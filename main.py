@@ -47,7 +47,7 @@ class Ui_Form(object):
         self.homeScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 342, 653))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -111, 342, 690))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.formLayout.setVerticalSpacing(10)
@@ -72,6 +72,12 @@ class Ui_Form(object):
 
         self.formLayout.setWidget(3, QFormLayout.SpanningRole, self.searchLineEdit)
 
+        self.stationTableView = QTableView(self.scrollAreaWidgetContents)
+        self.stationTableView.setObjectName(u"stationTableView")
+        self.stationTableView.setMinimumSize(QSize(0, 190))
+
+        self.formLayout.setWidget(4, QFormLayout.SpanningRole, self.stationTableView)
+
         self.otherservicesLabel = QLabel(self.scrollAreaWidgetContents)
         self.otherservicesLabel.setObjectName(u"otherservicesLabel")
         self.otherservicesLabel.setFont(font)
@@ -79,6 +85,7 @@ class Ui_Form(object):
         self.formLayout.setWidget(5, QFormLayout.LabelRole, self.otherservicesLabel)
 
         self.otherservicesLayout = QHBoxLayout()
+        self.otherservicesLayout.setSpacing(12)
         self.otherservicesLayout.setObjectName(u"otherservicesLayout")
         self.topupVerticalLayout = QVBoxLayout()
         self.topupVerticalLayout.setSpacing(0)
@@ -186,10 +193,93 @@ class Ui_Form(object):
 
         self.formLayout.setWidget(7, QFormLayout.LabelRole, self.promotionLabel)
 
-        self.promotionTableView = QTableView(self.scrollAreaWidgetContents)
-        self.promotionTableView.setObjectName(u"promotionTableView")
+        self.promotionScrollArea = QScrollArea(self.scrollAreaWidgetContents)
+        self.promotionScrollArea.setObjectName(u"promotionScrollArea")
+        self.promotionScrollArea.setMinimumSize(QSize(0, 85))
+        self.promotionScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.promotionScrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_2 = QWidget()
+        self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(-178, 0, 500, 67))
+        self.scrollAreaWidgetContents_2.setMinimumSize(QSize(500, 0))
+        self.formLayout_2 = QFormLayout(self.scrollAreaWidgetContents_2)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.formLayout_2.setHorizontalSpacing(0)
+        self.formLayout_2.setVerticalSpacing(0)
+        self.formLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.promotionHorizontalLayout = QHBoxLayout()
+        self.promotionHorizontalLayout.setSpacing(8)
+        self.promotionHorizontalLayout.setObjectName(u"promotionHorizontalLayout")
+        self.promotionPushButton6 = QPushButton(self.scrollAreaWidgetContents_2)
+        self.promotionPushButton6.setObjectName(u"promotionPushButton6")
+        self.promotionPushButton6.setMinimumSize(QSize(0, 65))
+        font1 = QFont()
+        font1.setPointSize(11)
+        self.promotionPushButton6.setFont(font1)
+        self.promotionPushButton6.setCursor(QCursor(Qt.PointingHandCursor))
+        icon4 = QIcon()
+        icon4.addFile(u"images/promotion.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.promotionPushButton6.setIcon(icon4)
+        self.promotionPushButton6.setIconSize(QSize(20, 20))
 
-        self.formLayout.setWidget(8, QFormLayout.SpanningRole, self.promotionTableView)
+        self.promotionHorizontalLayout.addWidget(self.promotionPushButton6)
+
+        self.promotionPushButton5 = QPushButton(self.scrollAreaWidgetContents_2)
+        self.promotionPushButton5.setObjectName(u"promotionPushButton5")
+        self.promotionPushButton5.setMinimumSize(QSize(0, 65))
+        self.promotionPushButton5.setFont(font1)
+        self.promotionPushButton5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton5.setIcon(icon4)
+        self.promotionPushButton5.setIconSize(QSize(20, 20))
+
+        self.promotionHorizontalLayout.addWidget(self.promotionPushButton5)
+
+        self.promotionPushButton4 = QPushButton(self.scrollAreaWidgetContents_2)
+        self.promotionPushButton4.setObjectName(u"promotionPushButton4")
+        self.promotionPushButton4.setMinimumSize(QSize(0, 65))
+        self.promotionPushButton4.setFont(font1)
+        self.promotionPushButton4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton4.setIcon(icon4)
+        self.promotionPushButton4.setIconSize(QSize(20, 20))
+
+        self.promotionHorizontalLayout.addWidget(self.promotionPushButton4)
+
+        self.promotionPushButton3 = QPushButton(self.scrollAreaWidgetContents_2)
+        self.promotionPushButton3.setObjectName(u"promotionPushButton3")
+        self.promotionPushButton3.setMinimumSize(QSize(0, 65))
+        self.promotionPushButton3.setFont(font1)
+        self.promotionPushButton3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton3.setIcon(icon4)
+        self.promotionPushButton3.setIconSize(QSize(20, 20))
+
+        self.promotionHorizontalLayout.addWidget(self.promotionPushButton3)
+
+        self.promotionPushButton2 = QPushButton(self.scrollAreaWidgetContents_2)
+        self.promotionPushButton2.setObjectName(u"promotionPushButton2")
+        self.promotionPushButton2.setMinimumSize(QSize(0, 65))
+        self.promotionPushButton2.setFont(font1)
+        self.promotionPushButton2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton2.setIcon(icon4)
+        self.promotionPushButton2.setIconSize(QSize(20, 20))
+
+        self.promotionHorizontalLayout.addWidget(self.promotionPushButton2)
+
+        self.promotionPushButton1 = QPushButton(self.scrollAreaWidgetContents_2)
+        self.promotionPushButton1.setObjectName(u"promotionPushButton1")
+        self.promotionPushButton1.setMinimumSize(QSize(0, 65))
+        self.promotionPushButton1.setFont(font1)
+        self.promotionPushButton1.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton1.setIcon(icon4)
+        self.promotionPushButton1.setIconSize(QSize(20, 20))
+
+        self.promotionHorizontalLayout.addWidget(self.promotionPushButton1)
+
+
+        self.formLayout_2.setLayout(0, QFormLayout.FieldRole, self.promotionHorizontalLayout)
+
+        self.promotionScrollArea.setWidget(self.scrollAreaWidgetContents_2)
+
+        self.formLayout.setWidget(8, QFormLayout.SpanningRole, self.promotionScrollArea)
 
         self.exclusivedealsLabel = QLabel(self.scrollAreaWidgetContents)
         self.exclusivedealsLabel.setObjectName(u"exclusivedealsLabel")
@@ -197,16 +287,163 @@ class Ui_Form(object):
 
         self.formLayout.setWidget(9, QFormLayout.LabelRole, self.exclusivedealsLabel)
 
-        self.exclusivedealsTableView = QTableView(self.scrollAreaWidgetContents)
-        self.exclusivedealsTableView.setObjectName(u"exclusivedealsTableView")
+        self.exclusivedealsScrollArea = QScrollArea(self.scrollAreaWidgetContents)
+        self.exclusivedealsScrollArea.setObjectName(u"exclusivedealsScrollArea")
+        self.exclusivedealsScrollArea.setMinimumSize(QSize(0, 94))
+        self.exclusivedealsScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.exclusivedealsScrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_3 = QWidget()
+        self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 500, 75))
+        self.scrollAreaWidgetContents_3.setMinimumSize(QSize(500, 0))
+        self.formLayout_3 = QFormLayout(self.scrollAreaWidgetContents_3)
+        self.formLayout_3.setObjectName(u"formLayout_3")
+        self.formLayout_3.setHorizontalSpacing(0)
+        self.formLayout_3.setVerticalSpacing(0)
+        self.formLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.exclusivedealsHorizontalLayout = QHBoxLayout()
+        self.exclusivedealsHorizontalLayout.setSpacing(8)
+        self.exclusivedealsHorizontalLayout.setObjectName(u"exclusivedealsHorizontalLayout")
+        self.verticalLayout6 = QVBoxLayout()
+        self.verticalLayout6.setSpacing(0)
+        self.verticalLayout6.setObjectName(u"verticalLayout6")
+        self.exclusivedealsLabel6 = QLabel(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsLabel6.setObjectName(u"exclusivedealsLabel6")
+        self.exclusivedealsLabel6.setAlignment(Qt.AlignCenter)
 
-        self.formLayout.setWidget(10, QFormLayout.SpanningRole, self.exclusivedealsTableView)
+        self.verticalLayout6.addWidget(self.exclusivedealsLabel6)
 
-        self.stationTableView = QTableView(self.scrollAreaWidgetContents)
-        self.stationTableView.setObjectName(u"stationTableView")
-        self.stationTableView.setMinimumSize(QSize(0, 190))
+        self.exclusivedealsPushButton6 = QPushButton(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsPushButton6.setObjectName(u"exclusivedealsPushButton6")
+        self.exclusivedealsPushButton6.setMinimumSize(QSize(0, 55))
+        self.exclusivedealsPushButton6.setFont(font1)
+        self.exclusivedealsPushButton6.setCursor(QCursor(Qt.PointingHandCursor))
+        icon5 = QIcon()
+        icon5.addFile(u"images/exlusivedeals.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.exclusivedealsPushButton6.setIcon(icon5)
+        self.exclusivedealsPushButton6.setIconSize(QSize(20, 20))
 
-        self.formLayout.setWidget(4, QFormLayout.SpanningRole, self.stationTableView)
+        self.verticalLayout6.addWidget(self.exclusivedealsPushButton6)
+
+
+        self.exclusivedealsHorizontalLayout.addLayout(self.verticalLayout6)
+
+        self.verticalLayout5 = QVBoxLayout()
+        self.verticalLayout5.setSpacing(0)
+        self.verticalLayout5.setObjectName(u"verticalLayout5")
+        self.exclusivedealsLabel5 = QLabel(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsLabel5.setObjectName(u"exclusivedealsLabel5")
+        self.exclusivedealsLabel5.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout5.addWidget(self.exclusivedealsLabel5)
+
+        self.exclusivedealsPushButton5 = QPushButton(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsPushButton5.setObjectName(u"exclusivedealsPushButton5")
+        self.exclusivedealsPushButton5.setMinimumSize(QSize(0, 55))
+        self.exclusivedealsPushButton5.setFont(font1)
+        self.exclusivedealsPushButton5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton5.setIcon(icon5)
+        self.exclusivedealsPushButton5.setIconSize(QSize(20, 20))
+
+        self.verticalLayout5.addWidget(self.exclusivedealsPushButton5)
+
+
+        self.exclusivedealsHorizontalLayout.addLayout(self.verticalLayout5)
+
+        self.verticalLayout4 = QVBoxLayout()
+        self.verticalLayout4.setSpacing(0)
+        self.verticalLayout4.setObjectName(u"verticalLayout4")
+        self.exclusivedealsLabel4 = QLabel(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsLabel4.setObjectName(u"exclusivedealsLabel4")
+        self.exclusivedealsLabel4.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout4.addWidget(self.exclusivedealsLabel4)
+
+        self.exclusivedealsPushButton4 = QPushButton(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsPushButton4.setObjectName(u"exclusivedealsPushButton4")
+        self.exclusivedealsPushButton4.setMinimumSize(QSize(0, 55))
+        self.exclusivedealsPushButton4.setFont(font1)
+        self.exclusivedealsPushButton4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton4.setIcon(icon5)
+        self.exclusivedealsPushButton4.setIconSize(QSize(20, 20))
+
+        self.verticalLayout4.addWidget(self.exclusivedealsPushButton4)
+
+
+        self.exclusivedealsHorizontalLayout.addLayout(self.verticalLayout4)
+
+        self.verticalLayout3 = QVBoxLayout()
+        self.verticalLayout3.setSpacing(0)
+        self.verticalLayout3.setObjectName(u"verticalLayout3")
+        self.exclusivedealsLabel3 = QLabel(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsLabel3.setObjectName(u"exclusivedealsLabel3")
+        self.exclusivedealsLabel3.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout3.addWidget(self.exclusivedealsLabel3)
+
+        self.exclusivedealsPushButton3 = QPushButton(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsPushButton3.setObjectName(u"exclusivedealsPushButton3")
+        self.exclusivedealsPushButton3.setMinimumSize(QSize(0, 55))
+        self.exclusivedealsPushButton3.setFont(font1)
+        self.exclusivedealsPushButton3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton3.setIcon(icon5)
+        self.exclusivedealsPushButton3.setIconSize(QSize(20, 20))
+
+        self.verticalLayout3.addWidget(self.exclusivedealsPushButton3)
+
+
+        self.exclusivedealsHorizontalLayout.addLayout(self.verticalLayout3)
+
+        self.verticalLayout2 = QVBoxLayout()
+        self.verticalLayout2.setSpacing(0)
+        self.verticalLayout2.setObjectName(u"verticalLayout2")
+        self.exclusivedealsLabel2 = QLabel(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsLabel2.setObjectName(u"exclusivedealsLabel2")
+        self.exclusivedealsLabel2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout2.addWidget(self.exclusivedealsLabel2)
+
+        self.exclusivedealsPushButton2 = QPushButton(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsPushButton2.setObjectName(u"exclusivedealsPushButton2")
+        self.exclusivedealsPushButton2.setMinimumSize(QSize(0, 55))
+        self.exclusivedealsPushButton2.setFont(font1)
+        self.exclusivedealsPushButton2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton2.setIcon(icon5)
+        self.exclusivedealsPushButton2.setIconSize(QSize(20, 20))
+
+        self.verticalLayout2.addWidget(self.exclusivedealsPushButton2)
+
+
+        self.exclusivedealsHorizontalLayout.addLayout(self.verticalLayout2)
+
+        self.verticalLayout1 = QVBoxLayout()
+        self.verticalLayout1.setSpacing(0)
+        self.verticalLayout1.setObjectName(u"verticalLayout1")
+        self.exclusivedealsLabel1 = QLabel(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsLabel1.setObjectName(u"exclusivedealsLabel1")
+        self.exclusivedealsLabel1.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout1.addWidget(self.exclusivedealsLabel1)
+
+        self.exclusivedealsPushButton1 = QPushButton(self.scrollAreaWidgetContents_3)
+        self.exclusivedealsPushButton1.setObjectName(u"exclusivedealsPushButton1")
+        self.exclusivedealsPushButton1.setMinimumSize(QSize(0, 55))
+        self.exclusivedealsPushButton1.setFont(font1)
+        self.exclusivedealsPushButton1.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton1.setIcon(icon5)
+        self.exclusivedealsPushButton1.setIconSize(QSize(20, 20))
+
+        self.verticalLayout1.addWidget(self.exclusivedealsPushButton1)
+
+
+        self.exclusivedealsHorizontalLayout.addLayout(self.verticalLayout1)
+
+
+        self.formLayout_3.setLayout(0, QFormLayout.FieldRole, self.exclusivedealsHorizontalLayout)
+
+        self.exclusivedealsScrollArea.setWidget(self.scrollAreaWidgetContents_3)
+
+        self.formLayout.setWidget(10, QFormLayout.SpanningRole, self.exclusivedealsScrollArea)
 
         self.homeScrollArea.setWidget(self.scrollAreaWidgetContents)
         self.stackedWidget.addWidget(self.homePage)
@@ -215,6 +452,9 @@ class Ui_Form(object):
         self.stackedWidget.addWidget(self.historyPage)
         self.locationPage = QWidget()
         self.locationPage.setObjectName(u"locationPage")
+        self.locationWidget = QWidget(self.locationPage)
+        self.locationWidget.setObjectName(u"locationWidget")
+        self.locationWidget.setGeometry(QRect(0, 0, 361, 571))
         self.stackedWidget.addWidget(self.locationPage)
         self.accountPage = QWidget()
         self.accountPage.setObjectName(u"accountPage")
@@ -237,9 +477,9 @@ class Ui_Form(object):
         self.homePushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
 "}")
-        icon4 = QIcon()
-        icon4.addFile(u"images/home.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.homePushButton.setIcon(icon4)
+        icon6 = QIcon()
+        icon6.addFile(u"images/home.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.homePushButton.setIcon(icon6)
 
         self.horizontalLayout.addWidget(self.homePushButton)
 
@@ -250,9 +490,9 @@ class Ui_Form(object):
         self.historyPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
 "}")
-        icon5 = QIcon()
-        icon5.addFile(u"images/history.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.historyPushButton.setIcon(icon5)
+        icon7 = QIcon()
+        icon7.addFile(u"images/history.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.historyPushButton.setIcon(icon7)
 
         self.horizontalLayout.addWidget(self.historyPushButton)
 
@@ -263,9 +503,9 @@ class Ui_Form(object):
         self.locationPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
 "}")
-        icon6 = QIcon()
-        icon6.addFile(u"images/location.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.locationPushButton.setIcon(icon6)
+        icon8 = QIcon()
+        icon8.addFile(u"images/location.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.locationPushButton.setIcon(icon8)
         self.locationPushButton.setIconSize(QSize(18, 18))
 
         self.horizontalLayout.addWidget(self.locationPushButton)
@@ -277,9 +517,9 @@ class Ui_Form(object):
         self.accountPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
 "}")
-        icon7 = QIcon()
-        icon7.addFile(u"images/account.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.accountPushButton.setIcon(icon7)
+        icon9 = QIcon()
+        icon9.addFile(u"images/account.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.accountPushButton.setIcon(icon9)
         self.accountPushButton.setIconSize(QSize(17, 17))
 
         self.horizontalLayout.addWidget(self.accountPushButton)
@@ -328,7 +568,25 @@ class Ui_Form(object):
 #endif // QT_CONFIG(whatsthis)
         self.cardsLabel.setText(QCoreApplication.translate("Form", u"Cards", None))
         self.promotionLabel.setText(QCoreApplication.translate("Form", u"Promotions", None))
+        self.promotionPushButton6.setText(QCoreApplication.translate("Form", u" 55%", None))
+        self.promotionPushButton5.setText(QCoreApplication.translate("Form", u" 50%", None))
+        self.promotionPushButton4.setText(QCoreApplication.translate("Form", u" 45%", None))
+        self.promotionPushButton3.setText(QCoreApplication.translate("Form", u" 40%", None))
+        self.promotionPushButton2.setText(QCoreApplication.translate("Form", u" 35%", None))
+        self.promotionPushButton1.setText(QCoreApplication.translate("Form", u" 30%", None))
         self.exclusivedealsLabel.setText(QCoreApplication.translate("Form", u"Exclusive Deals for debit/credit card user", None))
+        self.exclusivedealsLabel6.setText(QCoreApplication.translate("Form", u"CITI", None))
+        self.exclusivedealsPushButton6.setText(QCoreApplication.translate("Form", u" 150.-", None))
+        self.exclusivedealsLabel5.setText(QCoreApplication.translate("Form", u"CENTRAL", None))
+        self.exclusivedealsPushButton5.setText(QCoreApplication.translate("Form", u" 100.-", None))
+        self.exclusivedealsLabel4.setText(QCoreApplication.translate("Form", u"CIMB THAI", None))
+        self.exclusivedealsPushButton4.setText(QCoreApplication.translate("Form", u" 80.-", None))
+        self.exclusivedealsLabel3.setText(QCoreApplication.translate("Form", u"Krungsri", None))
+        self.exclusivedealsPushButton3.setText(QCoreApplication.translate("Form", u" 80.-", None))
+        self.exclusivedealsLabel2.setText(QCoreApplication.translate("Form", u"TTB", None))
+        self.exclusivedealsPushButton2.setText(QCoreApplication.translate("Form", u" 60.-", None))
+        self.exclusivedealsLabel1.setText(QCoreApplication.translate("Form", u"VISA", None))
+        self.exclusivedealsPushButton1.setText(QCoreApplication.translate("Form", u" 50.-", None))
 #if QT_CONFIG(whatsthis)
         self.homePushButton.setWhatsThis(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
