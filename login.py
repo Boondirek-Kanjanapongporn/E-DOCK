@@ -23,66 +23,99 @@ class Ui_Form(object):
         if not Form.objectName():
             Form.setObjectName(u"Form")
         Form.resize(360, 640)
-        self.loginLabel = QLabel(Form)
-        self.loginLabel.setObjectName(u"loginLabel")
-        self.loginLabel.setGeometry(QRect(160, 100, 41, 16))
         self.emailLabel = QLabel(Form)
         self.emailLabel.setObjectName(u"emailLabel")
-        self.emailLabel.setGeometry(QRect(40, 150, 61, 16))
+        self.emailLabel.setGeometry(QRect(40, 145, 281, 21))
+        self.emailLabel.setStyleSheet(u"font: 16pt;\n"
+"color: #444444;")
         self.passwordLabel = QLabel(Form)
         self.passwordLabel.setObjectName(u"passwordLabel")
-        self.passwordLabel.setGeometry(QRect(40, 230, 51, 16))
+        self.passwordLabel.setGeometry(QRect(40, 235, 281, 21))
+        self.passwordLabel.setStyleSheet(u"font: 16pt;\n"
+"color: #444444")
         self.loginPushButton = QPushButton(Form)
         self.loginPushButton.setObjectName(u"loginPushButton")
-        self.loginPushButton.setGeometry(QRect(40, 330, 281, 31))
+        self.loginPushButton.setGeometry(QRect(40, 350, 281, 41))
         self.loginPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.loginPushButton.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background-color: #aa1111;\n"
+"	border-radius: 10px;\n"
+"	font: 16pt, arial;\n"
+"	color: #ffffff;\n"
+"}\n"
+"QPushButton-Hover:\n"
+"{\n"
+"	background-color: #aa1111;\n"
+"}\n"
+"")
         self.emailLineEdit = QLineEdit(Form)
         self.emailLineEdit.setObjectName(u"emailLineEdit")
-        self.emailLineEdit.setGeometry(QRect(40, 170, 281, 31))
+        self.emailLineEdit.setGeometry(QRect(40, 170, 281, 35))
+        self.emailLineEdit.setMinimumSize(QSize(0, 35))
+        self.emailLineEdit.setStyleSheet(u"QLineEdit{\n"
+"	border: 2px solid #D2D2D2;\n"
+"	border-radius: 10px\n"
+"}\n"
+"")
         self.passwordLineEdit = QLineEdit(Form)
         self.passwordLineEdit.setObjectName(u"passwordLineEdit")
-        self.passwordLineEdit.setGeometry(QRect(40, 250, 281, 31))
+        self.passwordLineEdit.setGeometry(QRect(40, 260, 281, 35))
+        self.passwordLineEdit.setMinimumSize(QSize(0, 35))
+        self.passwordLineEdit.setStyleSheet(u"QLineEdit{\n"
+"	border: 2px solid #D2D2D2;\n"
+"	border-radius: 10px\n"
+"}\n"
+"")
         self.remembermeCheckBox = QCheckBox(Form)
         self.remembermeCheckBox.setObjectName(u"remembermeCheckBox")
-        self.remembermeCheckBox.setGeometry(QRect(40, 290, 111, 20))
+        self.remembermeCheckBox.setGeometry(QRect(40, 300, 121, 20))
         self.remembermeCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
         self.orLabel = QLabel(Form)
         self.orLabel.setObjectName(u"orLabel")
-        self.orLabel.setGeometry(QRect(0, 410, 361, 20))
+        self.orLabel.setGeometry(QRect(20, 430, 321, 20))
         self.orLabel.setAlignment(Qt.AlignCenter)
         self.needanaccountLabel = QLabel(Form)
         self.needanaccountLabel.setObjectName(u"needanaccountLabel")
-        self.needanaccountLabel.setGeometry(QRect(110, 460, 101, 16))
+        self.needanaccountLabel.setGeometry(QRect(100, 480, 121, 16))
+        self.needanaccountLabel.setStyleSheet(u"")
+        self.needanaccountLabel.setAlignment(Qt.AlignCenter)
         self.signupPushButton = QPushButton(Form)
         self.signupPushButton.setObjectName(u"signupPushButton")
-        self.signupPushButton.setGeometry(QRect(210, 460, 51, 16))
+        self.signupPushButton.setGeometry(QRect(210, 480, 71, 16))
         self.signupPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.signupPushButton.setStyleSheet(u"QPushButton {\n"
 "	border: None;\n"
 "	text-decoration: underline;\n"
+"	color: #aa1111;\n"
+"	\n"
 "}")
         self.forgotpasswordPushButton = QPushButton(Form)
         self.forgotpasswordPushButton.setObjectName(u"forgotpasswordPushButton")
-        self.forgotpasswordPushButton.setGeometry(QRect(220, 370, 111, 16))
+        self.forgotpasswordPushButton.setGeometry(QRect(220, 400, 111, 16))
         self.forgotpasswordPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.forgotpasswordPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None\n"
 "}")
         self.invalidemailLabel = QLabel(Form)
         self.invalidemailLabel.setObjectName(u"invalidemailLabel")
-        self.invalidemailLabel.setGeometry(QRect(250, 200, 81, 16))
+        self.invalidemailLabel.setGeometry(QRect(250, 210, 81, 16))
         self.invalidemailLabel.setStyleSheet(u"QLabel{\n"
-"	color: #FF0000;\n"
+"	color: #aa1111;\n"
 "}")
         self.invalidpasswordLabel = QLabel(Form)
         self.invalidpasswordLabel.setObjectName(u"invalidpasswordLabel")
-        self.invalidpasswordLabel.setGeometry(QRect(230, 280, 101, 16))
+        self.invalidpasswordLabel.setGeometry(QRect(230, 300, 101, 16))
         self.invalidpasswordLabel.setStyleSheet(u"QLabel{\n"
-"	color: #FF0000;\n"
+"	color: #aa1111;\n"
 "}")
+        self.loginLabel = QLabel(Form)
+        self.loginLabel.setObjectName(u"loginLabel")
+        self.loginLabel.setGeometry(QRect(40, 100, 91, 21))
+        self.loginLabel.setStyleSheet(u"font: 20pt, Arial;\n"
+"color: #444444;")
         self.invalidemailLabel.raise_()
         self.invalidpasswordLabel.raise_()
-        self.loginLabel.raise_()
         self.emailLabel.raise_()
         self.passwordLabel.raise_()
         self.loginPushButton.raise_()
@@ -93,6 +126,7 @@ class Ui_Form(object):
         self.forgotpasswordPushButton.raise_()
         self.emailLineEdit.raise_()
         self.passwordLineEdit.raise_()
+        self.loginLabel.raise_()
 
         self.retranslateUi(Form)
 
@@ -101,7 +135,6 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.loginLabel.setText(QCoreApplication.translate("Form", u"LOGIN", None))
         self.emailLabel.setText(QCoreApplication.translate("Form", u"Email", None))
         self.passwordLabel.setText(QCoreApplication.translate("Form", u"Password", None))
         self.loginPushButton.setText(QCoreApplication.translate("Form", u"Login", None))
@@ -112,5 +145,6 @@ class Ui_Form(object):
         self.forgotpasswordPushButton.setText(QCoreApplication.translate("Form", u"Forgot Password?", None))
         self.invalidemailLabel.setText(QCoreApplication.translate("Form", u"*Invalid Email", None))
         self.invalidpasswordLabel.setText(QCoreApplication.translate("Form", u"*Invalid Password", None))
+        self.loginLabel.setText(QCoreApplication.translate("Form", u"LOGIN", None))
     # retranslateUi
 
