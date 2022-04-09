@@ -16,9 +16,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFormLayout, QFrame, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QPushButton,
-    QRadioButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QStackedWidget, QTableView, QVBoxLayout, QWidget)
+    QLabel, QLineEdit, QPushButton, QRadioButton,
+    QScrollArea, QSizePolicy, QSpacerItem, QStackedWidget,
+    QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -47,7 +47,7 @@ class Ui_Form(object):
         self.homeScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 342, 690))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 342, 687))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.formLayout.setVerticalSpacing(10)
@@ -71,15 +71,89 @@ class Ui_Form(object):
 
         self.searchLineEdit = QLineEdit(self.scrollAreaWidgetContents)
         self.searchLineEdit.setObjectName(u"searchLineEdit")
-        self.searchLineEdit.setMinimumSize(QSize(0, 40))
+        self.searchLineEdit.setMinimumSize(QSize(0, 35))
 
         self.formLayout.setWidget(3, QFormLayout.SpanningRole, self.searchLineEdit)
 
-        self.stationTableView = QTableView(self.scrollAreaWidgetContents)
-        self.stationTableView.setObjectName(u"stationTableView")
-        self.stationTableView.setMinimumSize(QSize(0, 190))
+        self.stationScrollArea = QScrollArea(self.scrollAreaWidgetContents)
+        self.stationScrollArea.setObjectName(u"stationScrollArea")
+        self.stationScrollArea.setMinimumSize(QSize(0, 192))
+        self.stationScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.stationScrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.stationScrollArea.setWidgetResizable(True)
+        self.stationAreaWidgetContents = QWidget()
+        self.stationAreaWidgetContents.setObjectName(u"stationAreaWidgetContents")
+        self.stationAreaWidgetContents.setGeometry(QRect(0, 0, 300, 175))
+        self.stationAreaWidgetContents.setMinimumSize(QSize(0, 0))
+        self.formLayout_6 = QFormLayout(self.stationAreaWidgetContents)
+        self.formLayout_6.setObjectName(u"formLayout_6")
+        self.formLayout_6.setHorizontalSpacing(0)
+        self.formLayout_6.setVerticalSpacing(0)
+        self.formLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.stationHorizontalLayout = QHBoxLayout()
+        self.stationHorizontalLayout.setSpacing(6)
+        self.stationHorizontalLayout.setObjectName(u"stationHorizontalLayout")
+        self.stationHorizontalLayout.setContentsMargins(0, 0, -1, -1)
+        self.stationVerticalLayout = QVBoxLayout()
+        self.stationVerticalLayout.setObjectName(u"stationVerticalLayout")
+        self.stationVerticalLayout.setContentsMargins(6, 6, 6, 0)
+        self.promotionPushButton6_3 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_3.setObjectName(u"promotionPushButton6_3")
+        self.promotionPushButton6_3.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_3.setMaximumSize(QSize(85, 80))
+        font2 = QFont()
+        font2.setPointSize(11)
+        self.promotionPushButton6_3.setFont(font2)
+        self.promotionPushButton6_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_3.setIconSize(QSize(20, 20))
 
-        self.formLayout.setWidget(4, QFormLayout.SpanningRole, self.stationTableView)
+        self.stationVerticalLayout.addWidget(self.promotionPushButton6_3)
+
+        self.promotionPushButton6_4 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_4.setObjectName(u"promotionPushButton6_4")
+        self.promotionPushButton6_4.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_4.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_4.setFont(font2)
+        self.promotionPushButton6_4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_4.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout.addWidget(self.promotionPushButton6_4)
+
+
+        self.stationHorizontalLayout.addLayout(self.stationVerticalLayout)
+
+        self.stationVerticalLayout_2 = QVBoxLayout()
+        self.stationVerticalLayout_2.setObjectName(u"stationVerticalLayout_2")
+        self.stationVerticalLayout_2.setContentsMargins(6, 6, 6, 0)
+        self.promotionPushButton6_5 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_5.setObjectName(u"promotionPushButton6_5")
+        self.promotionPushButton6_5.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_5.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_5.setFont(font2)
+        self.promotionPushButton6_5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_5.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout_2.addWidget(self.promotionPushButton6_5)
+
+        self.promotionPushButton6_6 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_6.setObjectName(u"promotionPushButton6_6")
+        self.promotionPushButton6_6.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_6.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_6.setFont(font2)
+        self.promotionPushButton6_6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_6.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout_2.addWidget(self.promotionPushButton6_6)
+
+
+        self.stationHorizontalLayout.addLayout(self.stationVerticalLayout_2)
+
+
+        self.formLayout_6.setLayout(0, QFormLayout.FieldRole, self.stationHorizontalLayout)
+
+        self.stationScrollArea.setWidget(self.stationAreaWidgetContents)
+
+        self.formLayout.setWidget(4, QFormLayout.SpanningRole, self.stationScrollArea)
 
         self.otherservicesLabel = QLabel(self.scrollAreaWidgetContents)
         self.otherservicesLabel.setObjectName(u"otherservicesLabel")
@@ -216,8 +290,6 @@ class Ui_Form(object):
         self.promotionPushButton6 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton6.setObjectName(u"promotionPushButton6")
         self.promotionPushButton6.setMinimumSize(QSize(0, 65))
-        font2 = QFont()
-        font2.setPointSize(11)
         self.promotionPushButton6.setFont(font2)
         self.promotionPushButton6.setCursor(QCursor(Qt.PointingHandCursor))
         icon4 = QIcon()
@@ -546,7 +618,7 @@ class Ui_Form(object):
         self.accountScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 342, 1183))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 342, 1237))
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
@@ -581,7 +653,7 @@ class Ui_Form(object):
 
         self.notificationVerticalLayout = QVBoxLayout()
         self.notificationVerticalLayout.setObjectName(u"notificationVerticalLayout")
-        self.notificationVerticalLayout.setContentsMargins(20, -1, 20, -1)
+        self.notificationVerticalLayout.setContentsMargins(20, 10, 20, -1)
         self.opennotificationRadioButton = QRadioButton(self.scrollAreaWidgetContents_5)
         self.opennotificationRadioButton.setObjectName(u"opennotificationRadioButton")
 
@@ -615,7 +687,7 @@ class Ui_Form(object):
 
         self.addcarVerticalLayout = QVBoxLayout()
         self.addcarVerticalLayout.setObjectName(u"addcarVerticalLayout")
-        self.addcarVerticalLayout.setContentsMargins(20, -1, 20, -1)
+        self.addcarVerticalLayout.setContentsMargins(20, 10, 20, -1)
         self.companyLabel = QLabel(self.scrollAreaWidgetContents_5)
         self.companyLabel.setObjectName(u"companyLabel")
 
@@ -683,7 +755,7 @@ class Ui_Form(object):
 
         self.addcarVerticalLayout_2 = QVBoxLayout()
         self.addcarVerticalLayout_2.setObjectName(u"addcarVerticalLayout_2")
-        self.addcarVerticalLayout_2.setContentsMargins(20, -1, 20, -1)
+        self.addcarVerticalLayout_2.setContentsMargins(20, 10, 20, -1)
         self.cardnumberLabel = QLabel(self.scrollAreaWidgetContents_5)
         self.cardnumberLabel.setObjectName(u"cardnumberLabel")
 
@@ -748,7 +820,7 @@ class Ui_Form(object):
 
         self.changeusernameVerticalLayout = QVBoxLayout()
         self.changeusernameVerticalLayout.setObjectName(u"changeusernameVerticalLayout")
-        self.changeusernameVerticalLayout.setContentsMargins(20, -1, 20, -1)
+        self.changeusernameVerticalLayout.setContentsMargins(20, 10, 20, -1)
         self.newusernameLabel = QLabel(self.scrollAreaWidgetContents_5)
         self.newusernameLabel.setObjectName(u"newusernameLabel")
 
@@ -780,7 +852,7 @@ class Ui_Form(object):
 
         self.changepinVerticalLayout = QVBoxLayout()
         self.changepinVerticalLayout.setObjectName(u"changepinVerticalLayout")
-        self.changepinVerticalLayout.setContentsMargins(20, -1, 20, -1)
+        self.changepinVerticalLayout.setContentsMargins(20, 10, 20, -1)
         self.newpinLabel = QLabel(self.scrollAreaWidgetContents_5)
         self.newpinLabel.setObjectName(u"newpinLabel")
 
@@ -823,7 +895,7 @@ class Ui_Form(object):
 
         self.changepasswordVerticalLayout = QVBoxLayout()
         self.changepasswordVerticalLayout.setObjectName(u"changepasswordVerticalLayout")
-        self.changepasswordVerticalLayout.setContentsMargins(20, -1, 20, -1)
+        self.changepasswordVerticalLayout.setContentsMargins(20, 10, 20, -1)
         self.newpasswordLabel = QLabel(self.scrollAreaWidgetContents_5)
         self.newpasswordLabel.setObjectName(u"newpasswordLabel")
 
@@ -880,7 +952,7 @@ class Ui_Form(object):
 
         self.horizontalLayoutWidget = QWidget(Form)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
-        self.horizontalLayoutWidget.setGeometry(QRect(0, 580, 361, 61))
+        self.horizontalLayoutWidget.setGeometry(QRect(0, 580, 362, 61))
         self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -954,6 +1026,10 @@ class Ui_Form(object):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.hiLabel.setText(QCoreApplication.translate("Form", u"Hi, ", None))
         self.welcomeLabel.setText(QCoreApplication.translate("Form", u"Welcome to E-DOCK!", None))
+        self.promotionPushButton6_3.setText(QCoreApplication.translate("Form", u"Elex", None))
+        self.promotionPushButton6_4.setText(QCoreApplication.translate("Form", u"PPA", None))
+        self.promotionPushButton6_5.setText(QCoreApplication.translate("Form", u"Elex", None))
+        self.promotionPushButton6_6.setText(QCoreApplication.translate("Form", u"PPA", None))
         self.otherservicesLabel.setText(QCoreApplication.translate("Form", u"Other Services", None))
         self.topupPushButton.setText("")
 #if QT_CONFIG(tooltip)

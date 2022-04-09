@@ -45,7 +45,12 @@ class Main_Page(QWidget):
             self.ui.stationTableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
             self.ui.stationTableView.setModel(filter_proxy_model)
         
+        # Location Page
         elif (self.ui.stackedWidget.currentWidget() == self.ui.locationPage):
+            pass
+        
+        # Account Page
+        elif (self.ui.stackedWidget.currentWidget() == self.ui.accountPage):
             pass
     
     def gotoHomePage(self):

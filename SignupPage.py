@@ -37,7 +37,7 @@ class Signup_Page(QWidget):
                         self.auth.create_user_with_email_and_password(email, password)
                         print(f"Successfully created account with email: {email} and password: {password}")
                     except:
-                        self.showAlert("Email is already taken")
+                        self.showAlert("Email is already exists")
                 else:
                     self.ui.passwordsdonotmatchLabel.setVisible(True)
             else:
