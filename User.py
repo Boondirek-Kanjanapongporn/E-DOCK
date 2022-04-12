@@ -1,21 +1,20 @@
-class UserInfo:
-    def __init__(self, db, email, UID):
+class User:
+    def __init__(self, db, UID):
         self.db = db
-        self.email = email
         self.UID = UID
     
-    def createUserInfo(self):
-        try:
-            data={'username': '', 'pin': '', 'notification': True, 'e-wallet': 0, 'cars':'', 'cards':'', 'history':''}
-            self.db.child('users').child(self.UID).set(data)
-            return True
-        except:
-            raise SystemError("UserInfo is already exists")
+    # def createUserInfo(self):
+    #     if self.getUserInfo() is None:
+    #         data={'username': '', 'pin': '', 'notification': True, 'e-wallet': 0, 'cars':'', 'cards':'', 'history':''}
+    #         self.db.child('users').child(self.UID).set(data)
+    #         return True
+    #     else:
+    #         return False
     
     def getUserInfo(self):
         try:
-            userInfo = self.db.child('users').child(self.UID).get()
-            return userInfo.val()
+            userInfo = self.db.child('users').child(self.UID).get().val()
+            return userInfo
         except:
             raise SystemError("UserInfo does not exists")
 
@@ -40,26 +39,40 @@ class UserInfo:
         except:
             raise SystemError("Can't set notification")
     
-    def setEWallet(self, ewallet):
+    def setMoney(self, money):
         try:
-            self.db.child('users').child(self.UID).update({'e-wallet': ewallet})
+            self.db.child('users').child(self.UID).update({'money': money})
             return True
         except:
-            raise SystemError("Can't set e-wallet")
+            raise SystemError("Can't set money")
     
-    def setCars(self, cars):
-        try:
-            self.db.child('users').child(self.UID).update({'cars': cars})
-            return True
-        except:
-            raise SystemError("Can't set cars")
+    # def setCars(self, cars):
+    #     try:
+    #         self.db.child('users').child(self.UID).update({'cars': cars})
+    #         return True
+    #     except:
+    #         raise SystemError("Can't set cars")
 
-    def setCards(self, cards):
+    # def setCards(self, cards):
+    #     try:
+    #         self.db.child('users').child(self.UID).update({'cards': cards})
+    #         return True
+    #     except:
+    #         raise SystemError("Can't set cards")
+
+    def addCar(self, car):
         try:
-            self.db.child('users').child(self.UID).update({'cards': cards})
+            self.db.child('users').child(self.UID).child('cars').push(car)
             return True
         except:
-            raise SystemError("Can't set cards")
+            raise SystemError("Can't add car")
+
+    def addCard(self, card):
+        try:
+            self.db.child('users').child(self.UID).child('cards').push(card)
+            return True
+        except:
+            raise SystemError("Can't add card")
 
     def setHistory(self, history):
         try:
@@ -89,12 +102,12 @@ class UserInfo:
         except:
             raise SystemError("Can't get notification")
     
-    def getEWallet(self):
+    def getMoney(self):
         try:
             userInfo = self.getUserInfo()
-            return userInfo['e-wallet']
+            return userInfo['money']
         except:
-            raise SystemError("Can't get e-wallet")
+            raise SystemError("Can't get money")
     
     def getCars(self):
         try:

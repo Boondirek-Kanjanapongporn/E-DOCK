@@ -240,10 +240,10 @@ QPushButton-Hover:
   <widget class="QLabel" name="invalidpasswordLabel">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>220</x>
      <y>300</y>
      <width>101</width>
-     <height>16</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -253,6 +253,9 @@ QPushButton-Hover:
    </property>
    <property name="text">
     <string>*Invalid Password</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="loginLabel">

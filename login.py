@@ -105,10 +105,11 @@ class Ui_Form(object):
 "}")
         self.invalidpasswordLabel = QLabel(Form)
         self.invalidpasswordLabel.setObjectName(u"invalidpasswordLabel")
-        self.invalidpasswordLabel.setGeometry(QRect(230, 300, 101, 16))
+        self.invalidpasswordLabel.setGeometry(QRect(220, 300, 101, 21))
         self.invalidpasswordLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
 "}")
+        self.invalidpasswordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.loginLabel = QLabel(Form)
         self.loginLabel.setObjectName(u"loginLabel")
         self.loginLabel.setGeometry(QRect(40, 100, 91, 21))
