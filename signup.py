@@ -25,7 +25,7 @@ class Ui_Form(object):
         Form.resize(360, 640)
         self.signupLabel = QLabel(Form)
         self.signupLabel.setObjectName(u"signupLabel")
-        self.signupLabel.setGeometry(QRect(40, 80, 91, 21))
+        self.signupLabel.setGeometry(QRect(40, 70, 91, 21))
         self.signupLabel.setStyleSheet(u"font: 20pt, Arial;\n"
 "color: #444444;")
         self.needanaccountLabel = QLabel(Form)
@@ -33,7 +33,7 @@ class Ui_Form(object):
         self.needanaccountLabel.setGeometry(QRect(110, 520, 101, 16))
         self.emailLineEdit = QLineEdit(Form)
         self.emailLineEdit.setObjectName(u"emailLineEdit")
-        self.emailLineEdit.setGeometry(QRect(40, 150, 281, 35))
+        self.emailLineEdit.setGeometry(QRect(40, 140, 281, 35))
         self.emailLineEdit.setMinimumSize(QSize(0, 35))
         font = QFont()
         font.setPointSize(9)
@@ -49,7 +49,7 @@ class Ui_Form(object):
 "}")
         self.passwordLineEdit = QLineEdit(Form)
         self.passwordLineEdit.setObjectName(u"passwordLineEdit")
-        self.passwordLineEdit.setGeometry(QRect(40, 240, 281, 35))
+        self.passwordLineEdit.setGeometry(QRect(40, 230, 281, 35))
         self.passwordLineEdit.setMinimumSize(QSize(0, 35))
         self.passwordLineEdit.setStyleSheet(u"QLineEdit\n"
 "{\n"
@@ -62,7 +62,7 @@ class Ui_Form(object):
 "}")
         self.emailLabel = QLabel(Form)
         self.emailLabel.setObjectName(u"emailLabel")
-        self.emailLabel.setGeometry(QRect(40, 130, 271, 16))
+        self.emailLabel.setGeometry(QRect(40, 120, 271, 16))
         self.emailLabel.setStyleSheet(u"font: 16pt, Arial;\n"
 "color: #444444;")
         self.orLabel = QLabel(Form)
@@ -71,7 +71,7 @@ class Ui_Form(object):
         self.orLabel.setAlignment(Qt.AlignCenter)
         self.passwordLabel = QLabel(Form)
         self.passwordLabel.setObjectName(u"passwordLabel")
-        self.passwordLabel.setGeometry(QRect(40, 220, 271, 16))
+        self.passwordLabel.setGeometry(QRect(40, 210, 271, 16))
         self.passwordLabel.setStyleSheet(u"font: 16pt, Arial;\n"
 "color: #444444;")
         self.singupPushButton = QPushButton(Form)
@@ -118,19 +118,20 @@ class Ui_Form(object):
 "}")
         self.invalidemailLabel = QLabel(Form)
         self.invalidemailLabel.setObjectName(u"invalidemailLabel")
-        self.invalidemailLabel.setGeometry(QRect(250, 190, 81, 16))
+        self.invalidemailLabel.setGeometry(QRect(250, 180, 81, 16))
         self.invalidemailLabel.setStyleSheet(u"QLabel{\n"
 "	color: #AA1111;\n"
 "}")
         self.invalidpasswordLabel = QLabel(Form)
         self.invalidpasswordLabel.setObjectName(u"invalidpasswordLabel")
-        self.invalidpasswordLabel.setGeometry(QRect(230, 280, 101, 20))
+        self.invalidpasswordLabel.setGeometry(QRect(160, 270, 161, 31))
         self.invalidpasswordLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
 "}")
+        self.invalidpasswordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.passwordsdonotmatchLabel = QLabel(Form)
         self.passwordsdonotmatchLabel.setObjectName(u"passwordsdonotmatchLabel")
-        self.passwordsdonotmatchLabel.setGeometry(QRect(190, 366, 141, 16))
+        self.passwordsdonotmatchLabel.setGeometry(QRect(190, 370, 141, 16))
         self.passwordsdonotmatchLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
 "}")
@@ -165,7 +166,8 @@ class Ui_Form(object):
         self.loginPushButton.setText(QCoreApplication.translate("Form", u"LOGIN", None))
         self.confirmpasswordLabel.setText(QCoreApplication.translate("Form", u"Confirm Password", None))
         self.invalidemailLabel.setText(QCoreApplication.translate("Form", u"*Invalid Email", None))
-        self.invalidpasswordLabel.setText(QCoreApplication.translate("Form", u"*Invalid Password", None))
+        self.invalidpasswordLabel.setText(QCoreApplication.translate("Form", u"*Invalid Password\n"
+"*Must be more than 8 digits", None))
         self.passwordsdonotmatchLabel.setText(QCoreApplication.translate("Form", u"*Passwords do not match", None))
     # retranslateUi
 

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
+    <width>362</width>
     <height>640</height>
    </rect>
   </property>
@@ -26,7 +26,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="homePage">
        <widget class="QScrollArea" name="homeScrollArea">
@@ -55,7 +55,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>342</width>
+           <width>272</width>
            <height>687</height>
           </rect>
          </property>
@@ -75,31 +75,6 @@
           <property name="bottomMargin">
            <number>20</number>
           </property>
-          <item row="1" column="0">
-           <widget class="QLabel" name="hiLabel">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Hi, </string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="welcomeLabel">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Welcome to E-DOCK!</string>
-            </property>
-           </widget>
-          </item>
           <item row="3" column="0" colspan="2">
            <widget class="QLineEdit" name="searchLineEdit">
             <property name="minimumSize">
@@ -132,7 +107,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>300</width>
+               <width>198</width>
                <height>175</height>
               </rect>
              </property>
@@ -340,18 +315,6 @@
               </item>
              </layout>
             </widget>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="otherservicesLabel">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Other Services</string>
-            </property>
            </widget>
           </item>
           <item row="6" column="0" colspan="2">
@@ -571,18 +534,6 @@
              </layout>
             </item>
            </layout>
-          </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="promotionLabel">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Promotions</string>
-            </property>
-           </widget>
           </item>
           <item row="8" column="0" colspan="2">
            <widget class="QScrollArea" name="promotionScrollArea">
@@ -827,18 +778,6 @@
               </item>
              </layout>
             </widget>
-           </widget>
-          </item>
-          <item row="9" column="0">
-           <widget class="QLabel" name="exclusivedealsLabel">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Exclusive Deals for debit/credit card user</string>
-            </property>
            </widget>
           </item>
           <item row="10" column="0" colspan="2">
@@ -1188,6 +1127,67 @@
             </widget>
            </widget>
           </item>
+          <item row="1" column="0" colspan="2">
+           <widget class="QLabel" name="hiLabel">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hi, </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QLabel" name="welcomeLabel">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Welcome to E-DOCK!</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="2">
+           <widget class="QLabel" name="otherservicesLabel">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Other Services</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="2">
+           <widget class="QLabel" name="promotionLabel">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Promotions</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="2">
+           <widget class="QLabel" name="exclusivedealsLabel">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Exclusive Deals for debit/credit card user</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </widget>
@@ -1287,6 +1287,9 @@
                   <width>0</width>
                   <height>50</height>
                  </size>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton{
@@ -1427,7 +1430,7 @@ Hi</string>
            <x>0</x>
            <y>0</y>
            <width>342</width>
-           <height>1237</height>
+           <height>1136</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -1479,6 +1482,42 @@ Hi</string>
              <number>10</number>
             </property>
             <item>
+             <widget class="QLabel" name="ewalletLabel">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>E-Wallet:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="moneyLabel">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>65</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>24</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QPushButton" name="notificationPushButton">
               <property name="minimumSize">
                <size>
@@ -1528,47 +1567,77 @@ Hi</string>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="notificationVerticalLayout">
-              <property name="leftMargin">
-               <number>20</number>
+             <widget class="QWidget" name="notificationWidget" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="topMargin">
-               <number>10</number>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>73</height>
+               </size>
               </property>
-              <property name="rightMargin">
-               <number>20</number>
-              </property>
-              <item>
-               <widget class="QRadioButton" name="opennotificationRadioButton">
-                <property name="text">
-                 <string>Open Notification</string>
+              <widget class="QWidget" name="layoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>340</width>
+                 <height>73</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="notificationVerticalLayout">
+                <property name="leftMargin">
+                 <number>20</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="closenotificationRadioButton">
-                <property name="text">
-                 <string>Close Notification</string>
+                <property name="topMargin">
+                 <number>10</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+                <property name="rightMargin">
+                 <number>20</number>
                 </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
+                <item>
+                 <widget class="QRadioButton" name="opennotificationRadioButton">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>Open Notification</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="closenotificationRadioButton">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>Close Notification</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </widget>
             </item>
             <item>
              <widget class="QPushButton" name="addcarPushButton">
@@ -1593,7 +1662,7 @@ Hi</string>
                <enum>Qt::RightToLeft</enum>
               </property>
               <property name="text">
-               <string> Add Car                                                                   </string>
+               <string>Add Car                                                                    </string>
               </property>
               <property name="icon">
                <iconset>
@@ -1614,104 +1683,173 @@ Hi</string>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="addcarVerticalLayout">
-              <property name="leftMargin">
-               <number>20</number>
+             <widget class="QWidget" name="addcarWidget" native="true">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
               </property>
-              <property name="topMargin">
-               <number>10</number>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>273</height>
+               </size>
               </property>
-              <property name="rightMargin">
-               <number>20</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="companyLabel">
-                <property name="text">
-                 <string>Company:</string>
+              <widget class="QWidget" name="layoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>340</width>
+                 <height>273</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="addcarVerticalLayout">
+                <property name="spacing">
+                 <number>3</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="companyLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
+                <property name="leftMargin">
+                 <number>20</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="modelLabel">
-                <property name="text">
-                 <string>Model:</string>
+                <property name="topMargin">
+                 <number>10</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="modelLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
+                <property name="rightMargin">
+                 <number>20</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="batterycapacityLabel">
-                <property name="text">
-                 <string>Battery Capacity:</string>
+                <property name="bottomMargin">
+                 <number>10</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="batterycapacityLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="chargingcapacityLabel">
-                <property name="text">
-                 <string>Charging Capacity:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="chargingcapacityLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
+                <item>
+                 <widget class="QLabel" name="companyLabel">
+                  <property name="text">
+                   <string>Company:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="companyLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="modelLabel">
+                  <property name="text">
+                   <string>Model:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="modelLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="batterycapacityLabel">
+                  <property name="text">
+                   <string>Battery Capacity:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="batterycapacityLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="chargingcapacityLabel">
+                  <property name="text">
+                   <string>Charging Capacity:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="chargingcapacityLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="addcarHorizontalLayout">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="addcarPushButton_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="text">
+                     <string> Add Car</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>images/add.png</normaloff>images/add.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="adddebitcreditcardPushButton">
+             <widget class="QPushButton" name="addcardPushButton">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1733,7 +1871,7 @@ Hi</string>
                <enum>Qt::RightToLeft</enum>
               </property>
               <property name="text">
-               <string>Add Debit/Credit Card                                            </string>
+               <string>Add Debit/Credit Card                                             </string>
               </property>
               <property name="icon">
                <iconset>
@@ -1754,101 +1892,164 @@ Hi</string>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="addcarVerticalLayout_2">
-              <property name="leftMargin">
-               <number>20</number>
+             <widget class="QWidget" name="addcardWidget" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>273</height>
+               </size>
               </property>
-              <property name="topMargin">
-               <number>10</number>
-              </property>
-              <property name="rightMargin">
-               <number>20</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="cardnumberLabel">
-                <property name="text">
-                 <string>Card Number:</string>
+              <widget class="QWidget" name="layoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>340</width>
+                 <height>273</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="addcardVerticalLayout">
+                <property name="spacing">
+                 <number>3</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cardnumberLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
+                <property name="leftMargin">
+                 <number>20</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="cardholdernameLabel">
-                <property name="text">
-                 <string>Cardholder Name:</string>
+                <property name="topMargin">
+                 <number>10</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cardholdernameLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
+                <property name="rightMargin">
+                 <number>20</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="expiryLabel">
-                <property name="text">
-                 <string>Expiry (MM /YY):</string>
+                <property name="bottomMargin">
+                 <number>10</number>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="expiryLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="cvvLabel">
-                <property name="text">
-                 <string>CVV:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="cvvLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_7">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
+                <item>
+                 <widget class="QLabel" name="cardnumberLabel">
+                  <property name="text">
+                   <string>Card Number:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cardnumberLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="cardholdernameLabel">
+                  <property name="text">
+                   <string>Cardholder Name:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cardholdernameLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="expiryLabel">
+                  <property name="text">
+                   <string>Expiry (MM /YY):</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="expiryLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="cvvLabel">
+                  <property name="text">
+                   <string>CVV:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="cvvLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="addcardHorizontalLayout">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="addcardPushButton_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="text">
+                     <string> Add Card</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>images/add.png</normaloff>images/add.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
             </item>
             <item>
              <widget class="QPushButton" name="changeusernamePushButton">
@@ -1870,7 +2071,7 @@ Hi</string>
                <enum>Qt::RightToLeft</enum>
               </property>
               <property name="text">
-               <string>Change Username                                                   </string>
+               <string>Change Username                                                    </string>
               </property>
               <property name="icon">
                <iconset>
@@ -1885,247 +2086,119 @@ Hi</string>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="changeusernameVerticalLayout">
-              <property name="leftMargin">
-               <number>20</number>
-              </property>
-              <property name="topMargin">
-               <number>10</number>
-              </property>
-              <property name="rightMargin">
-               <number>20</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="newusernameLabel">
-                <property name="text">
-                 <string>New Username:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="newusernameLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QPushButton" name="changepinPushButton">
+             <widget class="QWidget" name="changeusernameWidget" native="true">
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>35</height>
+                <height>117</height>
                </size>
               </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::RightToLeft</enum>
-              </property>
-              <property name="text">
-               <string>Change Pin                                                              </string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>images/right-arrow.png</normaloff>images/right-arrow.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>21</width>
-                <height>21</height>
-               </size>
-              </property>
+              <widget class="QWidget" name="layoutWidget">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>340</width>
+                 <height>117</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="changeusernameVerticalLayout">
+                <property name="spacing">
+                 <number>3</number>
+                </property>
+                <property name="leftMargin">
+                 <number>20</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>20</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="newusernameLabel">
+                  <property name="text">
+                   <string>New Username:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="newusernameLineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="changeusernameHorizontalLayout">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="changeusernamePushButton_2">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>100</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="text">
+                     <string> Change</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>images/change.png</normaloff>images/change.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>16</width>
+                      <height>16</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="changepinVerticalLayout">
-              <property name="leftMargin">
-               <number>20</number>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>6</number>
               </property>
-              <property name="topMargin">
-               <number>10</number>
-              </property>
-              <property name="rightMargin">
-               <number>20</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="newpinLabel">
-                <property name="text">
-                 <string>New Pin:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="newpinLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="confirmpinLabel">
-                <property name="text">
-                 <string>Confirm Pin:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="confirmpinLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_5">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QPushButton" name="changepasswordPushButton">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>35</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="layoutDirection">
-               <enum>Qt::RightToLeft</enum>
-              </property>
-              <property name="text">
-               <string>Change Password                                                    </string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>images/right-arrow.png</normaloff>images/right-arrow.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>21</width>
-                <height>21</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="changepasswordVerticalLayout">
-              <property name="leftMargin">
-               <number>20</number>
-              </property>
-              <property name="topMargin">
-               <number>10</number>
-              </property>
-              <property name="rightMargin">
-               <number>20</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="newpasswordLabel">
-                <property name="text">
-                 <string>New Password:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="newpasswordLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="confirmpasswordLabel">
-                <property name="text">
-                 <string>Confirm Password:</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="confirmpasswordLineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>30</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>10</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="logoutHorizontalLayout">
               <property name="leftMargin">
                <number>100</number>
               </property>
@@ -2139,6 +2212,48 @@ Hi</string>
                <number>20</number>
               </property>
               <item>
+               <widget class="QPushButton" name="changepinPushButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Change Pin</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="changepasswordPushButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Change Password</string>
+                </property>
+               </widget>
+              </item>
+              <item>
                <widget class="QPushButton" name="logoutPushButton">
                 <property name="minimumSize">
                  <size>
@@ -2150,6 +2265,9 @@ Hi</string>
                  <font>
                   <pointsize>11</pointsize>
                  </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
                  <string>Logout</string>
