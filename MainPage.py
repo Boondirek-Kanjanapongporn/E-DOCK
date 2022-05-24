@@ -5,21 +5,27 @@ from PySide6.QtWebEngineWidgets import *
 import time
 from main import Ui_Form as Ui_Main
 from User import User
+from PinPage import Pin_Page
 
 class Main_Page(QWidget):
-    def __init__(self, db, auth, widget):
+    def __init__(self, db, auth, widget, isAutoLogin):
         QWidget.__init__(self, None)
         self.db = db
         self.auth = auth
         self.widget = widget
+        self.isAutoLogin = isAutoLogin
+        self.pinResult = False
 
         self.UID = self.auth.current_user['localId']
         self.email = self.auth.current_user['email']
         
-        self.user = User(self.db, self.UID)
+        self.user = User(self.db, self.UID, self.email)
 
         self.ui = Ui_Main()
         self.ui.setupUi(self)
+
+        # create Pin on first account creation
+        self.createPin()
 
         # goto Pages in Navbar
         self.ui.homePushButton.clicked.connect(self.gotoHomePage)
@@ -67,6 +73,42 @@ class Main_Page(QWidget):
         self.ui.logoutPushButton.clicked.connect(self.handleLogout)
     
         # ------------------------------------------------------------------------------------------------------
+    def createPin(self):
+        userinfo = self.db.child('users').child(self.UID).get()
+        if userinfo.val() is not None:
+            if self.user.getPin() == '':
+                self.gotoPinPage(1, True)
+            else:
+                return True
+        else:
+            raise SystemError('User Database does not Exist')
+
+    def gotoPinPage(self, index, isCreatePin=False):
+        pin_page = Pin_Page(self.widget, self.user, index, self.isAutoLogin, self)
+        self.widget.addWidget(pin_page)
+        if isCreatePin:
+            if self.isAutoLogin:
+                self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+            else:
+                self.widget.setCurrentIndex(self.widget.currentIndex() + 2)
+        else:
+            if self.isAutoLogin:
+                self.widget.setCurrentIndex(self.widget.currentIndex() + 3)
+            else:
+                self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+            # Wait for Pin Page to close
+            self.wait_object_destruction(pin_page)
+            if self.getPinResult() == True:
+                self.setPinResult(False)
+                return True
+            return False
+    
+    def getPinResult(self):
+        return self.pinResult
+    
+    def setPinResult(self, boolean):
+        self.pinResult = boolean
+        
     def gotoHomePage(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
         self.refreshHomePage()
@@ -86,7 +128,7 @@ class Main_Page(QWidget):
     def refreshHomePage(self):
         username = self.user.getUsername()
 
-        if(username):
+        if username:
             self.ui.hiLabel.setText(f"Hi, {username}")
         else:
             self.ui.hiLabel.setText(f"Hi, {self.email}")
@@ -108,7 +150,6 @@ class Main_Page(QWidget):
             self.ui.notificationWidget.setVisible(False)
         else:
             self.ui.notificationWidget.setVisible(True)
-
             if self.user.getNotification:
                 self.ui.opennotificationRadioButton.setChecked(True)
             else:
@@ -132,75 +173,86 @@ class Main_Page(QWidget):
         else:
             self.ui.changeusernameWidget.setVisible(True)
     
+    def wait_object_destruction(self, my_object):
+        loop = QEventLoop()
+        name = my_object.objectName()
+        my_object.destroyed.connect(loop.quit)
+        loop.exec_()
+        return None
+    
     def handleAddCar(self):
-        userinfo = self.db.child('users').child(self.UID).get()
+        if self.gotoPinPage(3):
+            userinfo = self.db.child('users').child(self.UID).get()
+            if userinfo.val() is not None:
+                company = self.ui.companyLineEdit.text()
+                model = self.ui.modelLineEdit.text()
+                batteryCapacity = self.ui.batterycapacityLineEdit.text()
+                chargingCapacity = self.ui.chargingcapacityLineEdit.text()
+                timestamp = time.time()
 
-        if userinfo.val() is not None:
-            company = self.ui.companyLineEdit.text()
-            model = self.ui.modelLineEdit.text()
-            batteryCapacity = self.ui.batterycapacityLineEdit.text()
-            chargingCapacity = self.ui.chargingcapacityLineEdit.text()
-            timestamp = time.time()
-
-            if company != "" and model != "" and batteryCapacity != "" and chargingCapacity != "" and not company.isspace() and not model.isspace() and not batteryCapacity.isspace() and not chargingCapacity.isspace():
-                newCar = {'company': company, 'model': model, 'batterCapacity': batteryCapacity, 'chargingCapacity': chargingCapacity, 'timestamp': timestamp}
-                try:
-                    self.user.addCar(newCar)
-                    self.showAlert("New car added")
-                except:
-                    self.showAlert("Can't add car")
+                if company != "" and model != "" and batteryCapacity != "" and chargingCapacity != "" and not company.isspace() and not model.isspace() and not batteryCapacity.isspace() and not chargingCapacity.isspace():
+                    newCar = {'company': company, 'model': model, 'batterCapacity': batteryCapacity, 'chargingCapacity': chargingCapacity, 'timestamp': timestamp}
+                    try:
+                        self.user.addCar(newCar)
+                        self.showAlert("New car added")
+                    except:
+                        self.showAlert("Can't add car")
+                else:
+                    self.showAlert("Invalid car input")
             else:
-                self.showAlert("Invalid car input")
-        else:
-            raise SystemError('User Database does not Exist')
+                raise SystemError('User Database does not Exist')
     
     def handleAddCard(self):
-        userinfo = self.db.child('users').child(self.UID).get()
+        if self.gotoPinPage(3):
+            userinfo = self.db.child('users').child(self.UID).get()
 
-        if userinfo.val() is not None:
-            cardNumber = self.ui.cardnumberLineEdit.text()
-            cardHolderName = self.ui.cardholdernameLineEdit.text()
-            expiry = self.ui.expiryLineEdit.text()
-            cvv = self.ui.cvvLineEdit.text()
-            timestamp = time.time()
+            if userinfo.val() is not None:
+                cardNumber = self.ui.cardnumberLineEdit.text()
+                cardHolderName = self.ui.cardholdernameLineEdit.text()
+                expiry = self.ui.expiryLineEdit.text()
+                cvv = self.ui.cvvLineEdit.text()
+                timestamp = time.time()
 
-            if cardNumber != "" and cardHolderName != "" and expiry != "" and cvv != "" and not cardNumber.isspace() and not cardHolderName.isspace() and not expiry.isspace() and not cvv.isspace():
-                newCard = {'cardNumber': cardNumber, 'cardHolderName': cardHolderName, 'expiry': expiry, 'cvv': cvv, 'timestamp': timestamp}
-                try:
-                    self.user.addCard(newCard)
-                    self.showAlert("New card added")
-                except:
-                    self.showAlert("Can't add card")
+                if cardNumber != "" and cardHolderName != "" and expiry != "" and cvv != "" and not cardNumber.isspace() and not cardHolderName.isspace() and not expiry.isspace() and not cvv.isspace():
+                    newCard = {'cardNumber': cardNumber, 'cardHolderName': cardHolderName, 'expiry': expiry, 'cvv': cvv, 'timestamp': timestamp}
+                    try:
+                        self.user.addCard(newCard)
+                        self.showAlert("New card added")
+                    except:
+                        self.showAlert("Can't add card")
+                else:
+                    self.showAlert("Invalid card input")
             else:
-                self.showAlert("Invalid card input")
-        else:
-            raise SystemError('User Database does not Exist')
+                raise SystemError('User Database does not Exist')
 
     def handleChangeUsername(self):
-        userinfo = self.db.child('users').child(self.UID).get()
+        if self.gotoPinPage(3):
+            userinfo = self.db.child('users').child(self.UID).get()
 
-        if userinfo.val() is not None:
-            newUsername = self.ui.newusernameLineEdit.text()
+            if userinfo.val() is not None:
+                newUsername = self.ui.newusernameLineEdit.text()
 
-            if newUsername != "" and not newUsername.isspace():
-                try:
-                    self.user.setUsername(newUsername)
-                    self.showAlert("Username has been changed")
-                except:
-                    self.showAlert("Can't change username")
+                if newUsername != "" and not newUsername.isspace():
+                    try:
+                        self.user.setUsername(newUsername)
+                        self.showAlert("Username has been changed")
+                    except:
+                        self.showAlert("Can't change username")
+                else:
+                    self.showAlert("Invalid username input")
             else:
-                self.showAlert("Invalid username input")
-        else:
-            raise SystemError('User Database does not Exist')
+                raise SystemError('User Database does not Exist')
     
     def handleChangePassword(self):
-        self.auth.send_password_reset_email(self.email)
-        self.showAlert("Reset password has been sent to email")
+        if self.gotoPinPage(3):
+            self.auth.send_password_reset_email(self.email)
+            self.showAlert("Reset password has been sent to email")
     
     def handleLogout(self):
-        self.widget.removeWidget(self.widget.currentWidget())
-        # self.widget.setCurrentIndex(2)
-        print("logged out")
+        if self.gotoPinPage(3):
+            self.widget.removeWidget(self.widget.currentWidget())
+            # self.widget.setCurrentIndex(2)
+            print("logged out")
 
     def openStationLocations(self):
         layout = QVBoxLayout()
