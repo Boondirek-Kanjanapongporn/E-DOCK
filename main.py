@@ -47,7 +47,7 @@ class Ui_Form(object):
         self.homeScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 272, 687))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 342, 687))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.formLayout.setVerticalSpacing(10)
@@ -66,7 +66,7 @@ class Ui_Form(object):
         self.stationScrollArea.setWidgetResizable(True)
         self.stationAreaWidgetContents = QWidget()
         self.stationAreaWidgetContents.setObjectName(u"stationAreaWidgetContents")
-        self.stationAreaWidgetContents.setGeometry(QRect(0, 0, 198, 175))
+        self.stationAreaWidgetContents.setGeometry(QRect(0, 0, 300, 175))
         self.stationAreaWidgetContents.setMinimumSize(QSize(0, 0))
         self.formLayout_6 = QFormLayout(self.stationAreaWidgetContents)
         self.formLayout_6.setObjectName(u"formLayout_6")
@@ -1050,7 +1050,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
         self.notificationPushButton.setDefault(False)
 
 

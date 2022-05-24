@@ -924,6 +924,17 @@ class Ui_Form(object):
 "	border: 3px solid #cecece;\n"
 "}\n"
 "")
+        self.closePushButton = QPushButton(self.enterpinPage)
+        self.closePushButton.setObjectName(u"closePushButton")
+        self.closePushButton.setGeometry(QRect(320, 20, 31, 24))
+        self.closePushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.closePushButton.setStyleSheet(u"QPushButton{\n"
+"	border: None;\n"
+"}")
+        icon1 = QIcon()
+        icon1.addFile(u"images/close.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.closePushButton.setIcon(icon1)
+        self.closePushButton.setIconSize(QSize(20, 20))
         self.stackedWidget.addWidget(self.enterpinPage)
         self.enterpasswordPage = QWidget()
         self.enterpasswordPage.setObjectName(u"enterpasswordPage")
@@ -936,17 +947,32 @@ class Ui_Form(object):
         self.enterpasswordLabel.setAlignment(Qt.AlignCenter)
         self.enterpasswordLineEdit = QLineEdit(self.enterpasswordPage)
         self.enterpasswordLineEdit.setObjectName(u"enterpasswordLineEdit")
-        self.enterpasswordLineEdit.setGeometry(QRect(20, 220, 321, 51))
+        self.enterpasswordLineEdit.setGeometry(QRect(20, 190, 321, 51))
         self.enterpasswordLineEdit.setStyleSheet(u"QLineEdit{\n"
 "	border-radius: 10px;\n"
 "	border: 3px solid #cecece;\n"
 "	font: 18pt Arial;\n"
 "}")
+        self.okPushButton = QPushButton(self.enterpasswordPage)
+        self.okPushButton.setObjectName(u"okPushButton")
+        self.okPushButton.setGeometry(QRect(140, 290, 75, 51))
+        font1 = QFont()
+        font1.setPointSize(12)
+        self.okPushButton.setFont(font1)
+        self.closePushButton_2 = QPushButton(self.enterpasswordPage)
+        self.closePushButton_2.setObjectName(u"closePushButton_2")
+        self.closePushButton_2.setGeometry(QRect(320, 20, 31, 24))
+        self.closePushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.closePushButton_2.setStyleSheet(u"QPushButton{\n"
+"	border: None;\n"
+"}")
+        self.closePushButton_2.setIcon(icon1)
+        self.closePushButton_2.setIconSize(QSize(20, 20))
         self.stackedWidget.addWidget(self.enterpasswordPage)
 
         self.retranslateUi(Form)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Form)
@@ -1008,6 +1034,9 @@ class Ui_Form(object):
         self.pin3_3.setText("")
         self.entepincodeLabel.setText(QCoreApplication.translate("Form", u"Enter a PIN Code", None))
         self.pin5_3.setText("")
+        self.closePushButton.setText("")
         self.enterpasswordLabel.setText(QCoreApplication.translate("Form", u"Enter Password", None))
+        self.okPushButton.setText(QCoreApplication.translate("Form", u"OK", None))
+        self.closePushButton_2.setText("")
     # retranslateUi
 

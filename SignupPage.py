@@ -2,6 +2,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from signup import Ui_Form as Ui_Signup
 from MainPage import Main_Page
+import pickle 
 
 class Signup_Page(QWidget):
     def __init__(self, db, auth, widget):
@@ -54,16 +55,22 @@ class Signup_Page(QWidget):
     def gotoLogin_Page(self):
         self.widget.setCurrentIndex(self.widget.currentIndex() - 1)
     
-    def gotoMain_page(self):
-        main_page = Main_Page(self.db, self.auth, self.widget)
+    def gotoMain_page(self, isAutoLogin=False):
+        main_page = Main_Page(self.db, self.auth, self.widget, isAutoLogin)
         self.widget.addWidget(main_page)
         self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
     
     def autoLogin(self, email, password):
         self.auth.sign_in_with_email_and_password(email, password)
+        self.saveRememberMe(email, password)
         self.createDatabaseUser()
         self.gotoMain_page()
-    
+
+    def saveRememberMe(self, email, password):
+        userData = {"email": email, "password": password}
+        with open('rememberUser.pkl','wb') as rememberUser:
+            pickle.dump(userData, rememberUser)
+
     def createDatabaseUser(self):
         uid = self.auth.current_user['localId']
         userinfo = self.db.child('users').child(uid).get()

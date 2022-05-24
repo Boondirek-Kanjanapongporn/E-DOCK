@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="createpinPage">
     <widget class="QWidget" name="gridLayoutWidget">
@@ -1968,6 +1968,37 @@ color: black;</string>
       <string/>
      </property>
     </widget>
+    <widget class="QPushButton" name="closePushButton">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>20</y>
+       <width>31</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border: None;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/close.png</normaloff>images/close.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="enterpasswordPage">
     <widget class="QLabel" name="enterpasswordLabel">
@@ -2002,7 +2033,7 @@ color: black;</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>220</y>
+       <y>190</y>
        <width>321</width>
        <height>51</height>
       </rect>
@@ -2013,6 +2044,55 @@ color: black;</string>
 	border: 3px solid #cecece;
 	font: 18pt Arial;
 }</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="okPushButton">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>290</y>
+       <width>75</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>OK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="closePushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>20</y>
+       <width>31</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	border: None;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/close.png</normaloff>images/close.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
      </property>
     </widget>
    </widget>

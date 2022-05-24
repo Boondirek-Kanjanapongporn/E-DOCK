@@ -1,7 +1,8 @@
 class User:
-    def __init__(self, db, UID):
+    def __init__(self, db, UID, email):
         self.db = db
         self.UID = UID
+        self.email = email
     
     # def createUserInfo(self):
     #     if self.getUserInfo() is None:
@@ -10,7 +11,9 @@ class User:
     #         return True
     #     else:
     #         return False
-    
+    def getEmail(self):
+        return self.email
+
     def getUserInfo(self):
         try:
             userInfo = self.db.child('users').child(self.UID).get().val()
