@@ -57,8 +57,8 @@ class Login_Page(QWidget):
     def gotoSignup_Page(self):
         self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
     
-    def gotoMain_Page(self):
-        main_page = Main_Page(self.db, self.auth, self.widget)
+    def gotoMain_Page(self, isAutoLogin=False):
+        main_page = Main_Page(self.db, self.auth, self.widget, isAutoLogin)
         self.widget.addWidget(main_page)
         self.widget.setCurrentIndex(self.widget.currentIndex() + 2)
     
@@ -75,7 +75,7 @@ class Login_Page(QWidget):
                     print("Login to account")
                     # print(f"Login account with email: {userData['email']} and password: {userData['password']}")
                     
-                    self.gotoMain_Page()
+                    self.gotoMain_Page(True)
         except:
             print('No rememberUser file found')
 
