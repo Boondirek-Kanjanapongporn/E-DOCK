@@ -26,7 +26,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="homePage">
        <widget class="QScrollArea" name="homeScrollArea">
@@ -55,7 +55,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>272</width>
+           <width>342</width>
            <height>687</height>
           </rect>
          </property>
@@ -107,7 +107,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>198</width>
+               <width>300</width>
                <height>175</height>
               </rect>
              </property>
