@@ -3,6 +3,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWebEngineWidgets import *
 import time
+
 from main import Ui_Form as Ui_Main
 from User import User
 from PinPage import Pin_Page
@@ -38,13 +39,31 @@ class Main_Page(QWidget):
         self.refreshHistoryPage()
         self.refreshLocationPage()
         self.refreshAccountPage()
+        
+        # Home Page -------------------------------------------------------------------------------------------------------
+        self.ui.topupPushButton.clicked.connect(self.gotoTopupPage)
 
+        # History Page ----------------------------------------------------------------------------------------------------
+        historyTest = [{'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
+                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'}]
+        self.addHistoryList(historyTest)
+
+        # Location Page -------------------------------------------------------------------------------------------------
         # Open EV station locations
         self.openStationLocations()
-        
-        # Home Page
-        # History Page
-        #Location Page
 
         # Account Page -----------------------------------------------------------------------------------------
         # Toggle Open/Close Settings
@@ -66,13 +85,37 @@ class Main_Page(QWidget):
         # Handle Change Username Settings
         self.ui.changeusernamePushButton_2.clicked.connect(self.handleChangeUsername)
 
+        # Handle Change Pin Settings
+        self.ui.changepinPushButton.clicked.connect(self.handleChangePin)
+
         # Handle Change Password Settings
         self.ui.changepasswordPushButton.clicked.connect(self.handleChangePassword)
 
         # Handle Logout
         self.ui.logoutPushButton.clicked.connect(self.handleLogout)
+
+        # Top-Up Page -----------------------------------------------------------------------------------------------
+        self.ui.pushButton_0.clicked.connect(lambda: self.addNumbertoTopUp("0"))
+        self.ui.pushButton_1.clicked.connect(lambda: self.addNumbertoTopUp("1"))
+        self.ui.pushButton_2.clicked.connect(lambda: self.addNumbertoTopUp("2"))
+        self.ui.pushButton_3.clicked.connect(lambda: self.addNumbertoTopUp("3"))
+        self.ui.pushButton_4.clicked.connect(lambda: self.addNumbertoTopUp("4"))
+        self.ui.pushButton_5.clicked.connect(lambda: self.addNumbertoTopUp("5"))
+        self.ui.pushButton_6.clicked.connect(lambda: self.addNumbertoTopUp("6"))
+        self.ui.pushButton_7.clicked.connect(lambda: self.addNumbertoTopUp("7"))
+        self.ui.pushButton_8.clicked.connect(lambda: self.addNumbertoTopUp("8"))
+        self.ui.pushButton_9.clicked.connect(lambda: self.addNumbertoTopUp("9"))
+        self.ui.pushButton_delete.clicked.connect(lambda: self.deleteNumberfromTopUp())
+        self.ui.pushButton_dot.clicked.connect(lambda: self.addNumbertoTopUp("."))
     
-        # ------------------------------------------------------------------------------------------------------
+    # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    def getPinResult(self):
+        return self.pinResult
+    
+    def setPinResult(self, boolean):
+        self.pinResult = boolean
+
     def createPin(self):
         userinfo = self.db.child('users').child(self.UID).get()
         if userinfo.val() is not None:
@@ -84,7 +127,7 @@ class Main_Page(QWidget):
             raise SystemError('User Database does not Exist')
 
     def gotoPinPage(self, index, isCreatePin=False):
-        pin_page = Pin_Page(self.widget, self.user, index, self.isAutoLogin, self)
+        pin_page = Pin_Page(self.auth, self.widget, self.user, index, self.isAutoLogin, self)
         self.widget.addWidget(pin_page)
         if isCreatePin:
             if self.isAutoLogin:
@@ -96,18 +139,12 @@ class Main_Page(QWidget):
                 self.widget.setCurrentIndex(self.widget.currentIndex() + 3)
             else:
                 self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
-            # Wait for Pin Page to close
-            self.wait_object_destruction(pin_page)
-            if self.getPinResult() == True:
-                self.setPinResult(False)
-                return True
-            return False
-    
-    def getPinResult(self):
-        return self.pinResult
-    
-    def setPinResult(self, boolean):
-        self.pinResult = boolean
+        # Wait for Pin Page to close
+        self.wait_object_destruction(pin_page)
+        if self.getPinResult():
+            self.setPinResult(False)
+            return True
+        return False
         
     def gotoHomePage(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
@@ -127,7 +164,6 @@ class Main_Page(QWidget):
     
     def refreshHomePage(self):
         username = self.user.getUsername()
-
         if username:
             self.ui.hiLabel.setText(f"Hi, {username}")
         else:
@@ -145,11 +181,57 @@ class Main_Page(QWidget):
         self.ui.addcardWidget.setVisible(False)
         self.ui.changeusernameWidget.setVisible(False)
     
+    def showAlert(self, text):
+        dialog = QDialog(self)
+        layout = QVBoxLayout()
+        label = QLabel(self)
+        label.setText(text)
+        layout.addWidget(label)
+        dialog.setLayout(layout)
+        dialog.show()
+    
+    # Home Page functions -----------------------------------------------------------------------------------------------
+    def hiUserLabel(self):
+        username = User.getUsername
+        if username:
+            return username
+        else:
+            return self.auth.current_user['email']
+    
+    def gotoTopupPage(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.topupPage)
+        self.refreshTopupPage()
+    
+    def refreshTopupPage(self):
+        self.ui.topupvalueLineEdit.setText("")
+    
+    # History Page functions ---------------------------------------------------------------------------------------------
+    def addHistoryList(self, historyList):
+        for history in historyList:
+            self.ui.historyVerticalLayout.addWidget(self.createHistoryPushButton(history))
+        self.ui.historyVerticalLayout.addStretch(1)
+    
+    def createHistoryPushButton(self, history):
+        historyPushButton = QPushButton()
+        historyPushButton.setText(f"{history.get('company')}\nPrice: {history.get('price')}\nDuration: {history.get('duration')}\nTimestamp: {history.get('timestamp')}")
+        return historyPushButton
+    
+    # Location Page functions ------------------------------------------------------------------------------------------------
+    def openStationLocations(self):
+        layout = QVBoxLayout()
+        web = QWebEngineView()
+        web.load(QUrl("https://www.plugshare.com/"))
+        layout.addWidget(web)
+        self.ui.locationWidget.setLayout(layout)
+    
+    # Account Page functions --------------------------------------------------------------------------------------------------
     def toggleNotificationWidget(self):
         if self.ui.notificationWidget.isVisible():
             self.ui.notificationWidget.setVisible(False)
+            self.ui.notificationPushButton.setIcon(QIcon("images\\right-arrow.png"))
         else:
             self.ui.notificationWidget.setVisible(True)
+            self.ui.notificationPushButton.setIcon(QIcon("images\\down-arrow.png"))
             if self.user.getNotification:
                 self.ui.opennotificationRadioButton.setChecked(True)
             else:
@@ -158,24 +240,29 @@ class Main_Page(QWidget):
     def toggleAddCarWidget(self):
         if self.ui.addcarWidget.isVisible():
             self.ui.addcarWidget.setVisible(False)
+            self.ui.addcarPushButton.setIcon(QIcon("images\\right-arrow.png"))
         else:
             self.ui.addcarWidget.setVisible(True)
+            self.ui.addcarPushButton.setIcon(QIcon("images\\down-arrow.png"))
     
     def toggleAddCardWidget(self):
         if self.ui.addcardWidget.isVisible():
             self.ui.addcardWidget.setVisible(False)
+            self.ui.addcardPushButton.setIcon(QIcon("images\\right-arrow.png"))
         else:
             self.ui.addcardWidget.setVisible(True)
+            self.ui.addcardPushButton.setIcon(QIcon("images\\down-arrow.png"))
     
     def toggleChangeUsernameWidget(self):
         if self.ui.changeusernameWidget.isVisible():
             self.ui.changeusernameWidget.setVisible(False)
+            self.ui.changeusernamePushButton.setIcon(QIcon("images\\right-arrow.png"))
         else:
             self.ui.changeusernameWidget.setVisible(True)
+            self.ui.changeusernamePushButton.setIcon(QIcon("images\\down-arrow.png"))
     
     def wait_object_destruction(self, my_object):
         loop = QEventLoop()
-        name = my_object.objectName()
         my_object.destroyed.connect(loop.quit)
         loop.exec_()
         return None
@@ -243,6 +330,13 @@ class Main_Page(QWidget):
             else:
                 raise SystemError('User Database does not Exist')
     
+    def handleChangePin(self):
+        if self.gotoPinPage(4):
+            if self.gotoPinPage(1):
+                self.showAlert("Pin has been changed")
+            else:
+                self.showAlert("Invalid Pin input")
+    
     def handleChangePassword(self):
         if self.gotoPinPage(3):
             self.auth.send_password_reset_email(self.email)
@@ -253,29 +347,25 @@ class Main_Page(QWidget):
             self.widget.removeWidget(self.widget.currentWidget())
             # self.widget.setCurrentIndex(2)
             print("logged out")
+    
+    # TopUp Page functions ----------------------------------------------------------------------------------------------
+    def addNumbertoTopUp(self, str):
+        topupStr = self.ui.topupvalueLineEdit.text()
 
-    def openStationLocations(self):
-        layout = QVBoxLayout()
-        web = QWebEngineView()
-        web.load(QUrl("https://www.plugshare.com/"))
-        layout.addWidget(web)
-        self.ui.locationWidget.setLayout(layout)
-    
-    def hiUserLabel(self):
-        username = User.getUsername
-        if username:
-            return username
+        if "." in topupStr and str == ".":
+            print("Can't add 2 dots")
         else:
-            return self.auth.current_user['email']
+            topupStr += str
+            if float(topupStr) <= 200000:
+                self.ui.topupvalueLineEdit.setText(topupStr)
+            else:
+                print("Value can't be over 200000")
+        return
     
-    def showAlert(self, text):
-        dialog = QDialog(self)
-        layout = QVBoxLayout()
-        label = QLabel(self)
-        label.setText(text)
-        layout.addWidget(label)
-        dialog.setLayout(layout)
-        dialog.show()
+    def deleteNumberfromTopUp(self):
+        topupStr = self.ui.topupvalueLineEdit.text()
+        if topupStr is not empty:
+            self.ui.topupvalueLineEdit.setText(topupStr[:-1])
         
 
 
