@@ -39,34 +39,42 @@ class Ui_Form(object):
         self.loginPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.loginPushButton.setStyleSheet(u"QPushButton\n"
 "{\n"
-"	background-color: #aa1111;\n"
+"	background-color: #71cd00;\n"
 "	border-radius: 10px;\n"
 "	font: 16pt, arial;\n"
 "	color: #ffffff;\n"
 "}\n"
 "QPushButton-Hover:\n"
 "{\n"
-"	background-color: #aa1111;\n"
+"	background-color: #549900;\n"
 "}\n"
 "")
         self.emailLineEdit = QLineEdit(Form)
         self.emailLineEdit.setObjectName(u"emailLineEdit")
         self.emailLineEdit.setGeometry(QRect(40, 170, 281, 35))
         self.emailLineEdit.setMinimumSize(QSize(0, 35))
-        self.emailLineEdit.setStyleSheet(u"QLineEdit{\n"
-"	border: 2px solid #D2D2D2;\n"
-"	border-radius: 10px\n"
+        self.emailLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
 "}\n"
-"")
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
         self.passwordLineEdit = QLineEdit(Form)
         self.passwordLineEdit.setObjectName(u"passwordLineEdit")
         self.passwordLineEdit.setGeometry(QRect(40, 260, 281, 35))
         self.passwordLineEdit.setMinimumSize(QSize(0, 35))
-        self.passwordLineEdit.setStyleSheet(u"QLineEdit{\n"
-"	border: 2px solid #D2D2D2;\n"
-"	border-radius: 10px\n"
+        self.passwordLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
 "}\n"
-"")
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
         self.remembermeCheckBox = QCheckBox(Form)
         self.remembermeCheckBox.setObjectName(u"remembermeCheckBox")
         self.remembermeCheckBox.setGeometry(QRect(40, 300, 121, 20))
@@ -87,7 +95,7 @@ class Ui_Form(object):
         self.signupPushButton.setStyleSheet(u"QPushButton {\n"
 "	border: None;\n"
 "	text-decoration: underline;\n"
-"	color: #aa1111;\n"
+"	color: #1c33de;\n"
 "	\n"
 "}")
         self.forgotpasswordPushButton = QPushButton(Form)

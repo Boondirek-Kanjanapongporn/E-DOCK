@@ -62,14 +62,14 @@ color: #444444</string>
    <property name="styleSheet">
     <string notr="true">QPushButton
 {
-	background-color: #aa1111;
+	background-color: #71cd00;
 	border-radius: 10px;
 	font: 16pt, arial;
 	color: #ffffff;
 }
 QPushButton-Hover:
 {
-	background-color: #aa1111;
+	background-color: #549900;
 }
 </string>
    </property>
@@ -93,11 +93,15 @@ QPushButton-Hover:
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit{
-	border: 2px solid #D2D2D2;
-	border-radius: 10px
+    <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
 }
-</string>
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="passwordLineEdit">
@@ -116,11 +120,15 @@ QPushButton-Hover:
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLineEdit{
-	border: 2px solid #D2D2D2;
-	border-radius: 10px
+    <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
 }
-</string>
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="remembermeCheckBox">
@@ -190,7 +198,7 @@ QPushButton-Hover:
     <string notr="true">QPushButton {
 	border: None;
 	text-decoration: underline;
-	color: #aa1111;
+	color: #1c33de;
 	
 }</string>
    </property>

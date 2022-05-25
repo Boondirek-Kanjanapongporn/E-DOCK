@@ -40,12 +40,12 @@ class Ui_Form(object):
         self.emailLineEdit.setFont(font)
         self.emailLineEdit.setStyleSheet(u"QLineEdit\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #71cd00;\n"
 "	border-radius: 10px;\n"
 "}\n"
 "QLineEdit:focus\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #71cd00;\n"
 "}")
         self.passwordLineEdit = QLineEdit(Form)
         self.passwordLineEdit.setObjectName(u"passwordLineEdit")
@@ -53,12 +53,12 @@ class Ui_Form(object):
         self.passwordLineEdit.setMinimumSize(QSize(0, 35))
         self.passwordLineEdit.setStyleSheet(u"QLineEdit\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #71cd00;\n"
 "	border-radius: 10px;\n"
 "}\n"
 "QLineEdit:focus\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #71cd00;\n"
 "}")
         self.emailLabel = QLabel(Form)
         self.emailLabel.setObjectName(u"emailLabel")
@@ -79,14 +79,14 @@ class Ui_Form(object):
         self.singupPushButton.setGeometry(QRect(40, 410, 281, 41))
         self.singupPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.singupPushButton.setStyleSheet(u"QPushButton{\n"
-"	background-color:#aa1111;\n"
+"	background-color:#71cd00;\n"
 "	border-radius: 10px;\n"
 "	color: #FFFFFF;\n"
 "	font: 16px;\n"
 "}\n"
 "QPushButton:hover\n"
 "{\n"
-"	background-color:#aa1111;\n"
+"	background-color:#468000;\n"
 "}\n"
 "	")
         self.loginPushButton = QPushButton(Form)
@@ -96,7 +96,7 @@ class Ui_Form(object):
         self.loginPushButton.setStyleSheet(u"QPushButton {\n"
 "	border: None;\n"
 "	text-decoration: underline;\n"
-"	color: #AA1111;\n"
+"	color: #1c33de;\n"
 "}")
         self.confirmpasswordLabel = QLabel(Form)
         self.confirmpasswordLabel.setObjectName(u"confirmpasswordLabel")
@@ -109,12 +109,12 @@ class Ui_Form(object):
         self.confirmpasswordLineEdit.setMinimumSize(QSize(0, 35))
         self.confirmpasswordLineEdit.setStyleSheet(u"QLineEdit\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #71cd00;\n"
 "	border-radius: 10px;\n"
 "}\n"
 "QLineEdit:focus\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #71cd00;\n"
 "}")
         self.invalidemailLabel = QLabel(Form)
         self.invalidemailLabel.setObjectName(u"invalidemailLabel")
@@ -131,7 +131,7 @@ class Ui_Form(object):
         self.invalidpasswordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.passwordsdonotmatchLabel = QLabel(Form)
         self.passwordsdonotmatchLabel.setObjectName(u"passwordsdonotmatchLabel")
-        self.passwordsdonotmatchLabel.setGeometry(QRect(190, 370, 141, 16))
+        self.passwordsdonotmatchLabel.setGeometry(QRect(170, 370, 161, 20))
         self.passwordsdonotmatchLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
 "}")

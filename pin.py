@@ -948,10 +948,15 @@ class Ui_Form(object):
         self.enterpasswordLineEdit = QLineEdit(self.enterpasswordPage)
         self.enterpasswordLineEdit.setObjectName(u"enterpasswordLineEdit")
         self.enterpasswordLineEdit.setGeometry(QRect(20, 190, 321, 51))
-        self.enterpasswordLineEdit.setStyleSheet(u"QLineEdit{\n"
+        self.enterpasswordLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
 "	border-radius: 10px;\n"
-"	border: 3px solid #cecece;\n"
-"	font: 18pt Arial;\n"
+"font: 18pt Arial;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
 "}")
         self.okPushButton = QPushButton(self.enterpasswordPage)
         self.okPushButton.setObjectName(u"okPushButton")
@@ -959,14 +964,15 @@ class Ui_Form(object):
         self.okPushButton.setFont(font)
         self.okPushButton.setStyleSheet(u"QPushButton\n"
 "{\n"
-"	background: #cecece;\n"
+"	background: #71cd00;\n"
 "	border-radius: 10px;\n"
 "	font: 20px Arial;\n"
+"	color: #ffffff;\n"
 "	\n"
 "}\n"
 "QPushButton:pressed\n"
 "{\n"
-"	background: #bbbbbf;\n"
+"	background: #468000;;\n"
 "}")
         self.closePushButton_2 = QPushButton(self.enterpasswordPage)
         self.closePushButton_2.setObjectName(u"closePushButton_2")

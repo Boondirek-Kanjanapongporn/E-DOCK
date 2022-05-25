@@ -2039,10 +2039,15 @@ color: black;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLineEdit{
+      <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
 	border-radius: 10px;
-	border: 3px solid #cecece;
-	font: 18pt Arial;
+font: 18pt Arial;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
 }</string>
      </property>
     </widget>
@@ -2066,14 +2071,15 @@ color: black;</string>
      <property name="styleSheet">
       <string notr="true">QPushButton
 {
-	background: #cecece;
+	background: #71cd00;
 	border-radius: 10px;
 	font: 20px Arial;
+	color: #ffffff;
 	
 }
 QPushButton:pressed
 {
-	background: #bbbbbf;
+	background: #468000;;
 }</string>
      </property>
      <property name="text">

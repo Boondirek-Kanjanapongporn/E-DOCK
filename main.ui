@@ -83,6 +83,17 @@
               <height>35</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #D2D2D2;
+}</string>
+            </property>
            </widget>
           </item>
           <item row="4" column="0" colspan="2">
@@ -323,12 +334,12 @@
              <number>12</number>
             </property>
             <item>
-             <layout class="QVBoxLayout" name="paymentVerticalLayout">
+             <layout class="QVBoxLayout" name="chargeVerticalLayout">
               <property name="spacing">
                <number>0</number>
               </property>
               <item>
-               <widget class="QPushButton" name="paymentPushButton">
+               <widget class="QPushButton" name="chargePushButton">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -354,7 +365,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="paymentLabel">
+               <widget class="QLabel" name="chargeLabel">
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
@@ -1147,6 +1158,11 @@
               <bold>true</bold>
              </font>
             </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+	color: #71cd00;
+}</string>
+            </property>
             <property name="text">
              <string>Welcome to E-DOCK!</string>
             </property>
@@ -1362,7 +1378,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>327</width>
+           <width>342</width>
            <height>1136</height>
           </rect>
          </property>
@@ -1669,6 +1685,17 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -1685,6 +1712,17 @@
                     <width>0</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
                   </property>
                  </widget>
                 </item>
@@ -1703,6 +1741,17 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -1719,6 +1768,17 @@
                     <width>0</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
                   </property>
                  </widget>
                 </item>
@@ -1760,12 +1820,24 @@
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	background-color:#71cd00;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+QPushButton:hover
+{
+	background-color:#468000;
+}
+	</string>
+                    </property>
                     <property name="text">
                      <string> Add Car</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../.designer/backup/images/add.png</normaloff>../../../.designer/backup/images/add.png</iconset>
+                      <normaloff>images/add.png</normaloff>images/add.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1872,6 +1944,17 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -1888,6 +1971,17 @@
                     <width>0</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
                   </property>
                  </widget>
                 </item>
@@ -1906,6 +2000,17 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -1922,6 +2027,17 @@
                     <width>0</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
                   </property>
                  </widget>
                 </item>
@@ -1963,12 +2079,24 @@
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	background-color:#71cd00;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+QPushButton:hover
+{
+	background-color:#468000;
+}
+	</string>
+                    </property>
                     <property name="text">
                      <string> Add Card</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../.designer/backup/images/add.png</normaloff>../../../.designer/backup/images/add.png</iconset>
+                      <normaloff>images/add.png</normaloff>images/add.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -2066,6 +2194,17 @@
                     <height>30</height>
                    </size>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -2106,12 +2245,24 @@
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	background-color:#71cd00;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+QPushButton:hover
+{
+	background-color:#468000;
+}
+	</string>
+                    </property>
                     <property name="text">
                      <string> Change</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../../../.designer/backup/images/change.png</normaloff>../../../.designer/backup/images/change.png</iconset>
+                      <normaloff>images/change.png</normaloff>images/change.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -2163,6 +2314,10 @@
                 <property name="text">
                  <string>Change Pin</string>
                 </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>images/change.png</normaloff>images/change.png</iconset>
+                </property>
                </widget>
               </item>
               <item>
@@ -2201,6 +2356,11 @@
                 </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: #aa1111;
+}</string>
                 </property>
                 <property name="text">
                  <string>Logout</string>
@@ -2255,7 +2415,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>239</width>
+           <width>342</width>
            <height>540</height>
           </rect>
          </property>
@@ -2403,6 +2563,17 @@
                  <font>
                   <pointsize>15</pointsize>
                  </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit
+{
+	border: 2px solid #71cd00;
+	border-radius: 10px;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2932,12 +3103,18 @@ QPushButton:pressed
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background-color: #71cd00;
+	border-radius: 10px;
+	color: #ffffff;
+}
+QPushButton:hover{
+	background-color: #468000;
+}</string>
+                  </property>
                   <property name="text">
                    <string>Top-Up</string>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>../../../.designer/backup/images/add.png</normaloff>../../../.designer/backup/images/add.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -2973,6 +3150,1000 @@ QPushButton:pressed
         <property name="text">
          <string>Top-Up</string>
         </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="selectstationPage">
+       <widget class="QLabel" name="stationLabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Station</string>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="selectstationScrollArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>361</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>359</width>
+           <height>539</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QFormLayout" name="formLayout_8">
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="selectstationVerticalLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="verticalSpacer_16">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>15</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="enterstationidLabel">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Enter Station ID:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="enterstationidVerticalLayout">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <spacer name="verticalSpacer_13">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>15</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="enterstationidHorizontalLayout">
+                <property name="spacing">
+                 <number>5</number>
+                </property>
+                <property name="leftMargin">
+                 <number>15</number>
+                </property>
+                <property name="rightMargin">
+                 <number>15</number>
+                </property>
+                <item>
+                 <widget class="QLineEdit" name="stationid1">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #71cd00;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="stationid2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #71cd00;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="stationid3">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #71cd00;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="stationid4">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #71cd00;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="stationid5">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #71cd00;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="stationid6">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #71cd00;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+QLineEdit:focus
+{
+	border: 2px solid #71cd00;
+}</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>35</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="keyboardGridLayout_2">
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <property name="horizontalSpacing">
+                 <number>0</number>
+                </property>
+                <property name="verticalSpacing">
+                 <number>5</number>
+                </property>
+                <item row="4" column="2">
+                 <widget class="QPushButton" name="pushButton_delete_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>images/delete.png</normaloff>images/delete.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>25</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QPushButton" name="pushButton_9_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>9</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="pushButton_3_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>3</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QPushButton" name="pushButton_7_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>7</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="pushButton_2_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>2</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>16</width>
+                    <height>16</height>
+                   </size>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QPushButton" name="pushButton_0_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="pushButton_1_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	font: 22px Arial;
+	border-radius: 32px;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_5_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>5</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="pushButton_4_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>4</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="pushButton_8_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="pushButton_6_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>6</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QPushButton" name="pushButton_scan">
+                  <property name="minimumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>65</width>
+                    <height>65</height>
+                   </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 32px;
+	font: 22px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>images/scan.png</normaloff>images/scan.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>25</width>
+                    <height>25</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_15">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="searchvalueHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="searchPushButton">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background-color: #71cd00;
+	border-radius: 10px;
+	color: #ffffff;
+}
+QPushButton:hover{
+	background-color: #468000;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Search</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
      </widget>
@@ -3012,6 +4183,9 @@ QPushButton:pressed
       <property name="styleSheet">
        <string notr="true">QPushButton{
 	border: None;
+}
+QPushButton:hover{
+	color: #71cd00;
 }</string>
       </property>
       <property name="text">
@@ -3037,6 +4211,9 @@ QPushButton:pressed
       <property name="styleSheet">
        <string notr="true">QPushButton{
 	border: None;
+}
+QPushButton:hover{
+	color: #71cd00;
 }</string>
       </property>
       <property name="text">
@@ -3062,6 +4239,9 @@ QPushButton:pressed
       <property name="styleSheet">
        <string notr="true">QPushButton{
 	border: None;
+}
+QPushButton:hover{
+	color: #71cd00;
 }</string>
       </property>
       <property name="text">
@@ -3093,6 +4273,9 @@ QPushButton:pressed
       <property name="styleSheet">
        <string notr="true">QPushButton{
 	border: None;
+}
+QPushButton:hover{
+	color: #71cd00;
 }</string>
       </property>
       <property name="text">
