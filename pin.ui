@@ -2057,8 +2057,24 @@ color: black;</string>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <family>Arial</family>
+       <pointsize>-1</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+	background: #cecece;
+	border-radius: 10px;
+	font: 20px Arial;
+	
+}
+QPushButton:pressed
+{
+	background: #bbbbbf;
+}</string>
      </property>
      <property name="text">
       <string>OK</string>

@@ -4,9 +4,10 @@ from pin import Ui_Form as Ui_Pin
 import pickle
 
 class Pin_Page(QWidget):
-    def __init__(self, widget, user, index, isAutoLogin, parentObject):
+    def __init__(self, auth, widget, user, index, isAutoLogin, parentObject):
         QWidget.__init__(self, None)
         self.setAttribute(Qt.WA_DeleteOnClose)
+        self.auth = auth
         self.widget = widget
         self.user = user
         self.index = index
@@ -209,20 +210,11 @@ class Pin_Page(QWidget):
     def authPassword(self):
         password = self.ui.enterpasswordLineEdit.text()
         try:
-            self.auth.sign_in_with_email_and_password(self.user.getEmail, password)
-            return True
+            self.auth.sign_in_with_email_and_password(self.user.getEmail(), password)
+            self.closePinPage(True)
         except:
             print("Incorrect Password")
-            return False
-        # try:
-        #     with open('rememberUser.pkl', 'rb') as rememberUser:
-        #         userData = pickle.load(rememberUser)
-        #         if password == userData['password']:
-        #             return True
-        #         else:
-        #             return False
-        # except:
-        #     print('No rememberUser file found')
+            self.closePinPage()
 
     def showAlert(self, text):
         dialog = QDialog(self)
