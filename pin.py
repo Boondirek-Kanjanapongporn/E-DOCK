@@ -956,9 +956,18 @@ class Ui_Form(object):
         self.okPushButton = QPushButton(self.enterpasswordPage)
         self.okPushButton.setObjectName(u"okPushButton")
         self.okPushButton.setGeometry(QRect(140, 290, 75, 51))
-        font1 = QFont()
-        font1.setPointSize(12)
-        self.okPushButton.setFont(font1)
+        self.okPushButton.setFont(font)
+        self.okPushButton.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 10px;\n"
+"	font: 20px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
         self.closePushButton_2 = QPushButton(self.enterpasswordPage)
         self.closePushButton_2.setObjectName(u"closePushButton_2")
         self.closePushButton_2.setGeometry(QRect(320, 20, 31, 24))
