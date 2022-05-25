@@ -55,6 +55,15 @@ class Ui_Form(object):
         self.searchLineEdit = QLineEdit(self.scrollAreaWidgetContents)
         self.searchLineEdit.setObjectName(u"searchLineEdit")
         self.searchLineEdit.setMinimumSize(QSize(0, 35))
+        self.searchLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #D2D2D2;\n"
+"}")
 
         self.formLayout.setWidget(3, QFormLayout.SpanningRole, self.searchLineEdit)
 
@@ -141,29 +150,29 @@ class Ui_Form(object):
         self.otherservicesLayout = QHBoxLayout()
         self.otherservicesLayout.setSpacing(12)
         self.otherservicesLayout.setObjectName(u"otherservicesLayout")
-        self.paymentVerticalLayout = QVBoxLayout()
-        self.paymentVerticalLayout.setSpacing(0)
-        self.paymentVerticalLayout.setObjectName(u"paymentVerticalLayout")
-        self.paymentPushButton = QPushButton(self.scrollAreaWidgetContents)
-        self.paymentPushButton.setObjectName(u"paymentPushButton")
-        self.paymentPushButton.setMinimumSize(QSize(0, 31))
-        self.paymentPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.chargeVerticalLayout = QVBoxLayout()
+        self.chargeVerticalLayout.setSpacing(0)
+        self.chargeVerticalLayout.setObjectName(u"chargeVerticalLayout")
+        self.chargePushButton = QPushButton(self.scrollAreaWidgetContents)
+        self.chargePushButton.setObjectName(u"chargePushButton")
+        self.chargePushButton.setMinimumSize(QSize(0, 31))
+        self.chargePushButton.setCursor(QCursor(Qt.PointingHandCursor))
         icon = QIcon()
         icon.addFile(u"images/charging.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.paymentPushButton.setIcon(icon)
-        self.paymentPushButton.setIconSize(QSize(20, 20))
+        self.chargePushButton.setIcon(icon)
+        self.chargePushButton.setIconSize(QSize(20, 20))
 
-        self.paymentVerticalLayout.addWidget(self.paymentPushButton)
+        self.chargeVerticalLayout.addWidget(self.chargePushButton)
 
-        self.paymentLabel = QLabel(self.scrollAreaWidgetContents)
-        self.paymentLabel.setObjectName(u"paymentLabel")
-        self.paymentLabel.setStyleSheet(u"")
-        self.paymentLabel.setAlignment(Qt.AlignCenter)
+        self.chargeLabel = QLabel(self.scrollAreaWidgetContents)
+        self.chargeLabel.setObjectName(u"chargeLabel")
+        self.chargeLabel.setStyleSheet(u"")
+        self.chargeLabel.setAlignment(Qt.AlignCenter)
 
-        self.paymentVerticalLayout.addWidget(self.paymentLabel)
+        self.chargeVerticalLayout.addWidget(self.chargeLabel)
 
 
-        self.otherservicesLayout.addLayout(self.paymentVerticalLayout)
+        self.otherservicesLayout.addLayout(self.chargeVerticalLayout)
 
         self.topupVerticalLayout = QVBoxLayout()
         self.topupVerticalLayout.setSpacing(0)
@@ -499,6 +508,9 @@ class Ui_Form(object):
         font2.setPointSize(10)
         font2.setBold(True)
         self.welcomeLabel.setFont(font2)
+        self.welcomeLabel.setStyleSheet(u"QLabel{\n"
+"	color: #71cd00;\n"
+"}")
 
         self.formLayout.setWidget(2, QFormLayout.SpanningRole, self.welcomeLabel)
 
@@ -581,7 +593,7 @@ class Ui_Form(object):
         self.accountScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 327, 1136))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 342, 1136))
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
@@ -695,6 +707,15 @@ class Ui_Form(object):
         self.companyLineEdit = QLineEdit(self.layoutWidget1)
         self.companyLineEdit.setObjectName(u"companyLineEdit")
         self.companyLineEdit.setMinimumSize(QSize(0, 30))
+        self.companyLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcarVerticalLayout.addWidget(self.companyLineEdit)
 
@@ -706,6 +727,15 @@ class Ui_Form(object):
         self.modelLineEdit = QLineEdit(self.layoutWidget1)
         self.modelLineEdit.setObjectName(u"modelLineEdit")
         self.modelLineEdit.setMinimumSize(QSize(0, 30))
+        self.modelLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcarVerticalLayout.addWidget(self.modelLineEdit)
 
@@ -717,6 +747,15 @@ class Ui_Form(object):
         self.batterycapacityLineEdit = QLineEdit(self.layoutWidget1)
         self.batterycapacityLineEdit.setObjectName(u"batterycapacityLineEdit")
         self.batterycapacityLineEdit.setMinimumSize(QSize(0, 30))
+        self.batterycapacityLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcarVerticalLayout.addWidget(self.batterycapacityLineEdit)
 
@@ -728,6 +767,15 @@ class Ui_Form(object):
         self.chargingcapacityLineEdit = QLineEdit(self.layoutWidget1)
         self.chargingcapacityLineEdit.setObjectName(u"chargingcapacityLineEdit")
         self.chargingcapacityLineEdit.setMinimumSize(QSize(0, 30))
+        self.chargingcapacityLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcarVerticalLayout.addWidget(self.chargingcapacityLineEdit)
 
@@ -743,8 +791,18 @@ class Ui_Form(object):
         self.addcarPushButton_2.setMinimumSize(QSize(0, 30))
         self.addcarPushButton_2.setMaximumSize(QSize(100, 16777215))
         self.addcarPushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.addcarPushButton_2.setStyleSheet(u"QPushButton{\n"
+"	background-color:#71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #FFFFFF;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#468000;\n"
+"}\n"
+"	")
         icon7 = QIcon()
-        icon7.addFile(u"../../../.designer/backup/images/add.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u"images/add.png", QSize(), QIcon.Normal, QIcon.Off)
         self.addcarPushButton_2.setIcon(icon7)
         self.addcarPushButton_2.setIconSize(QSize(20, 20))
 
@@ -788,6 +846,15 @@ class Ui_Form(object):
         self.cardnumberLineEdit = QLineEdit(self.layoutWidget2)
         self.cardnumberLineEdit.setObjectName(u"cardnumberLineEdit")
         self.cardnumberLineEdit.setMinimumSize(QSize(0, 30))
+        self.cardnumberLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcardVerticalLayout.addWidget(self.cardnumberLineEdit)
 
@@ -799,6 +866,15 @@ class Ui_Form(object):
         self.cardholdernameLineEdit = QLineEdit(self.layoutWidget2)
         self.cardholdernameLineEdit.setObjectName(u"cardholdernameLineEdit")
         self.cardholdernameLineEdit.setMinimumSize(QSize(0, 30))
+        self.cardholdernameLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcardVerticalLayout.addWidget(self.cardholdernameLineEdit)
 
@@ -810,6 +886,15 @@ class Ui_Form(object):
         self.expiryLineEdit = QLineEdit(self.layoutWidget2)
         self.expiryLineEdit.setObjectName(u"expiryLineEdit")
         self.expiryLineEdit.setMinimumSize(QSize(0, 30))
+        self.expiryLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcardVerticalLayout.addWidget(self.expiryLineEdit)
 
@@ -821,6 +906,15 @@ class Ui_Form(object):
         self.cvvLineEdit = QLineEdit(self.layoutWidget2)
         self.cvvLineEdit.setObjectName(u"cvvLineEdit")
         self.cvvLineEdit.setMinimumSize(QSize(0, 30))
+        self.cvvLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.addcardVerticalLayout.addWidget(self.cvvLineEdit)
 
@@ -836,6 +930,16 @@ class Ui_Form(object):
         self.addcardPushButton_2.setMinimumSize(QSize(0, 30))
         self.addcardPushButton_2.setMaximumSize(QSize(100, 16777215))
         self.addcardPushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.addcardPushButton_2.setStyleSheet(u"QPushButton{\n"
+"	background-color:#71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #FFFFFF;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#468000;\n"
+"}\n"
+"	")
         self.addcardPushButton_2.setIcon(icon7)
         self.addcardPushButton_2.setIconSize(QSize(20, 20))
 
@@ -876,6 +980,15 @@ class Ui_Form(object):
         self.newusernameLineEdit = QLineEdit(self.layoutWidget3)
         self.newusernameLineEdit.setObjectName(u"newusernameLineEdit")
         self.newusernameLineEdit.setMinimumSize(QSize(0, 30))
+        self.newusernameLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
 
         self.changeusernameVerticalLayout.addWidget(self.newusernameLineEdit)
 
@@ -891,8 +1004,18 @@ class Ui_Form(object):
         self.changeusernamePushButton_2.setMinimumSize(QSize(0, 30))
         self.changeusernamePushButton_2.setMaximumSize(QSize(100, 16777215))
         self.changeusernamePushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.changeusernamePushButton_2.setStyleSheet(u"QPushButton{\n"
+"	background-color:#71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #FFFFFF;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#468000;\n"
+"}\n"
+"	")
         icon8 = QIcon()
-        icon8.addFile(u"../../../.designer/backup/images/change.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u"images/change.png", QSize(), QIcon.Normal, QIcon.Off)
         self.changeusernamePushButton_2.setIcon(icon8)
         self.changeusernamePushButton_2.setIconSize(QSize(16, 16))
 
@@ -913,6 +1036,7 @@ class Ui_Form(object):
         self.changepinPushButton.setMinimumSize(QSize(0, 35))
         self.changepinPushButton.setFont(font)
         self.changepinPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.changepinPushButton.setIcon(icon8)
 
         self.verticalLayout_3.addWidget(self.changepinPushButton)
 
@@ -929,6 +1053,9 @@ class Ui_Form(object):
         self.logoutPushButton.setMinimumSize(QSize(0, 35))
         self.logoutPushButton.setFont(font)
         self.logoutPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.logoutPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #aa1111;\n"
+"}")
 
         self.verticalLayout_3.addWidget(self.logoutPushButton)
 
@@ -955,7 +1082,7 @@ class Ui_Form(object):
         self.topupScrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 239, 540))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 342, 540))
         sizePolicy1.setHeightForWidth(self.scrollAreaWidgetContents_6.sizePolicy().hasHeightForWidth())
         self.scrollAreaWidgetContents_6.setSizePolicy(sizePolicy1)
         self.scrollAreaWidgetContents_6.setMinimumSize(QSize(0, 0))
@@ -1004,6 +1131,15 @@ class Ui_Form(object):
         font5 = QFont()
         font5.setPointSize(15)
         self.topupvalueLineEdit.setFont(font5)
+        self.topupvalueLineEdit.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
         self.topupvalueLineEdit.setAlignment(Qt.AlignCenter)
 
         self.topupvalueVerticalLayout.addWidget(self.topupvalueLineEdit)
@@ -1274,7 +1410,14 @@ class Ui_Form(object):
         font6.setPointSize(13)
         self.topupvaluePushButton.setFont(font6)
         self.topupvaluePushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.topupvaluePushButton.setIcon(icon7)
+        self.topupvaluePushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color: #71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #ffffff;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #468000;\n"
+"}")
         self.topupvaluePushButton.setIconSize(QSize(20, 20))
 
         self.topupvalueHorizontalLayout.addWidget(self.topupvaluePushButton)
@@ -1294,6 +1437,478 @@ class Ui_Form(object):
         self.topupLabel_2.setGeometry(QRect(20, 10, 111, 21))
         self.topupLabel_2.setFont(font)
         self.stackedWidget.addWidget(self.topupPage)
+        self.selectstationPage = QWidget()
+        self.selectstationPage.setObjectName(u"selectstationPage")
+        self.stationLabel = QLabel(self.selectstationPage)
+        self.stationLabel.setObjectName(u"stationLabel")
+        self.stationLabel.setGeometry(QRect(20, 10, 111, 21))
+        self.stationLabel.setFont(font)
+        self.selectstationScrollArea = QScrollArea(self.selectstationPage)
+        self.selectstationScrollArea.setObjectName(u"selectstationScrollArea")
+        self.selectstationScrollArea.setGeometry(QRect(0, 40, 361, 541))
+        sizePolicy.setHeightForWidth(self.selectstationScrollArea.sizePolicy().hasHeightForWidth())
+        self.selectstationScrollArea.setSizePolicy(sizePolicy)
+        self.selectstationScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.selectstationScrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_7 = QWidget()
+        self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 359, 539))
+        sizePolicy1.setHeightForWidth(self.scrollAreaWidgetContents_7.sizePolicy().hasHeightForWidth())
+        self.scrollAreaWidgetContents_7.setSizePolicy(sizePolicy1)
+        self.scrollAreaWidgetContents_7.setMinimumSize(QSize(0, 0))
+        self.formLayout_8 = QFormLayout(self.scrollAreaWidgetContents_7)
+        self.formLayout_8.setObjectName(u"formLayout_8")
+        self.formLayout_8.setHorizontalSpacing(0)
+        self.formLayout_8.setVerticalSpacing(0)
+        self.formLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.selectstationVerticalLayout = QVBoxLayout()
+        self.selectstationVerticalLayout.setSpacing(0)
+        self.selectstationVerticalLayout.setObjectName(u"selectstationVerticalLayout")
+        self.selectstationVerticalLayout.setContentsMargins(0, 10, 0, 0)
+        self.verticalSpacer_16 = QSpacerItem(20, 15, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.selectstationVerticalLayout.addItem(self.verticalSpacer_16)
+
+        self.enterstationidLabel = QLabel(self.scrollAreaWidgetContents_7)
+        self.enterstationidLabel.setObjectName(u"enterstationidLabel")
+        font7 = QFont()
+        font7.setPointSize(12)
+        self.enterstationidLabel.setFont(font7)
+        self.enterstationidLabel.setAlignment(Qt.AlignCenter)
+
+        self.selectstationVerticalLayout.addWidget(self.enterstationidLabel)
+
+        self.enterstationidVerticalLayout = QVBoxLayout()
+        self.enterstationidVerticalLayout.setSpacing(3)
+        self.enterstationidVerticalLayout.setObjectName(u"enterstationidVerticalLayout")
+        self.enterstationidVerticalLayout.setContentsMargins(10, 10, 10, 0)
+        self.verticalSpacer_13 = QSpacerItem(20, 15, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout.addItem(self.verticalSpacer_13)
+
+        self.enterstationidHorizontalLayout = QHBoxLayout()
+        self.enterstationidHorizontalLayout.setSpacing(5)
+        self.enterstationidHorizontalLayout.setObjectName(u"enterstationidHorizontalLayout")
+        self.enterstationidHorizontalLayout.setContentsMargins(15, -1, 15, -1)
+        self.stationid1 = QLineEdit(self.scrollAreaWidgetContents_7)
+        self.stationid1.setObjectName(u"stationid1")
+        self.stationid1.setMinimumSize(QSize(0, 35))
+        self.stationid1.setMaximumSize(QSize(16777215, 16777215))
+        self.stationid1.setFont(font5)
+        self.stationid1.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: rgba(0, 0, 0, 0);\n"
+"	border: 2px solid #71cd00;\n"
+"	border-top: none;\n"
+"	border-right: none;\n"
+"	border-left: none;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
+        self.stationid1.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidHorizontalLayout.addWidget(self.stationid1)
+
+        self.stationid2 = QLineEdit(self.scrollAreaWidgetContents_7)
+        self.stationid2.setObjectName(u"stationid2")
+        self.stationid2.setMinimumSize(QSize(0, 35))
+        self.stationid2.setMaximumSize(QSize(16777215, 16777215))
+        self.stationid2.setFont(font5)
+        self.stationid2.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: rgba(0, 0, 0, 0);\n"
+"	border: 2px solid #71cd00;\n"
+"	border-top: none;\n"
+"	border-right: none;\n"
+"	border-left: none;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
+        self.stationid2.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidHorizontalLayout.addWidget(self.stationid2)
+
+        self.stationid3 = QLineEdit(self.scrollAreaWidgetContents_7)
+        self.stationid3.setObjectName(u"stationid3")
+        self.stationid3.setMinimumSize(QSize(0, 35))
+        self.stationid3.setMaximumSize(QSize(16777215, 16777215))
+        self.stationid3.setFont(font5)
+        self.stationid3.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: rgba(0, 0, 0, 0);\n"
+"	border: 2px solid #71cd00;\n"
+"	border-top: none;\n"
+"	border-right: none;\n"
+"	border-left: none;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
+        self.stationid3.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidHorizontalLayout.addWidget(self.stationid3)
+
+        self.stationid4 = QLineEdit(self.scrollAreaWidgetContents_7)
+        self.stationid4.setObjectName(u"stationid4")
+        self.stationid4.setMinimumSize(QSize(0, 35))
+        self.stationid4.setMaximumSize(QSize(16777215, 16777215))
+        self.stationid4.setFont(font5)
+        self.stationid4.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: rgba(0, 0, 0, 0);\n"
+"	border: 2px solid #71cd00;\n"
+"	border-top: none;\n"
+"	border-right: none;\n"
+"	border-left: none;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
+        self.stationid4.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidHorizontalLayout.addWidget(self.stationid4)
+
+        self.stationid5 = QLineEdit(self.scrollAreaWidgetContents_7)
+        self.stationid5.setObjectName(u"stationid5")
+        self.stationid5.setMinimumSize(QSize(0, 35))
+        self.stationid5.setMaximumSize(QSize(16777215, 16777215))
+        self.stationid5.setFont(font5)
+        self.stationid5.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: rgba(0, 0, 0, 0);\n"
+"	border: 2px solid #71cd00;\n"
+"	border-top: none;\n"
+"	border-right: none;\n"
+"	border-left: none;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
+        self.stationid5.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidHorizontalLayout.addWidget(self.stationid5)
+
+        self.stationid6 = QLineEdit(self.scrollAreaWidgetContents_7)
+        self.stationid6.setObjectName(u"stationid6")
+        self.stationid6.setMinimumSize(QSize(0, 35))
+        self.stationid6.setMaximumSize(QSize(16777215, 16777215))
+        self.stationid6.setFont(font5)
+        self.stationid6.setStyleSheet(u"QLineEdit\n"
+"{\n"
+"	background-color: rgba(0, 0, 0, 0);\n"
+"	border: 2px solid #71cd00;\n"
+"	border-top: none;\n"
+"	border-right: none;\n"
+"	border-left: none;\n"
+"}\n"
+"QLineEdit:focus\n"
+"{\n"
+"	border: 2px solid #71cd00;\n"
+"}")
+        self.stationid6.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidHorizontalLayout.addWidget(self.stationid6)
+
+
+        self.enterstationidVerticalLayout.addLayout(self.enterstationidHorizontalLayout)
+
+        self.verticalSpacer_14 = QSpacerItem(20, 35, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout.addItem(self.verticalSpacer_14)
+
+        self.keyboardGridLayout_2 = QGridLayout()
+        self.keyboardGridLayout_2.setObjectName(u"keyboardGridLayout_2")
+        self.keyboardGridLayout_2.setHorizontalSpacing(0)
+        self.keyboardGridLayout_2.setVerticalSpacing(5)
+        self.keyboardGridLayout_2.setContentsMargins(-1, 5, -1, 5)
+        self.pushButton_delete_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_delete_2.setObjectName(u"pushButton_delete_2")
+        self.pushButton_delete_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_delete_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_delete_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_delete_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+        self.pushButton_delete_2.setIcon(icon9)
+        self.pushButton_delete_2.setIconSize(QSize(25, 25))
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_delete_2, 4, 2, 1, 1)
+
+        self.pushButton_9_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_9_2.setObjectName(u"pushButton_9_2")
+        self.pushButton_9_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_9_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_9_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_9_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_9_2, 3, 2, 1, 1)
+
+        self.pushButton_3_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_3_2.setObjectName(u"pushButton_3_2")
+        self.pushButton_3_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_3_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_3_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_3_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_3_2, 1, 2, 1, 1)
+
+        self.pushButton_7_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_7_2.setObjectName(u"pushButton_7_2")
+        self.pushButton_7_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_7_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_7_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_7_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_7_2, 3, 0, 1, 1)
+
+        self.pushButton_2_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_2_2.setObjectName(u"pushButton_2_2")
+        sizePolicy2.setHeightForWidth(self.pushButton_2_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_2_2.setSizePolicy(sizePolicy2)
+        self.pushButton_2_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_2_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_2_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_2_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+        self.pushButton_2_2.setIconSize(QSize(16, 16))
+        self.pushButton_2_2.setFlat(False)
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_2_2, 1, 1, 1, 1)
+
+        self.pushButton_0_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_0_2.setObjectName(u"pushButton_0_2")
+        self.pushButton_0_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_0_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_0_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_0_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_0_2, 4, 1, 1, 1)
+
+        self.pushButton_1_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_1_2.setObjectName(u"pushButton_1_2")
+        self.pushButton_1_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_1_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_1_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_1_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	font: 22px Arial;\n"
+"	border-radius: 32px;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_1_2, 1, 0, 1, 1)
+
+        self.pushButton_5_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_5_2.setObjectName(u"pushButton_5_2")
+        self.pushButton_5_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_5_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_5_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_5_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_5_2, 2, 1, 1, 1)
+
+        self.pushButton_4_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_4_2.setObjectName(u"pushButton_4_2")
+        self.pushButton_4_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_4_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_4_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_4_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_4_2, 2, 0, 1, 1)
+
+        self.pushButton_8_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_8_2.setObjectName(u"pushButton_8_2")
+        self.pushButton_8_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_8_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_8_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_8_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_8_2, 3, 1, 1, 1)
+
+        self.pushButton_6_2 = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_6_2.setObjectName(u"pushButton_6_2")
+        self.pushButton_6_2.setMinimumSize(QSize(65, 65))
+        self.pushButton_6_2.setMaximumSize(QSize(65, 65))
+        self.pushButton_6_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_6_2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_6_2, 2, 2, 1, 1)
+
+        self.pushButton_scan = QPushButton(self.scrollAreaWidgetContents_7)
+        self.pushButton_scan.setObjectName(u"pushButton_scan")
+        self.pushButton_scan.setMinimumSize(QSize(65, 65))
+        self.pushButton_scan.setMaximumSize(QSize(65, 65))
+        self.pushButton_scan.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_scan.setStyleSheet(u"QPushButton\n"
+"{\n"
+"	background: #cecece;\n"
+"	border-radius: 32px;\n"
+"	font: 22px Arial;\n"
+"	\n"
+"}\n"
+"QPushButton:pressed\n"
+"{\n"
+"	background: #bbbbbf;\n"
+"}")
+        icon10 = QIcon()
+        icon10.addFile(u"images/scan.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_scan.setIcon(icon10)
+        self.pushButton_scan.setIconSize(QSize(25, 25))
+
+        self.keyboardGridLayout_2.addWidget(self.pushButton_scan, 4, 0, 1, 1)
+
+
+        self.enterstationidVerticalLayout.addLayout(self.keyboardGridLayout_2)
+
+        self.verticalSpacer_15 = QSpacerItem(20, 30, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout.addItem(self.verticalSpacer_15)
+
+        self.searchvalueHorizontalLayout = QHBoxLayout()
+        self.searchvalueHorizontalLayout.setSpacing(0)
+        self.searchvalueHorizontalLayout.setObjectName(u"searchvalueHorizontalLayout")
+        self.searchPushButton = QPushButton(self.scrollAreaWidgetContents_7)
+        self.searchPushButton.setObjectName(u"searchPushButton")
+        self.searchPushButton.setMinimumSize(QSize(0, 35))
+        self.searchPushButton.setMaximumSize(QSize(100, 16777215))
+        self.searchPushButton.setFont(font6)
+        self.searchPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.searchPushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color: #71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #ffffff;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #468000;\n"
+"}")
+        self.searchPushButton.setIconSize(QSize(20, 20))
+
+        self.searchvalueHorizontalLayout.addWidget(self.searchPushButton)
+
+
+        self.enterstationidVerticalLayout.addLayout(self.searchvalueHorizontalLayout)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.enterstationidVerticalLayout.addItem(self.verticalSpacer)
+
+
+        self.selectstationVerticalLayout.addLayout(self.enterstationidVerticalLayout)
+
+
+        self.formLayout_8.setLayout(0, QFormLayout.FieldRole, self.selectstationVerticalLayout)
+
+        self.selectstationScrollArea.setWidget(self.scrollAreaWidgetContents_7)
+        self.stackedWidget.addWidget(self.selectstationPage)
 
         self.verticalLayout.addWidget(self.stackedWidget)
 
@@ -1311,10 +1926,13 @@ class Ui_Form(object):
         self.homePushButton.setLayoutDirection(Qt.LeftToRight)
         self.homePushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	color: #71cd00;\n"
 "}")
-        icon10 = QIcon()
-        icon10.addFile(u"images/home.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.homePushButton.setIcon(icon10)
+        icon11 = QIcon()
+        icon11.addFile(u"images/home.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.homePushButton.setIcon(icon11)
 
         self.horizontalLayout.addWidget(self.homePushButton)
 
@@ -1324,10 +1942,13 @@ class Ui_Form(object):
         self.historyPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.historyPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	color: #71cd00;\n"
 "}")
-        icon11 = QIcon()
-        icon11.addFile(u"images/history.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.historyPushButton.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u"images/history.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.historyPushButton.setIcon(icon12)
 
         self.horizontalLayout.addWidget(self.historyPushButton)
 
@@ -1337,10 +1958,13 @@ class Ui_Form(object):
         self.locationPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.locationPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	color: #71cd00;\n"
 "}")
-        icon12 = QIcon()
-        icon12.addFile(u"images/location.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.locationPushButton.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u"images/location.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.locationPushButton.setIcon(icon13)
         self.locationPushButton.setIconSize(QSize(18, 18))
 
         self.horizontalLayout.addWidget(self.locationPushButton)
@@ -1351,10 +1975,13 @@ class Ui_Form(object):
         self.accountPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.accountPushButton.setStyleSheet(u"QPushButton{\n"
 "	border: None;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	color: #71cd00;\n"
 "}")
-        icon13 = QIcon()
-        icon13.addFile(u"images/account.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.accountPushButton.setIcon(icon13)
+        icon14 = QIcon()
+        icon14.addFile(u"images/account.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.accountPushButton.setIcon(icon14)
         self.accountPushButton.setIconSize(QSize(17, 17))
 
         self.horizontalLayout.addWidget(self.accountPushButton)
@@ -1375,14 +2002,14 @@ class Ui_Form(object):
         self.promotionPushButton6_4.setText(QCoreApplication.translate("Form", u"PPA", None))
         self.promotionPushButton6_5.setText(QCoreApplication.translate("Form", u"Elex", None))
         self.promotionPushButton6_6.setText(QCoreApplication.translate("Form", u"PPA", None))
-        self.paymentPushButton.setText("")
+        self.chargePushButton.setText("")
 #if QT_CONFIG(tooltip)
-        self.paymentLabel.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.chargeLabel.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p><br/></p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(whatsthis)
-        self.paymentLabel.setWhatsThis(QCoreApplication.translate("Form", u"<html><head/><body><p><br/></p></body></html>", None))
+        self.chargeLabel.setWhatsThis(QCoreApplication.translate("Form", u"<html><head/><body><p><br/></p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)
-        self.paymentLabel.setText(QCoreApplication.translate("Form", u"Charge", None))
+        self.chargeLabel.setText(QCoreApplication.translate("Form", u"Charge", None))
         self.topupPushButton.setText("")
 #if QT_CONFIG(tooltip)
         self.topupLabel.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p><br/></p></body></html>", None))
@@ -1474,6 +2101,27 @@ class Ui_Form(object):
         self.pushButton_dot.setText(QCoreApplication.translate("Form", u".", None))
         self.topupvaluePushButton.setText(QCoreApplication.translate("Form", u"Top-Up", None))
         self.topupLabel_2.setText(QCoreApplication.translate("Form", u"Top-Up", None))
+        self.stationLabel.setText(QCoreApplication.translate("Form", u"Station", None))
+        self.enterstationidLabel.setText(QCoreApplication.translate("Form", u"Enter Station ID:", None))
+        self.stationid1.setPlaceholderText("")
+        self.stationid2.setPlaceholderText("")
+        self.stationid3.setPlaceholderText("")
+        self.stationid4.setPlaceholderText("")
+        self.stationid5.setPlaceholderText("")
+        self.stationid6.setPlaceholderText("")
+        self.pushButton_delete_2.setText("")
+        self.pushButton_9_2.setText(QCoreApplication.translate("Form", u"9", None))
+        self.pushButton_3_2.setText(QCoreApplication.translate("Form", u"3", None))
+        self.pushButton_7_2.setText(QCoreApplication.translate("Form", u"7", None))
+        self.pushButton_2_2.setText(QCoreApplication.translate("Form", u"2", None))
+        self.pushButton_0_2.setText(QCoreApplication.translate("Form", u"0", None))
+        self.pushButton_1_2.setText(QCoreApplication.translate("Form", u"1", None))
+        self.pushButton_5_2.setText(QCoreApplication.translate("Form", u"5", None))
+        self.pushButton_4_2.setText(QCoreApplication.translate("Form", u"4", None))
+        self.pushButton_8_2.setText(QCoreApplication.translate("Form", u"8", None))
+        self.pushButton_6_2.setText(QCoreApplication.translate("Form", u"6", None))
+        self.pushButton_scan.setText("")
+        self.searchPushButton.setText(QCoreApplication.translate("Form", u"Search", None))
 #if QT_CONFIG(whatsthis)
         self.homePushButton.setWhatsThis(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)

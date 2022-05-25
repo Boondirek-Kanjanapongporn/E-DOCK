@@ -16,6 +16,7 @@ class Main_Page(QWidget):
         self.widget = widget
         self.isAutoLogin = isAutoLogin
         self.pinResult = False
+        self.stationid = []
 
         self.UID = self.auth.current_user['localId']
         self.email = self.auth.current_user['email']
@@ -41,6 +42,7 @@ class Main_Page(QWidget):
         self.refreshAccountPage()
         
         # Home Page -------------------------------------------------------------------------------------------------------
+        self.ui.chargePushButton.clicked.connect(self.gotoSelectStationPage)
         self.ui.topupPushButton.clicked.connect(self.gotoTopupPage)
 
         # History Page ----------------------------------------------------------------------------------------------------
@@ -198,12 +200,19 @@ class Main_Page(QWidget):
         else:
             return self.auth.current_user['email']
     
+    def gotoSelectStationPage(self):
+        self.refreshSelectStationPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.selectstationPage)
+
     def gotoTopupPage(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.topupPage)
         self.refreshTopupPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.topupPage)
     
     def refreshTopupPage(self):
         self.ui.topupvalueLineEdit.setText("")
+    
+    def refreshSelectStationPage(self):
+        pass
     
     # History Page functions ---------------------------------------------------------------------------------------------
     def addHistoryList(self, historyList):
@@ -364,7 +373,7 @@ class Main_Page(QWidget):
     
     def deleteNumberfromTopUp(self):
         topupStr = self.ui.topupvalueLineEdit.text()
-        if topupStr is not empty:
+        if topupStr:
             self.ui.topupvalueLineEdit.setText(topupStr[:-1])
         
 

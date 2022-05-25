@@ -66,12 +66,12 @@ color: #444444;</string>
    <property name="styleSheet">
     <string notr="true">QLineEdit
 {
-	border: 2px solid #71cd00;
+	border: 2px solid #D2D2D2;
 	border-radius: 10px;
 }
 QLineEdit:focus
 {
-	border: 2px solid #71cd00;
+	border: 2px solid #D2D2D2;
 }</string>
    </property>
   </widget>
@@ -93,12 +93,12 @@ QLineEdit:focus
    <property name="styleSheet">
     <string notr="true">QLineEdit
 {
-	border: 2px solid #71cd00;
+	border: 2px solid #D2D2D2;
 	border-radius: 10px;
 }
 QLineEdit:focus
 {
-	border: 2px solid #71cd00;
+	border: 2px solid #D2D2D2;
 }</string>
    </property>
   </widget>
@@ -166,14 +166,14 @@ color: #444444;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-	background-color:#71cd00;
+	background-color:#aa1111;
 	border-radius: 10px;
 	color: #FFFFFF;
 	font: 16px;
 }
 QPushButton:hover
 {
-	background-color:#468000;
+	background-color:#aa1111;
 }
 	</string>
    </property>
@@ -197,7 +197,7 @@ QPushButton:hover
     <string notr="true">QPushButton {
 	border: None;
 	text-decoration: underline;
-	color: #1c33de;
+	color: #AA1111;
 }</string>
    </property>
    <property name="text">
@@ -239,12 +239,12 @@ color: #444444;</string>
    <property name="styleSheet">
     <string notr="true">QLineEdit
 {
-	border: 2px solid #71cd00;
+	border: 2px solid #D2D2D2;
 	border-radius: 10px;
 }
 QLineEdit:focus
 {
-	border: 2px solid #71cd00;
+	border: 2px solid #D2D2D2;
 }</string>
    </property>
   </widget>
@@ -291,10 +291,10 @@ QLineEdit:focus
   <widget class="QLabel" name="passwordsdonotmatchLabel">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>190</x>
      <y>370</y>
-     <width>161</width>
-     <height>20</height>
+     <width>141</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="styleSheet">
