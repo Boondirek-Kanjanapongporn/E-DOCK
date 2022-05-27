@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from pin import Ui_Form as Ui_Pin
-import pickle
 
 class Pin_Page(QWidget):
     def __init__(self, auth, widget, user, index, isAutoLogin, parentObject):
@@ -114,6 +113,18 @@ class Pin_Page(QWidget):
                                 self.ui.pin5.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
                                 if val >= 6:
                                     self.ui.pin6.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                else:
+                                    self.ui.pin6.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                            else:
+                                self.ui.pin5.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                        else:
+                            self.ui.pin4.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                    else:
+                        self.ui.pin3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                else:
+                    self.ui.pin2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+            else:
+                self.ui.pin1.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
         elif index == 2:
             if val >= 1:
                 self.ui.pin1_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
@@ -127,6 +138,18 @@ class Pin_Page(QWidget):
                                 self.ui.pin5_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
                                 if val >= 6:
                                     self.ui.pin6_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                else:
+                                    self.ui.pin6_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                            else:
+                                self.ui.pin5_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                        else:
+                            self.ui.pin4_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                    else:
+                        self.ui.pin3_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                else:
+                    self.ui.pin2_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+            else:
+                self.ui.pin1_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
         elif index == 3:
             if val >= 1:
                 self.ui.pin1_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
@@ -140,6 +163,18 @@ class Pin_Page(QWidget):
                                 self.ui.pin5_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
                                 if val >= 6:
                                     self.ui.pin6_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                else:
+                                    self.ui.pin6_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                            else:
+                                self.ui.pin5_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                        else:
+                            self.ui.pin4_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                    else:
+                        self.ui.pin3_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+                else:
+                    self.ui.pin2_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
+            else:
+                self.ui.pin1_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
     
     def addNumbertoPin(self, val, index):
         if index == 1:
@@ -202,10 +237,6 @@ class Pin_Page(QWidget):
             self.closePinPage()
 
     def showAlert(self, text):
-        dialog = QDialog(self)
-        layout = QVBoxLayout()
-        label = QLabel(self)
-        label.setText(text)
-        layout.addWidget(label)
-        dialog.setLayout(layout)
-        dialog.show()
+        messageBox = QMessageBox(self)
+        messageBox.setText(text)
+        messageBox.exec()

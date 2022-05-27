@@ -1,8 +1,12 @@
+from tkinter import messagebox
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWebEngineWidgets import *
-import time
+from scb_payment import QRCodePayment
+import qrcode
+import datetime
+from StationPage import Station_Page
 
 from main import Ui_Form as Ui_Main
 from User import User
@@ -46,23 +50,7 @@ class Main_Page(QWidget):
         self.ui.topupPushButton.clicked.connect(self.gotoTopupPage)
 
         # History Page ----------------------------------------------------------------------------------------------------
-        historyTest = [{'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'},
-                        {'company':'PTT', 'price':1000, 'duration':30, 'timestamp':'000:000'}]
-        self.addHistoryList(historyTest)
-
+        
         # Location Page -------------------------------------------------------------------------------------------------
         # Open EV station locations
         self.openStationLocations()
@@ -109,6 +97,25 @@ class Main_Page(QWidget):
         self.ui.pushButton_9.clicked.connect(lambda: self.addNumbertoTopUp("9"))
         self.ui.pushButton_delete.clicked.connect(lambda: self.deleteNumberfromTopUp())
         self.ui.pushButton_dot.clicked.connect(lambda: self.addNumbertoTopUp("."))
+        self.ui.topupvaluePushButton.clicked.connect(lambda: self.generateQRCode())
+
+        # Select Station Page ----------------------------------------------------------------------------------------
+        self.ui.pushButton_0_2.clicked.connect(lambda: self.addNumbertoStationID(0))
+        self.ui.pushButton_1_2.clicked.connect(lambda: self.addNumbertoStationID(1))
+        self.ui.pushButton_2_2.clicked.connect(lambda: self.addNumbertoStationID(2))
+        self.ui.pushButton_3_2.clicked.connect(lambda: self.addNumbertoStationID(3))
+        self.ui.pushButton_4_2.clicked.connect(lambda: self.addNumbertoStationID(4))
+        self.ui.pushButton_5_2.clicked.connect(lambda: self.addNumbertoStationID(5))
+        self.ui.pushButton_6_2.clicked.connect(lambda: self.addNumbertoStationID(6))
+        self.ui.pushButton_7_2.clicked.connect(lambda: self.addNumbertoStationID(7))
+        self.ui.pushButton_8_2.clicked.connect(lambda: self.addNumbertoStationID(8))
+        self.ui.pushButton_9_2.clicked.connect(lambda: self.addNumbertoStationID(9))
+        self.ui.pushButton_delete_2.clicked.connect(lambda: self.deleteNumberfromStationID())
+        self.ui.searchPushButton.clicked.connect(lambda: self.searchStationID())
+
+        # Charging Station Page --------------------------------------------------------------------------------------
+        self.ui.cancelPushButton.clicked.connect(self.gotoSelectStationPage)
+        self.ui.confirmPushButton.clicked.connect(self.gotoStationPage)
     
     # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -172,25 +179,36 @@ class Main_Page(QWidget):
             self.ui.hiLabel.setText(f"Hi, {self.email}")
 
     def refreshHistoryPage(self):
-        pass
+        self.clearLayout(self.ui.historyVerticalLayout)
+        try:
+            historyNodes = self.user.getHistory()
+            historyList = []
+            for value in historyNodes.values():
+                historyList.append(value)
+            self.addHistoryList(historyList[::-1])
+        except:
+            print("No histories")
+    
+    def clearLayout(self, layout):
+        while layout.count():
+            child = layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
 
     def refreshLocationPage(self):
         pass
 
     def refreshAccountPage(self):
+        self.ui.moneyLabel.setText(f"{self.user.getMoney():.5f}")
         self.ui.notificationWidget.setVisible(False)
         self.ui.addcarWidget.setVisible(False)
         self.ui.addcardWidget.setVisible(False)
         self.ui.changeusernameWidget.setVisible(False)
     
     def showAlert(self, text):
-        dialog = QDialog(self)
-        layout = QVBoxLayout()
-        label = QLabel(self)
-        label.setText(text)
-        layout.addWidget(label)
-        dialog.setLayout(layout)
-        dialog.show()
+        messageBox = QMessageBox(self)
+        messageBox.setText(text)
+        messageBox.exec()
     
     # Home Page functions -----------------------------------------------------------------------------------------------
     def hiUserLabel(self):
@@ -210,9 +228,17 @@ class Main_Page(QWidget):
     
     def refreshTopupPage(self):
         self.ui.topupvalueLineEdit.setText("")
+        self.ui.moneyLabel_2.setText(f"{self.user.getMoney():.5f}")
     
     def refreshSelectStationPage(self):
-        pass
+        self.stationid = []
+        self.ui.stationid1.setText("")
+        self.ui.stationid2.setText("")
+        self.ui.stationid3.setText("")
+        self.ui.stationid4.setText("")
+        self.ui.stationid5.setText("")
+        self.ui.stationid6.setText("")
+
     
     # History Page functions ---------------------------------------------------------------------------------------------
     def addHistoryList(self, historyList):
@@ -222,7 +248,7 @@ class Main_Page(QWidget):
     
     def createHistoryPushButton(self, history):
         historyPushButton = QPushButton()
-        historyPushButton.setText(f"{history.get('company')}\nPrice: {history.get('price')}\nDuration: {history.get('duration')}\nTimestamp: {history.get('timestamp')}")
+        historyPushButton.setText(f"{history.get('company')}\nStation ID: {history.get('stationid')}\nPrice: {history.get('price')} THB\nDuration: {history.get('duration')}\nTimestamp: {history.get('timestamp')}")
         return historyPushButton
     
     # Location Page functions ------------------------------------------------------------------------------------------------
@@ -284,10 +310,10 @@ class Main_Page(QWidget):
                 model = self.ui.modelLineEdit.text()
                 batteryCapacity = self.ui.batterycapacityLineEdit.text()
                 chargingCapacity = self.ui.chargingcapacityLineEdit.text()
-                timestamp = time.time()
+                timestamp = datetime.datetime.now()
 
                 if company != "" and model != "" and batteryCapacity != "" and chargingCapacity != "" and not company.isspace() and not model.isspace() and not batteryCapacity.isspace() and not chargingCapacity.isspace():
-                    newCar = {'company': company, 'model': model, 'batterCapacity': batteryCapacity, 'chargingCapacity': chargingCapacity, 'timestamp': timestamp}
+                    newCar = {'company': company, 'model': model, 'batterCapacity': batteryCapacity, 'chargingCapacity': chargingCapacity, 'timestamp': str(timestamp)}
                     try:
                         self.user.addCar(newCar)
                         self.showAlert("New car added")
@@ -307,10 +333,10 @@ class Main_Page(QWidget):
                 cardHolderName = self.ui.cardholdernameLineEdit.text()
                 expiry = self.ui.expiryLineEdit.text()
                 cvv = self.ui.cvvLineEdit.text()
-                timestamp = time.time()
+                timestamp = datetime.datetime.now()
 
                 if cardNumber != "" and cardHolderName != "" and expiry != "" and cvv != "" and not cardNumber.isspace() and not cardHolderName.isspace() and not expiry.isspace() and not cvv.isspace():
-                    newCard = {'cardNumber': cardNumber, 'cardHolderName': cardHolderName, 'expiry': expiry, 'cvv': cvv, 'timestamp': timestamp}
+                    newCard = {'cardNumber': cardNumber, 'cardHolderName': cardHolderName, 'expiry': expiry, 'cvv': cvv, 'timestamp': str(timestamp)}
                     try:
                         self.user.addCard(newCard)
                         self.showAlert("New card added")
@@ -357,10 +383,9 @@ class Main_Page(QWidget):
             # self.widget.setCurrentIndex(2)
             print("logged out")
     
-    # TopUp Page functions ----------------------------------------------------------------------------------------------
+    # Top-Up Page functions ----------------------------------------------------------------------------------------------
     def addNumbertoTopUp(self, str):
         topupStr = self.ui.topupvalueLineEdit.text()
-
         if "." in topupStr and str == ".":
             print("Can't add 2 dots")
         else:
@@ -375,6 +400,127 @@ class Main_Page(QWidget):
         topupStr = self.ui.topupvalueLineEdit.text()
         if topupStr:
             self.ui.topupvalueLineEdit.setText(topupStr[:-1])
+    
+    def generateQRCode(self):
+        topupValue = float(self.ui.topupvalueLineEdit.text())
+    
+        API_KEY = 'l707545b5ae3244b1b8482de4db7dc9b9e'
+        API_SECRET = '87d9ea4c8b7640369348bd347d3e741c'
+        MERCHANT = '272263407857060'
+        TERMINAL = '946017491380534'
+        BILLER = '987134826044678'
+
+        # initial object
+        qr_payment = QRCodePayment(API_KEY, API_SECRET, MERCHANT, TERMINAL, BILLER)
+
+        qrData = qr_payment.gererate_qr_30(amount = topupValue, ref1="TH1234", ref2="THG456", ref3="SCB0987")
+        data = qrData.get('data').get('qrRawData')
+
+        img = qrcode.make(data)
+        imgload = open('images//QR-Code.png','wb') #สร้างไฟล์ไบต์ใหม่ขึ้นมา กำหนดสิทธิ์เขียนไฟล์ได้
+        img.save(imgload, 'PNG') #บันทึกค่า QR Code เข้าไปยังไฟล์
+        imgload.close() #ปิดไฟล์
+
+        self.displayQR(topupValue)
+        self.user.topUptoE_Wallet(topupValue)
+        self.ui.moneyLabel.setText(f"{self.user.getMoney():.5f}")
+        self.ui.moneyLabel_2.setText(f"{self.user.getMoney():.5f}")
+    
+    def displayQR(self, val):
+        dialog = QDialog(self)
+        layout = QVBoxLayout()
+        qrCode = QPushButton()
+        # Create top up label
+        topupLabel = QLabel()
+        topupLabel.setText("Top-Up: {0:.2f} THB".format(val))
+        # Create QrCode image
+        qrCode.setIcon(QIcon("images/QR-Code.png"))
+        qrCode.setStyleSheet("QPushButton { border: none; background-color: rgba(0,0,0,0) } ")
+        qrCode.setIconSize(QSize(200, 200))
+        # Add elements to layout
+        layout.addWidget(topupLabel)
+        layout.addWidget(qrCode)
+        dialog.setLayout(layout)
+        dialog.exec_()
+        return True
+    
+    # Select Station functions -------------------------------------------------------------------------------------------
+    def addNumbertoStationID(self, val):
+        if len(self.stationid) < 6:
+            self.stationid.append(val)
+            self.updateStationIDLineEdit(len(self.stationid))
+    
+    def deleteNumberfromStationID(self):
+        if self.stationid:
+            self.stationid.pop()
+            self.updateStationIDLineEdit(len(self.stationid))
+    
+    def searchStationID(self):
+        stations = self.db.child('stations').get().val()
+        stationidStr = ''.join(str(e) for e in self.stationid)
+        if stationidStr in stations.keys():
+            self.gotoChargingStationPage(stationidStr, stations.get(stationidStr))
+        else:
+            self.showAlert("StationID not found!!!")
+    
+    def updateStationIDLineEdit(self, idLength):
+        if idLength >= 1:
+            self.ui.stationid1.setText(str(self.stationid[0]))
+            if idLength >= 2:
+                self.ui.stationid2.setText(str(self.stationid[1]))
+                if idLength >= 3:
+                    self.ui.stationid3.setText(str(self.stationid[2]))
+                    if idLength >= 4:
+                        self.ui.stationid4.setText(str(self.stationid[3]))
+                        if idLength >= 5:
+                            self.ui.stationid5.setText(str(self.stationid[4]))
+                            if idLength >= 6:
+                                self.ui.stationid6.setText(str(self.stationid[5]))
+                            else:
+                                self.ui.stationid6.setText("")
+                        else:
+                            self.ui.stationid5.setText("")
+                    else:
+                        self.ui.stationid4.setText("")
+                else:
+                    self.ui.stationid3.setText("")
+            else:
+                self.ui.stationid2.setText("")
+        else:
+            self.ui.stationid1.setText("")
+
+    def gotoChargingStationPage(self, stationidStr, stationInfo):
+        self.refreshChargingStationPage(stationidStr, stationInfo)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.chargingstationPage)
+    
+    # Charging Station functions ------------------------------------------------------------------------------------------
+    def refreshChargingStationPage(self, stationidStr, stationInfo):
+        self.ui.stationidvalueLabel.setText(stationidStr)
+        self.ui.companyvalueLabel_2.setText(stationInfo.get('company'))
+        self.ui.typevalueLabel.setText(stationInfo.get('type'))
+        self.ui.locationvalueTextEdit.setText(stationInfo.get('location'))
+    
+    def gotoStationPage(self):
+        if self.gotoPinPage(3):
+            stationidStr = ''.join(str(e) for e in self.stationid)
+            station_page = Station_Page(self.db, self.auth, self.widget, self.isAutoLogin, self, self.user, stationidStr)
+            self.widget.addWidget(station_page)
+
+            if self.isAutoLogin:
+                self.widget.setCurrentIndex(self.widget.currentIndex() + 3)
+            else:
+                self.widget.setCurrentIndex(self.widget.currentIndex() + 1)
+            
+            # Wait for Station Page to close
+            self.wait_object_destruction(station_page)
+            print("Station Page Destructed")
+            if self.getPinResult():
+                self.setPinResult(False)
+                self.gotoHomePage()
+                return True
+            return False
+        else:
+            self.showAlert("Invalid Pin Input")
         
 
 

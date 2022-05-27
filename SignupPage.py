@@ -76,16 +76,12 @@ class Signup_Page(QWidget):
         userinfo = self.db.child('users').child(uid).get()
 
         if userinfo.val() is None:
-            data={'username': '', 'pin': '', 'notification': True, 'money': 0, 'cars':'', 'cards':'', 'history':''}
+            data={'username': '', 'pin': '', 'notification': True, 'money': 0, 'cars':'', 'cards':'', 'histories':''}
             self.db.child('users').child(uid).set(data)
         else:
             raise SystemError('User Database is already Exists')
 
     def showAlert(self, text):
-        dialog = QDialog(self)
-        layout = QVBoxLayout()
-        label = QLabel(self)
-        label.setText(text)
-        layout.addWidget(label)
-        dialog.setLayout(layout)
-        dialog.show()
+        messageBox = QMessageBox(self)
+        messageBox.setText(text)
+        messageBox.exec()

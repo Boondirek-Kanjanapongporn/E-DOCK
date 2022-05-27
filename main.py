@@ -15,10 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFormLayout, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QPushButton, QRadioButton,
-    QScrollArea, QSizePolicy, QSpacerItem, QStackedWidget,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QFormLayout, QGridLayout,
+    QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QRadioButton, QScrollArea, QSizePolicy, QSpacerItem,
+    QStackedWidget, QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -158,7 +158,7 @@ class Ui_Form(object):
         self.chargePushButton.setMinimumSize(QSize(0, 31))
         self.chargePushButton.setCursor(QCursor(Qt.PointingHandCursor))
         icon = QIcon()
-        icon.addFile(u"images/charging.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"images/charge.png", QSize(), QIcon.Normal, QIcon.Off)
         self.chargePushButton.setIcon(icon)
         self.chargePushButton.setIconSize(QSize(20, 20))
 
@@ -257,7 +257,7 @@ class Ui_Form(object):
         self.promotionScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 500, 67))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(-200, 0, 500, 67))
         self.scrollAreaWidgetContents_2.setMinimumSize(QSize(500, 0))
         self.formLayout_2 = QFormLayout(self.scrollAreaWidgetContents_2)
         self.formLayout_2.setObjectName(u"formLayout_2")
@@ -343,7 +343,7 @@ class Ui_Form(object):
         self.exclusivedealsScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 500, 75))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(-200, 0, 500, 75))
         self.scrollAreaWidgetContents_3.setMinimumSize(QSize(500, 0))
         self.formLayout_3 = QFormLayout(self.scrollAreaWidgetContents_3)
         self.formLayout_3.setObjectName(u"formLayout_3")
@@ -593,7 +593,7 @@ class Ui_Form(object):
         self.accountScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 342, 1136))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, -597, 342, 1136))
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
@@ -1909,6 +1909,223 @@ class Ui_Form(object):
 
         self.selectstationScrollArea.setWidget(self.scrollAreaWidgetContents_7)
         self.stackedWidget.addWidget(self.selectstationPage)
+        self.chargingstationPage = QWidget()
+        self.chargingstationPage.setObjectName(u"chargingstationPage")
+        self.chargingstationLabel = QLabel(self.chargingstationPage)
+        self.chargingstationLabel.setObjectName(u"chargingstationLabel")
+        self.chargingstationLabel.setGeometry(QRect(20, 10, 121, 21))
+        self.chargingstationLabel.setFont(font)
+        self.chargingstationScrollArea = QScrollArea(self.chargingstationPage)
+        self.chargingstationScrollArea.setObjectName(u"chargingstationScrollArea")
+        self.chargingstationScrollArea.setGeometry(QRect(0, 40, 361, 541))
+        sizePolicy.setHeightForWidth(self.chargingstationScrollArea.sizePolicy().hasHeightForWidth())
+        self.chargingstationScrollArea.setSizePolicy(sizePolicy)
+        self.chargingstationScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.chargingstationScrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_8 = QWidget()
+        self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
+        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 359, 539))
+        sizePolicy1.setHeightForWidth(self.scrollAreaWidgetContents_8.sizePolicy().hasHeightForWidth())
+        self.scrollAreaWidgetContents_8.setSizePolicy(sizePolicy1)
+        self.scrollAreaWidgetContents_8.setMinimumSize(QSize(0, 0))
+        self.formLayout_9 = QFormLayout(self.scrollAreaWidgetContents_8)
+        self.formLayout_9.setObjectName(u"formLayout_9")
+        self.formLayout_9.setHorizontalSpacing(0)
+        self.formLayout_9.setVerticalSpacing(0)
+        self.formLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.stationVerticalLayout_3 = QVBoxLayout()
+        self.stationVerticalLayout_3.setSpacing(0)
+        self.stationVerticalLayout_3.setObjectName(u"stationVerticalLayout_3")
+        self.stationVerticalLayout_3.setContentsMargins(0, 10, 0, 0)
+        self.verticalSpacer_17 = QSpacerItem(20, 15, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.stationVerticalLayout_3.addItem(self.verticalSpacer_17)
+
+        self.stationidLabel_2 = QLabel(self.scrollAreaWidgetContents_8)
+        self.stationidLabel_2.setObjectName(u"stationidLabel_2")
+        self.stationidLabel_2.setMinimumSize(QSize(357, 0))
+        self.stationidLabel_2.setFont(font7)
+        self.stationidLabel_2.setAlignment(Qt.AlignCenter)
+
+        self.stationVerticalLayout_3.addWidget(self.stationidLabel_2)
+
+        self.enterstationidVerticalLayout_2 = QVBoxLayout()
+        self.enterstationidVerticalLayout_2.setSpacing(3)
+        self.enterstationidVerticalLayout_2.setObjectName(u"enterstationidVerticalLayout_2")
+        self.enterstationidVerticalLayout_2.setContentsMargins(10, 10, 10, 0)
+        self.verticalSpacer_18 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_18)
+
+        self.stationidvalueLabel = QLabel(self.scrollAreaWidgetContents_8)
+        self.stationidvalueLabel.setObjectName(u"stationidvalueLabel")
+        font8 = QFont()
+        font8.setPointSize(14)
+        self.stationidvalueLabel.setFont(font8)
+        self.stationidvalueLabel.setAlignment(Qt.AlignCenter)
+
+        self.enterstationidVerticalLayout_2.addWidget(self.stationidvalueLabel)
+
+        self.verticalSpacer_19 = QSpacerItem(20, 10, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_19)
+
+        self.chargingstationiconPushButton = QPushButton(self.scrollAreaWidgetContents_8)
+        self.chargingstationiconPushButton.setObjectName(u"chargingstationiconPushButton")
+        self.chargingstationiconPushButton.setStyleSheet(u"QPushButton{\n"
+"	border: None;\n"
+"}")
+        icon11 = QIcon()
+        icon11.addFile(u"images/charging-station.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.chargingstationiconPushButton.setIcon(icon11)
+        self.chargingstationiconPushButton.setIconSize(QSize(150, 150))
+
+        self.enterstationidVerticalLayout_2.addWidget(self.chargingstationiconPushButton)
+
+        self.verticalSpacer_22 = QSpacerItem(20, 15, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_22)
+
+        self.companyHorizontalLayout = QHBoxLayout()
+        self.companyHorizontalLayout.setSpacing(0)
+        self.companyHorizontalLayout.setObjectName(u"companyHorizontalLayout")
+        self.companyHorizontalLayout.setContentsMargins(40, -1, 0, -1)
+        self.companyLabel_2 = QLabel(self.scrollAreaWidgetContents_8)
+        self.companyLabel_2.setObjectName(u"companyLabel_2")
+        self.companyLabel_2.setMaximumSize(QSize(100, 16777215))
+        self.companyLabel_2.setFont(font)
+
+        self.companyHorizontalLayout.addWidget(self.companyLabel_2)
+
+        self.companyvalueLabel_2 = QLabel(self.scrollAreaWidgetContents_8)
+        self.companyvalueLabel_2.setObjectName(u"companyvalueLabel_2")
+        self.companyvalueLabel_2.setMaximumSize(QSize(196, 16777215))
+        self.companyvalueLabel_2.setFont(font)
+
+        self.companyHorizontalLayout.addWidget(self.companyvalueLabel_2)
+
+
+        self.enterstationidVerticalLayout_2.addLayout(self.companyHorizontalLayout)
+
+        self.verticalSpacer_23 = QSpacerItem(20, 15, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_23)
+
+        self.typeHorizontalLayout = QHBoxLayout()
+        self.typeHorizontalLayout.setSpacing(0)
+        self.typeHorizontalLayout.setObjectName(u"typeHorizontalLayout")
+        self.typeHorizontalLayout.setContentsMargins(40, -1, 0, -1)
+        self.typeLabel = QLabel(self.scrollAreaWidgetContents_8)
+        self.typeLabel.setObjectName(u"typeLabel")
+        self.typeLabel.setMaximumSize(QSize(100, 16777215))
+        self.typeLabel.setFont(font)
+
+        self.typeHorizontalLayout.addWidget(self.typeLabel)
+
+        self.typevalueLabel = QLabel(self.scrollAreaWidgetContents_8)
+        self.typevalueLabel.setObjectName(u"typevalueLabel")
+        self.typevalueLabel.setMaximumSize(QSize(196, 16777215))
+        self.typevalueLabel.setFont(font)
+
+        self.typeHorizontalLayout.addWidget(self.typevalueLabel)
+
+
+        self.enterstationidVerticalLayout_2.addLayout(self.typeHorizontalLayout)
+
+        self.verticalSpacer_21 = QSpacerItem(20, 15, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_21)
+
+        self.locationHorizontalLayout = QHBoxLayout()
+        self.locationHorizontalLayout.setSpacing(0)
+        self.locationHorizontalLayout.setObjectName(u"locationHorizontalLayout")
+        self.locationHorizontalLayout.setContentsMargins(40, -1, -1, -1)
+        self.locationLabel_2 = QLabel(self.scrollAreaWidgetContents_8)
+        self.locationLabel_2.setObjectName(u"locationLabel_2")
+        self.locationLabel_2.setMinimumSize(QSize(100, 0))
+        self.locationLabel_2.setMaximumSize(QSize(100, 16777215))
+        self.locationLabel_2.setFont(font)
+        self.locationLabel_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+
+        self.locationHorizontalLayout.addWidget(self.locationLabel_2)
+
+        self.locationvalueTextEdit = QTextEdit(self.scrollAreaWidgetContents_8)
+        self.locationvalueTextEdit.setObjectName(u"locationvalueTextEdit")
+        self.locationvalueTextEdit.setMinimumSize(QSize(0, 0))
+        self.locationvalueTextEdit.setMaximumSize(QSize(16777215, 90))
+        self.locationvalueTextEdit.setBaseSize(QSize(0, 0))
+        self.locationvalueTextEdit.setFont(font)
+        self.locationvalueTextEdit.setStyleSheet(u"QTextEdit{\n"
+"	background-color: rgba( 0, 0, 0, 0 );\n"
+"	border: none;\n"
+"}")
+        self.locationvalueTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.locationvalueTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.locationvalueTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
+
+        self.locationHorizontalLayout.addWidget(self.locationvalueTextEdit)
+
+
+        self.enterstationidVerticalLayout_2.addLayout(self.locationHorizontalLayout)
+
+        self.verticalSpacer_20 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_20)
+
+        self.confirmHorizontalLayout = QHBoxLayout()
+        self.confirmHorizontalLayout.setSpacing(0)
+        self.confirmHorizontalLayout.setObjectName(u"confirmHorizontalLayout")
+        self.cancelPushButton = QPushButton(self.scrollAreaWidgetContents_8)
+        self.cancelPushButton.setObjectName(u"cancelPushButton")
+        self.cancelPushButton.setMinimumSize(QSize(0, 35))
+        self.cancelPushButton.setMaximumSize(QSize(100, 16777215))
+        self.cancelPushButton.setFont(font6)
+        self.cancelPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cancelPushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color: #71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #ffffff;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #468000;\n"
+"}")
+        self.cancelPushButton.setIconSize(QSize(20, 20))
+
+        self.confirmHorizontalLayout.addWidget(self.cancelPushButton)
+
+        self.confirmPushButton = QPushButton(self.scrollAreaWidgetContents_8)
+        self.confirmPushButton.setObjectName(u"confirmPushButton")
+        self.confirmPushButton.setMinimumSize(QSize(0, 35))
+        self.confirmPushButton.setMaximumSize(QSize(100, 16777215))
+        self.confirmPushButton.setFont(font6)
+        self.confirmPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.confirmPushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color: #71cd00;\n"
+"	border-radius: 10px;\n"
+"	color: #ffffff;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #468000;\n"
+"}")
+        self.confirmPushButton.setIconSize(QSize(20, 20))
+
+        self.confirmHorizontalLayout.addWidget(self.confirmPushButton)
+
+
+        self.enterstationidVerticalLayout_2.addLayout(self.confirmHorizontalLayout)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 30, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.enterstationidVerticalLayout_2.addItem(self.verticalSpacer_4)
+
+
+        self.stationVerticalLayout_3.addLayout(self.enterstationidVerticalLayout_2)
+
+
+        self.formLayout_9.setLayout(0, QFormLayout.FieldRole, self.stationVerticalLayout_3)
+
+        self.chargingstationScrollArea.setWidget(self.scrollAreaWidgetContents_8)
+        self.stackedWidget.addWidget(self.chargingstationPage)
 
         self.verticalLayout.addWidget(self.stackedWidget)
 
@@ -1930,9 +2147,9 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "	color: #71cd00;\n"
 "}")
-        icon11 = QIcon()
-        icon11.addFile(u"images/home.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.homePushButton.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u"images/home.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.homePushButton.setIcon(icon12)
 
         self.horizontalLayout.addWidget(self.homePushButton)
 
@@ -1946,9 +2163,9 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "	color: #71cd00;\n"
 "}")
-        icon12 = QIcon()
-        icon12.addFile(u"images/history.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.historyPushButton.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u"images/history.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.historyPushButton.setIcon(icon13)
 
         self.horizontalLayout.addWidget(self.historyPushButton)
 
@@ -1962,9 +2179,9 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "	color: #71cd00;\n"
 "}")
-        icon13 = QIcon()
-        icon13.addFile(u"images/location.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.locationPushButton.setIcon(icon13)
+        icon14 = QIcon()
+        icon14.addFile(u"images/location.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.locationPushButton.setIcon(icon14)
         self.locationPushButton.setIconSize(QSize(18, 18))
 
         self.horizontalLayout.addWidget(self.locationPushButton)
@@ -1979,9 +2196,9 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "	color: #71cd00;\n"
 "}")
-        icon14 = QIcon()
-        icon14.addFile(u"images/account.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.accountPushButton.setIcon(icon14)
+        icon15 = QIcon()
+        icon15.addFile(u"images/account.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.accountPushButton.setIcon(icon15)
         self.accountPushButton.setIconSize(QSize(17, 17))
 
         self.horizontalLayout.addWidget(self.accountPushButton)
@@ -2122,6 +2339,17 @@ class Ui_Form(object):
         self.pushButton_6_2.setText(QCoreApplication.translate("Form", u"6", None))
         self.pushButton_scan.setText("")
         self.searchPushButton.setText(QCoreApplication.translate("Form", u"Search", None))
+        self.chargingstationLabel.setText(QCoreApplication.translate("Form", u"Charging Station", None))
+        self.stationidLabel_2.setText(QCoreApplication.translate("Form", u"Station ID:", None))
+        self.stationidvalueLabel.setText("")
+        self.chargingstationiconPushButton.setText("")
+        self.companyLabel_2.setText(QCoreApplication.translate("Form", u"Company:", None))
+        self.companyvalueLabel_2.setText("")
+        self.typeLabel.setText(QCoreApplication.translate("Form", u"Type:", None))
+        self.typevalueLabel.setText("")
+        self.locationLabel_2.setText(QCoreApplication.translate("Form", u"Location:", None))
+        self.cancelPushButton.setText(QCoreApplication.translate("Form", u"Cancel", None))
+        self.confirmPushButton.setText(QCoreApplication.translate("Form", u"Confirm", None))
 #if QT_CONFIG(whatsthis)
         self.homePushButton.setWhatsThis(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)

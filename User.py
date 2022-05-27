@@ -11,6 +11,9 @@ class User:
     #         return True
     #     else:
     #         return False
+    def getUID(self):
+        return self.UID
+
     def getEmail(self):
         return self.email
 
@@ -48,20 +51,6 @@ class User:
             return True
         except:
             raise SystemError("Can't set money")
-    
-    # def setCars(self, cars):
-    #     try:
-    #         self.db.child('users').child(self.UID).update({'cars': cars})
-    #         return True
-    #     except:
-    #         raise SystemError("Can't set cars")
-
-    # def setCards(self, cards):
-    #     try:
-    #         self.db.child('users').child(self.UID).update({'cards': cards})
-    #         return True
-    #     except:
-    #         raise SystemError("Can't set cards")
 
     def addCar(self, car):
         try:
@@ -76,13 +65,20 @@ class User:
             return True
         except:
             raise SystemError("Can't add card")
-
-    def setHistory(self, history):
+    
+    def addHistory(self, history):
         try:
-            self.db.child('users').child(self.UID).update({'history': history})
+            self.db.child('users').child(self.UID).child('histories').push(history)
             return True
         except:
-            raise SystemError("Can't set history")
+            raise SystemError("Can't add history")
+
+    # def setHistory(self, history):
+    #     try:
+    #         self.db.child('users').child(self.UID).update({'history': history})
+    #         return True
+    #     except:
+    #         raise SystemError("Can't set history")
     
     def getUsername(self):
         try:
@@ -129,9 +125,14 @@ class User:
     def getHistory(self):
         try:
             userInfo = self.getUserInfo()
-            return userInfo['history']
+            return userInfo['histories']
         except:
-            raise SystemError("Can't get history")
+            raise SystemError("Can't get histories")
     
     def deleteAttribute(self, attribute):
         self.db.child('users').child(self.UID).child(attribute).remove()
+    
+    def topUptoE_Wallet(self, amount):
+        currentMoney = self.getMoney()
+        currentMoney += amount
+        self.setMoney(currentMoney)
