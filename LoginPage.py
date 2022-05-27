@@ -80,10 +80,6 @@ class Login_Page(QWidget):
             print('No rememberUser file found')
 
     def showAlert(self, text):
-        dialog = QDialog(self)
-        layout = QVBoxLayout()
-        label = QLabel(self)
-        label.setText(text)
-        layout.addWidget(label)
-        dialog.setLayout(layout)
-        dialog.show()
+        messageBox = QMessageBox(self)
+        messageBox.setText(text)
+        messageBox.exec()
