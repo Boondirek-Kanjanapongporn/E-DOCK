@@ -23,16 +23,21 @@ class Ui_Form(object):
         if not Form.objectName():
             Form.setObjectName(u"Form")
         Form.resize(360, 640)
+        Form.setStyleSheet(u"QWidget{\n"
+"	background-color: #FAFAFA;\n"
+"}")
         self.emailLabel = QLabel(Form)
         self.emailLabel.setObjectName(u"emailLabel")
         self.emailLabel.setGeometry(QRect(40, 145, 281, 21))
         self.emailLabel.setStyleSheet(u"font: 16pt;\n"
-"color: #444444;")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.passwordLabel = QLabel(Form)
         self.passwordLabel.setObjectName(u"passwordLabel")
         self.passwordLabel.setGeometry(QRect(40, 235, 281, 21))
         self.passwordLabel.setStyleSheet(u"font: 16pt;\n"
-"color: #444444")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.loginPushButton = QPushButton(Form)
         self.loginPushButton.setObjectName(u"loginPushButton")
         self.loginPushButton.setGeometry(QRect(40, 350, 281, 41))
@@ -79,14 +84,16 @@ class Ui_Form(object):
         self.remembermeCheckBox.setObjectName(u"remembermeCheckBox")
         self.remembermeCheckBox.setGeometry(QRect(40, 300, 121, 20))
         self.remembermeCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
+        self.remembermeCheckBox.setStyleSheet(u"background-color: rgba(0,0,0,0);")
         self.orLabel = QLabel(Form)
         self.orLabel.setObjectName(u"orLabel")
         self.orLabel.setGeometry(QRect(20, 430, 321, 20))
+        self.orLabel.setStyleSheet(u"background-color: rgba(0,0,0,0);")
         self.orLabel.setAlignment(Qt.AlignCenter)
         self.needanaccountLabel = QLabel(Form)
         self.needanaccountLabel.setObjectName(u"needanaccountLabel")
         self.needanaccountLabel.setGeometry(QRect(100, 480, 121, 16))
-        self.needanaccountLabel.setStyleSheet(u"")
+        self.needanaccountLabel.setStyleSheet(u"background-color: rgba(0,0,0,0);")
         self.needanaccountLabel.setAlignment(Qt.AlignCenter)
         self.signupPushButton = QPushButton(Form)
         self.signupPushButton.setObjectName(u"signupPushButton")
@@ -96,33 +103,42 @@ class Ui_Form(object):
 "	border: None;\n"
 "	text-decoration: underline;\n"
 "	color: #1c33de;\n"
-"	\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
         self.forgotpasswordPushButton = QPushButton(Form)
         self.forgotpasswordPushButton.setObjectName(u"forgotpasswordPushButton")
         self.forgotpasswordPushButton.setGeometry(QRect(220, 400, 111, 16))
         self.forgotpasswordPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.forgotpasswordPushButton.setStyleSheet(u"QPushButton{\n"
-"	border: None\n"
+"	border: None;\n"
+"	text-decoration: underline;\n"
+"	color: #aa1111;\n"
+"	background-color: rgba(0,0,0,0);\n"
+"}\n"
+"QPushButton:hover{\n"
+"	color: #630b0b;\n"
 "}")
         self.invalidemailLabel = QLabel(Form)
         self.invalidemailLabel.setObjectName(u"invalidemailLabel")
         self.invalidemailLabel.setGeometry(QRect(250, 210, 81, 16))
         self.invalidemailLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
         self.invalidpasswordLabel = QLabel(Form)
         self.invalidpasswordLabel.setObjectName(u"invalidpasswordLabel")
         self.invalidpasswordLabel.setGeometry(QRect(220, 300, 101, 21))
         self.invalidpasswordLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
         self.invalidpasswordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.loginLabel = QLabel(Form)
         self.loginLabel.setObjectName(u"loginLabel")
         self.loginLabel.setGeometry(QRect(40, 100, 91, 21))
         self.loginLabel.setStyleSheet(u"font: 20pt, Arial;\n"
-"color: #444444;")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.invalidemailLabel.raise_()
         self.invalidpasswordLabel.raise_()
         self.emailLabel.raise_()

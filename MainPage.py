@@ -46,8 +46,11 @@ class Main_Page(QWidget):
         self.refreshAccountPage()
         
         # Home Page -------------------------------------------------------------------------------------------------------
+        self.ui.searchLineEdit.textChanged.connect(self.handleSearch)
         self.ui.chargePushButton.clicked.connect(self.gotoSelectStationPage)
         self.ui.topupPushButton.clicked.connect(self.gotoTopupPage)
+        self.ui.carsPushButton.clicked.connect(self.gotoCarsPage)
+        self.ui.cardsPushButton.clicked.connect(self.gotoCardsPage)
 
         # History Page ----------------------------------------------------------------------------------------------------
         
@@ -116,6 +119,10 @@ class Main_Page(QWidget):
         # Charging Station Page --------------------------------------------------------------------------------------
         self.ui.cancelPushButton.clicked.connect(self.gotoSelectStationPage)
         self.ui.confirmPushButton.clicked.connect(self.gotoStationPage)
+
+        # Cars Page --------------------------------------------------------------------------------------------------
+
+        # Cards Page -------------------------------------------------------------------------------------------------
     
     # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -179,15 +186,7 @@ class Main_Page(QWidget):
             self.ui.hiLabel.setText(f"Hi, {self.email}")
 
     def refreshHistoryPage(self):
-        self.clearLayout(self.ui.historyVerticalLayout)
-        try:
-            historyNodes = self.user.getHistory()
-            historyList = []
-            for value in historyNodes.values():
-                historyList.append(value)
-            self.addHistoryList(historyList[::-1])
-        except:
-            print("No histories")
+        self.addHistoryList()
     
     def clearLayout(self, layout):
         while layout.count():
@@ -218,6 +217,26 @@ class Main_Page(QWidget):
         else:
             return self.auth.current_user['email']
     
+    def handleSearch(self):
+        searchText = self.ui.searchLineEdit.text().upper()
+        companies = self.db.child('companies').get().val()
+        companies = list(companies.keys())
+        if searchText != "" and not searchText.isspace():
+            for i in range(self.ui.stationHorizontalLayout.count()):
+                childLayout = self.ui.stationHorizontalLayout.itemAt(i)
+                for j in range(childLayout.count()):
+                    childButton = childLayout.itemAt(j)
+                    if searchText in childButton.widget().text():
+                        childButton.widget().setVisible(True)
+                    else:
+                        childButton.widget().setVisible(False)
+        else:
+            for i in range(self.ui.stationHorizontalLayout.count()):
+                childLayout = self.ui.stationHorizontalLayout.itemAt(i)
+                for j in range(childLayout.count()):
+                    childButton = childLayout.itemAt(j)
+                    childButton.widget().setVisible(True)
+    
     def gotoSelectStationPage(self):
         self.refreshSelectStationPage()
         self.ui.stackedWidget.setCurrentWidget(self.ui.selectstationPage)
@@ -225,6 +244,14 @@ class Main_Page(QWidget):
     def gotoTopupPage(self):
         self.refreshTopupPage()
         self.ui.stackedWidget.setCurrentWidget(self.ui.topupPage)
+    
+    def gotoCarsPage(self):
+        self.refreshCarsPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.carsPage)
+
+    def gotoCardsPage(self):
+        self.refreshCardsPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.cardsPage)
     
     def refreshTopupPage(self):
         self.ui.topupvalueLineEdit.setText("")
@@ -238,13 +265,24 @@ class Main_Page(QWidget):
         self.ui.stationid4.setText("")
         self.ui.stationid5.setText("")
         self.ui.stationid6.setText("")
+    
+    def refreshCarsPage(self):
+        self.addCarsList()
+
+    def refreshCardsPage(self):
+        self.addCardsList()
 
     
     # History Page functions ---------------------------------------------------------------------------------------------
-    def addHistoryList(self, historyList):
-        for history in historyList:
-            self.ui.historyVerticalLayout.addWidget(self.createHistoryPushButton(history))
-        self.ui.historyVerticalLayout.addStretch(1)
+    def addHistoryList(self):
+        self.clearLayout(self.ui.historyVerticalLayout)
+        try:
+            historyList = self.user.getHistory()
+            for value in reversed(list(historyList.values())):
+                self.ui.historyVerticalLayout.addWidget(self.createHistoryPushButton(value))
+            self.ui.historyVerticalLayout.addStretch(1)
+        except:
+            print("No histories")
     
     def createHistoryPushButton(self, history):
         historyPushButton = QPushButton()
@@ -313,7 +351,7 @@ class Main_Page(QWidget):
                 timestamp = datetime.datetime.now()
 
                 if company != "" and model != "" and batteryCapacity != "" and chargingCapacity != "" and not company.isspace() and not model.isspace() and not batteryCapacity.isspace() and not chargingCapacity.isspace():
-                    newCar = {'company': company, 'model': model, 'batterCapacity': batteryCapacity, 'chargingCapacity': chargingCapacity, 'timestamp': str(timestamp)}
+                    newCar = {'company': company, 'model': model, 'batteryCapacity': batteryCapacity, 'chargingCapacity': chargingCapacity, 'timestamp': str(timestamp)}
                     try:
                         self.user.addCar(newCar)
                         self.showAlert("New car added")
@@ -521,6 +559,38 @@ class Main_Page(QWidget):
             return False
         else:
             self.showAlert("Invalid Pin Input")
+    
+    # Cars Page function ---------------------------------------------------------------------------------------------------
+    def addCarsList(self):
+        self.clearLayout(self.ui.carsVerticalLayout_2)
+        try:
+            carsList = self.user.getCars()
+            for value in reversed(list(carsList.values())):
+                self.ui.carsVerticalLayout_2.addWidget(self.createCarPushButton(value))
+            self.ui.carsVerticalLayout_2.addStretch(1)
+        except:
+            print("No cars")
+    
+    def createCarPushButton(self, car):
+        carPushButton = QPushButton()
+        carPushButton.setText(f"{car.get('company')}\nModel: {car.get('model')}\nBattery-Capacity: {car.get('batteryCapacity')} mAh\nCharge-Capacity: {car.get('chargingCapacity')} kW\nTimestamp: {car.get('timestamp')}")
+        return carPushButton
+    
+    # Cars Page function ---------------------------------------------------------------------------------------------------
+    def addCardsList(self):
+        self.clearLayout(self.ui.cardsVerticalLayout_2)
+        try:
+            cardsList = self.user.getCards()
+            for value in reversed(list(cardsList.values())):
+                self.ui.cardsVerticalLayout_2.addWidget(self.createCardPushButton(value))
+            self.ui.cardsVerticalLayout_2.addStretch(1)
+        except:
+            print("No cards")
+    
+    def createCardPushButton(self, card):
+        cardPushButton = QPushButton()
+        cardPushButton.setText(f"Card Number:{card.get('cardNumber')}\nCardholder: {card.get('cardHolderName')}\nTimestamp: {card.get('timestamp')}")
+        return cardPushButton
         
 
 

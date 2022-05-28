@@ -22,10 +22,13 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(361, 640)
+        Form.resize(360, 640)
         self.stackedWidget = QStackedWidget(Form)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 0, 361, 641))
+        self.stackedWidget.setStyleSheet(u"QWidget{\n"
+"	background-color: #FAFAFA;\n"
+"}")
         self.createpinPage = QWidget()
         self.createpinPage.setObjectName(u"createpinPage")
         self.gridLayoutWidget = QWidget(self.createpinPage)
