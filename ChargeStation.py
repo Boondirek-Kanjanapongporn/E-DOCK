@@ -21,7 +21,7 @@ class ChargeStation:
         self.totalSeconds = 0
         self.timeStamp = 0
         self.wattageList = []
-        self.SmartPlug = TPLinkSP("192.168.137.53")
+        self.SmartPlug = TPLinkSP("192.168.137.203")
         self.SmartPlug.turn_off()
     
     def getStationID(self):
