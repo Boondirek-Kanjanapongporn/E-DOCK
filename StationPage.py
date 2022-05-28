@@ -53,11 +53,7 @@ class Station_Page(QWidget):
         messageBox.setText(text)
         messageBox.exec()
     
-    def showConfirmation(self, title, totalSeconds):
-        hours = totalSeconds/3600
-        avgWattage = 80
-        chargeCost = (avgWattage * hours)/1000 * self.chargestation.stationRate
-        
+    def showConfirmation(self, title, totalSeconds, chargeCost):
         time = self.secondstoTime(totalSeconds)
         messageBox = QMessageBox()
         messageBox.setWindowTitle(title)
@@ -124,10 +120,16 @@ class Station_Page(QWidget):
         for i in range(0, len(timerReversed)):
             totalSeconds += timerReversed[i] * secondsList[i]
         if totalSeconds >= 60:
-            boolean = self.showConfirmation("Confirm Charging Details?", totalSeconds)
+            hours = totalSeconds/3600
+            avgWattage = 80
+            chargeCost = (avgWattage * hours)/1000 * self.chargestation.stationRate
+            boolean = self.showConfirmation("Confirm Charging Details?", totalSeconds, chargeCost)
             if boolean:
-                self.chargestation.setTotalSeconds(totalSeconds)
-                self.gotoChargingPage()
+                if chargeCost <= self.user.getMoney():
+                    self.chargestation.setTotalSeconds(totalSeconds)
+                    self.gotoChargingPage()
+                else:
+                    self.showAlert("Not enough money in E-Wallet, Please Top-Up")
         else:
             self.showAlert("Charge Time Must Be More than 1 Minute")
     
