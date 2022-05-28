@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: #FAFAFA;
+}</string>
+  </property>
   <widget class="QLabel" name="emailLabel">
    <property name="geometry">
     <rect>
@@ -24,7 +29,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">font: 16pt;
-color: #444444;</string>
+color: #444444;
+background-color: rgba(0,0,0,0);</string>
    </property>
    <property name="text">
     <string>Email</string>
@@ -41,7 +47,8 @@ color: #444444;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 16pt;
-color: #444444</string>
+color: #444444;
+background-color: rgba(0,0,0,0);</string>
    </property>
    <property name="text">
     <string>Password</string>
@@ -143,6 +150,9 @@ QLineEdit:focus
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0,0,0,0);</string>
+   </property>
    <property name="text">
     <string>Remember me?</string>
    </property>
@@ -155,6 +165,9 @@ QLineEdit:focus
      <width>321</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(0,0,0,0);</string>
    </property>
    <property name="text">
     <string>--------------------------- OR ---------------------------</string>
@@ -173,7 +186,7 @@ QLineEdit:focus
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-color: rgba(0,0,0,0);</string>
    </property>
    <property name="text">
     <string>Need an account?</string>
@@ -199,7 +212,7 @@ QLineEdit:focus
 	border: None;
 	text-decoration: underline;
 	color: #1c33de;
-	
+	background-color: rgba(0,0,0,0);
 }</string>
    </property>
    <property name="text">
@@ -220,7 +233,13 @@ QLineEdit:focus
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
-	border: None
+	border: None;
+	text-decoration: underline;
+	color: #aa1111;
+	background-color: rgba(0,0,0,0);
+}
+QPushButton:hover{
+	color: #630b0b;
 }</string>
    </property>
    <property name="text">
@@ -239,6 +258,7 @@ QLineEdit:focus
    <property name="styleSheet">
     <string notr="true">QLabel{
 	color: #aa1111;
+	background-color: rgba(0,0,0,0);
 }</string>
    </property>
    <property name="text">
@@ -257,6 +277,7 @@ QLineEdit:focus
    <property name="styleSheet">
     <string notr="true">QLabel{
 	color: #aa1111;
+	background-color: rgba(0,0,0,0);
 }</string>
    </property>
    <property name="text">
@@ -277,7 +298,8 @@ QLineEdit:focus
    </property>
    <property name="styleSheet">
     <string notr="true">font: 20pt, Arial;
-color: #444444;</string>
+color: #444444;
+background-color: rgba(0,0,0,0);</string>
    </property>
    <property name="text">
     <string>LOGIN</string>

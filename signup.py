@@ -23,6 +23,9 @@ class Ui_Form(object):
         if not Form.objectName():
             Form.setObjectName(u"Form")
         Form.resize(360, 640)
+        Form.setStyleSheet(u"QWidget{\n"
+"	background-color: #FAFAFA;\n"
+"}")
         self.signupLabel = QLabel(Form)
         self.signupLabel.setObjectName(u"signupLabel")
         self.signupLabel.setGeometry(QRect(40, 70, 91, 21))
@@ -131,7 +134,7 @@ class Ui_Form(object):
         self.invalidpasswordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.passwordsdonotmatchLabel = QLabel(Form)
         self.passwordsdonotmatchLabel.setObjectName(u"passwordsdonotmatchLabel")
-        self.passwordsdonotmatchLabel.setGeometry(QRect(170, 370, 161, 20))
+        self.passwordsdonotmatchLabel.setGeometry(QRect(190, 370, 141, 20))
         self.passwordsdonotmatchLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
 "}")

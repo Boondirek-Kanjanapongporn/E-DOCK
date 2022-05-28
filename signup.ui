@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color: #FAFAFA;
+}</string>
+  </property>
   <widget class="QLabel" name="signupLabel">
    <property name="geometry">
     <rect>
@@ -291,9 +296,9 @@ QLineEdit:focus
   <widget class="QLabel" name="passwordsdonotmatchLabel">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>190</x>
      <y>370</y>
-     <width>161</width>
+     <width>141</width>
      <height>20</height>
     </rect>
    </property>

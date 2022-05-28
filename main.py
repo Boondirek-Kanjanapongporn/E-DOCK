@@ -24,7 +24,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(362, 640)
+        Form.resize(360, 640)
         self.verticalLayoutWidget = QWidget(Form)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
         self.verticalLayoutWidget.setGeometry(QRect(0, 0, 361, 581))
@@ -33,6 +33,7 @@ class Ui_Form(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget = QStackedWidget(self.verticalLayoutWidget)
         self.stackedWidget.setObjectName(u"stackedWidget")
+        self.stackedWidget.setStyleSheet(u"")
         self.homePage = QWidget()
         self.homePage.setObjectName(u"homePage")
         self.homeScrollArea = QScrollArea(self.homePage)
@@ -43,11 +44,12 @@ class Ui_Form(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.homeScrollArea.sizePolicy().hasHeightForWidth())
         self.homeScrollArea.setSizePolicy(sizePolicy)
+        self.homeScrollArea.setStyleSheet(u"")
         self.homeScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.homeScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 342, 687))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -112, 342, 691))
         self.formLayout = QFormLayout(self.scrollAreaWidgetContents)
         self.formLayout.setObjectName(u"formLayout")
         self.formLayout.setVerticalSpacing(10)
@@ -62,7 +64,7 @@ class Ui_Form(object):
 "}\n"
 "QLineEdit:focus\n"
 "{\n"
-"	border: 2px solid #D2D2D2;\n"
+"	border: 2px solid #2871cc;\n"
 "}")
 
         self.formLayout.setWidget(3, QFormLayout.SpanningRole, self.searchLineEdit)
@@ -75,7 +77,7 @@ class Ui_Form(object):
         self.stationScrollArea.setWidgetResizable(True)
         self.stationAreaWidgetContents = QWidget()
         self.stationAreaWidgetContents.setObjectName(u"stationAreaWidgetContents")
-        self.stationAreaWidgetContents.setGeometry(QRect(0, 0, 300, 175))
+        self.stationAreaWidgetContents.setGeometry(QRect(0, 0, 400, 175))
         self.stationAreaWidgetContents.setMinimumSize(QSize(0, 0))
         self.formLayout_6 = QFormLayout(self.stationAreaWidgetContents)
         self.formLayout_6.setObjectName(u"formLayout_6")
@@ -94,9 +96,18 @@ class Ui_Form(object):
         self.promotionPushButton6_3.setMinimumSize(QSize(83, 80))
         self.promotionPushButton6_3.setMaximumSize(QSize(85, 80))
         font = QFont()
-        font.setPointSize(11)
+        font.setPointSize(10)
         self.promotionPushButton6_3.setFont(font)
         self.promotionPushButton6_3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_3.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
         self.promotionPushButton6_3.setIconSize(QSize(20, 20))
 
         self.stationVerticalLayout.addWidget(self.promotionPushButton6_3)
@@ -107,6 +118,15 @@ class Ui_Form(object):
         self.promotionPushButton6_4.setMaximumSize(QSize(80, 80))
         self.promotionPushButton6_4.setFont(font)
         self.promotionPushButton6_4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_4.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
         self.promotionPushButton6_4.setIconSize(QSize(20, 20))
 
         self.stationVerticalLayout.addWidget(self.promotionPushButton6_4)
@@ -123,6 +143,15 @@ class Ui_Form(object):
         self.promotionPushButton6_5.setMaximumSize(QSize(80, 80))
         self.promotionPushButton6_5.setFont(font)
         self.promotionPushButton6_5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_5.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
         self.promotionPushButton6_5.setIconSize(QSize(20, 20))
 
         self.stationVerticalLayout_2.addWidget(self.promotionPushButton6_5)
@@ -133,12 +162,109 @@ class Ui_Form(object):
         self.promotionPushButton6_6.setMaximumSize(QSize(80, 80))
         self.promotionPushButton6_6.setFont(font)
         self.promotionPushButton6_6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_6.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
         self.promotionPushButton6_6.setIconSize(QSize(20, 20))
 
         self.stationVerticalLayout_2.addWidget(self.promotionPushButton6_6)
 
 
         self.stationHorizontalLayout.addLayout(self.stationVerticalLayout_2)
+
+        self.stationVerticalLayout_4 = QVBoxLayout()
+        self.stationVerticalLayout_4.setObjectName(u"stationVerticalLayout_4")
+        self.stationVerticalLayout_4.setContentsMargins(6, 6, 6, 0)
+        self.promotionPushButton6_7 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_7.setObjectName(u"promotionPushButton6_7")
+        self.promotionPushButton6_7.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_7.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_7.setFont(font)
+        self.promotionPushButton6_7.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_7.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
+        self.promotionPushButton6_7.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout_4.addWidget(self.promotionPushButton6_7)
+
+        self.promotionPushButton6_8 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_8.setObjectName(u"promotionPushButton6_8")
+        self.promotionPushButton6_8.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_8.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_8.setFont(font)
+        self.promotionPushButton6_8.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_8.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
+        self.promotionPushButton6_8.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout_4.addWidget(self.promotionPushButton6_8)
+
+
+        self.stationHorizontalLayout.addLayout(self.stationVerticalLayout_4)
+
+        self.stationVerticalLayout_5 = QVBoxLayout()
+        self.stationVerticalLayout_5.setObjectName(u"stationVerticalLayout_5")
+        self.stationVerticalLayout_5.setContentsMargins(6, 6, 6, 0)
+        self.promotionPushButton6_9 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_9.setObjectName(u"promotionPushButton6_9")
+        self.promotionPushButton6_9.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_9.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_9.setFont(font)
+        self.promotionPushButton6_9.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_9.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
+        self.promotionPushButton6_9.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout_5.addWidget(self.promotionPushButton6_9)
+
+        self.promotionPushButton6_10 = QPushButton(self.stationAreaWidgetContents)
+        self.promotionPushButton6_10.setObjectName(u"promotionPushButton6_10")
+        self.promotionPushButton6_10.setMinimumSize(QSize(83, 80))
+        self.promotionPushButton6_10.setMaximumSize(QSize(80, 80))
+        self.promotionPushButton6_10.setFont(font)
+        self.promotionPushButton6_10.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6_10.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 20px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
+        self.promotionPushButton6_10.setIconSize(QSize(20, 20))
+
+        self.stationVerticalLayout_5.addWidget(self.promotionPushButton6_10)
+
+
+        self.stationHorizontalLayout.addLayout(self.stationVerticalLayout_5)
 
 
         self.formLayout_6.setLayout(0, QFormLayout.FieldRole, self.stationHorizontalLayout)
@@ -157,6 +283,15 @@ class Ui_Form(object):
         self.chargePushButton.setObjectName(u"chargePushButton")
         self.chargePushButton.setMinimumSize(QSize(0, 31))
         self.chargePushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.chargePushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #fafafa;\n"
+"	border: 2px solid #444444;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#f2f2f2;\n"
+"}")
         icon = QIcon()
         icon.addFile(u"images/charge.png", QSize(), QIcon.Normal, QIcon.Off)
         self.chargePushButton.setIcon(icon)
@@ -181,7 +316,15 @@ class Ui_Form(object):
         self.topupPushButton.setObjectName(u"topupPushButton")
         self.topupPushButton.setMinimumSize(QSize(0, 31))
         self.topupPushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.topupPushButton.setStyleSheet(u"")
+        self.topupPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #fafafa;\n"
+"	border: 2px solid #444444;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#f2f2f2;\n"
+"}")
         icon1 = QIcon()
         icon1.addFile(u"images/topup.png", QSize(), QIcon.Normal, QIcon.Off)
         self.topupPushButton.setIcon(icon1)
@@ -206,6 +349,15 @@ class Ui_Form(object):
         self.carsPushButton.setObjectName(u"carsPushButton")
         self.carsPushButton.setMinimumSize(QSize(0, 31))
         self.carsPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.carsPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #fafafa;\n"
+"	border: 2px solid #444444;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#f2f2f2;\n"
+"}")
         icon2 = QIcon()
         icon2.addFile(u"images/car.png", QSize(), QIcon.Normal, QIcon.Off)
         self.carsPushButton.setIcon(icon2)
@@ -230,6 +382,15 @@ class Ui_Form(object):
         self.cardsPushButton.setObjectName(u"cardsPushButton")
         self.cardsPushButton.setMinimumSize(QSize(0, 31))
         self.cardsPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cardsPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #fafafa;\n"
+"	border: 2px solid #444444;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#f2f2f2;\n"
+"}")
         icon3 = QIcon()
         icon3.addFile(u"images/card.png", QSize(), QIcon.Normal, QIcon.Off)
         self.cardsPushButton.setIcon(icon3)
@@ -257,7 +418,7 @@ class Ui_Form(object):
         self.promotionScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(-200, 0, 500, 67))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 500, 67))
         self.scrollAreaWidgetContents_2.setMinimumSize(QSize(500, 0))
         self.formLayout_2 = QFormLayout(self.scrollAreaWidgetContents_2)
         self.formLayout_2.setObjectName(u"formLayout_2")
@@ -270,10 +431,22 @@ class Ui_Form(object):
         self.promotionPushButton6 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton6.setObjectName(u"promotionPushButton6")
         self.promotionPushButton6.setMinimumSize(QSize(0, 65))
-        self.promotionPushButton6.setFont(font)
+        font1 = QFont()
+        font1.setPointSize(11)
+        self.promotionPushButton6.setFont(font1)
         self.promotionPushButton6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton6.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #ff751a;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#ff6600;\n"
+"}")
         icon4 = QIcon()
-        icon4.addFile(u"images/promotion.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u"images/promotion_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.promotionPushButton6.setIcon(icon4)
         self.promotionPushButton6.setIconSize(QSize(20, 20))
 
@@ -282,8 +455,18 @@ class Ui_Form(object):
         self.promotionPushButton5 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton5.setObjectName(u"promotionPushButton5")
         self.promotionPushButton5.setMinimumSize(QSize(0, 65))
-        self.promotionPushButton5.setFont(font)
+        self.promotionPushButton5.setFont(font1)
         self.promotionPushButton5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton5.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #ff751a;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#ff6600;\n"
+"}")
         self.promotionPushButton5.setIcon(icon4)
         self.promotionPushButton5.setIconSize(QSize(20, 20))
 
@@ -292,8 +475,18 @@ class Ui_Form(object):
         self.promotionPushButton4 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton4.setObjectName(u"promotionPushButton4")
         self.promotionPushButton4.setMinimumSize(QSize(0, 65))
-        self.promotionPushButton4.setFont(font)
+        self.promotionPushButton4.setFont(font1)
         self.promotionPushButton4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton4.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #ff751a;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#ff6600;\n"
+"}")
         self.promotionPushButton4.setIcon(icon4)
         self.promotionPushButton4.setIconSize(QSize(20, 20))
 
@@ -302,8 +495,18 @@ class Ui_Form(object):
         self.promotionPushButton3 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton3.setObjectName(u"promotionPushButton3")
         self.promotionPushButton3.setMinimumSize(QSize(0, 65))
-        self.promotionPushButton3.setFont(font)
+        self.promotionPushButton3.setFont(font1)
         self.promotionPushButton3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton3.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #ff751a;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#ff6600;\n"
+"}")
         self.promotionPushButton3.setIcon(icon4)
         self.promotionPushButton3.setIconSize(QSize(20, 20))
 
@@ -312,8 +515,18 @@ class Ui_Form(object):
         self.promotionPushButton2 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton2.setObjectName(u"promotionPushButton2")
         self.promotionPushButton2.setMinimumSize(QSize(0, 65))
-        self.promotionPushButton2.setFont(font)
+        self.promotionPushButton2.setFont(font1)
         self.promotionPushButton2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton2.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #ff751a;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#ff6600;\n"
+"}")
         self.promotionPushButton2.setIcon(icon4)
         self.promotionPushButton2.setIconSize(QSize(20, 20))
 
@@ -322,8 +535,18 @@ class Ui_Form(object):
         self.promotionPushButton1 = QPushButton(self.scrollAreaWidgetContents_2)
         self.promotionPushButton1.setObjectName(u"promotionPushButton1")
         self.promotionPushButton1.setMinimumSize(QSize(0, 65))
-        self.promotionPushButton1.setFont(font)
+        self.promotionPushButton1.setFont(font1)
         self.promotionPushButton1.setCursor(QCursor(Qt.PointingHandCursor))
+        self.promotionPushButton1.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #ff751a;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#ff6600;\n"
+"}")
         self.promotionPushButton1.setIcon(icon4)
         self.promotionPushButton1.setIconSize(QSize(20, 20))
 
@@ -343,7 +566,7 @@ class Ui_Form(object):
         self.exclusivedealsScrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(-200, 0, 500, 75))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 500, 75))
         self.scrollAreaWidgetContents_3.setMinimumSize(QSize(500, 0))
         self.formLayout_3 = QFormLayout(self.scrollAreaWidgetContents_3)
         self.formLayout_3.setObjectName(u"formLayout_3")
@@ -365,10 +588,20 @@ class Ui_Form(object):
         self.exclusivedealsPushButton6 = QPushButton(self.scrollAreaWidgetContents_3)
         self.exclusivedealsPushButton6.setObjectName(u"exclusivedealsPushButton6")
         self.exclusivedealsPushButton6.setMinimumSize(QSize(0, 55))
-        self.exclusivedealsPushButton6.setFont(font)
+        self.exclusivedealsPushButton6.setFont(font1)
         self.exclusivedealsPushButton6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton6.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #da2c43;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#c32238;\n"
+"}")
         icon5 = QIcon()
-        icon5.addFile(u"images/exlusivedeals.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u"images/exclusivedeals_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.exclusivedealsPushButton6.setIcon(icon5)
         self.exclusivedealsPushButton6.setIconSize(QSize(20, 20))
 
@@ -389,8 +622,18 @@ class Ui_Form(object):
         self.exclusivedealsPushButton5 = QPushButton(self.scrollAreaWidgetContents_3)
         self.exclusivedealsPushButton5.setObjectName(u"exclusivedealsPushButton5")
         self.exclusivedealsPushButton5.setMinimumSize(QSize(0, 55))
-        self.exclusivedealsPushButton5.setFont(font)
+        self.exclusivedealsPushButton5.setFont(font1)
         self.exclusivedealsPushButton5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton5.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #da2c43;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#c32238;\n"
+"}")
         self.exclusivedealsPushButton5.setIcon(icon5)
         self.exclusivedealsPushButton5.setIconSize(QSize(20, 20))
 
@@ -411,8 +654,18 @@ class Ui_Form(object):
         self.exclusivedealsPushButton4 = QPushButton(self.scrollAreaWidgetContents_3)
         self.exclusivedealsPushButton4.setObjectName(u"exclusivedealsPushButton4")
         self.exclusivedealsPushButton4.setMinimumSize(QSize(0, 55))
-        self.exclusivedealsPushButton4.setFont(font)
+        self.exclusivedealsPushButton4.setFont(font1)
         self.exclusivedealsPushButton4.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton4.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #da2c43;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#c32238;\n"
+"}")
         self.exclusivedealsPushButton4.setIcon(icon5)
         self.exclusivedealsPushButton4.setIconSize(QSize(20, 20))
 
@@ -433,8 +686,18 @@ class Ui_Form(object):
         self.exclusivedealsPushButton3 = QPushButton(self.scrollAreaWidgetContents_3)
         self.exclusivedealsPushButton3.setObjectName(u"exclusivedealsPushButton3")
         self.exclusivedealsPushButton3.setMinimumSize(QSize(0, 55))
-        self.exclusivedealsPushButton3.setFont(font)
+        self.exclusivedealsPushButton3.setFont(font1)
         self.exclusivedealsPushButton3.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton3.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #da2c43;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#c32238;\n"
+"}")
         self.exclusivedealsPushButton3.setIcon(icon5)
         self.exclusivedealsPushButton3.setIconSize(QSize(20, 20))
 
@@ -455,8 +718,18 @@ class Ui_Form(object):
         self.exclusivedealsPushButton2 = QPushButton(self.scrollAreaWidgetContents_3)
         self.exclusivedealsPushButton2.setObjectName(u"exclusivedealsPushButton2")
         self.exclusivedealsPushButton2.setMinimumSize(QSize(0, 55))
-        self.exclusivedealsPushButton2.setFont(font)
+        self.exclusivedealsPushButton2.setFont(font1)
         self.exclusivedealsPushButton2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton2.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #da2c43;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#c32238;\n"
+"}")
         self.exclusivedealsPushButton2.setIcon(icon5)
         self.exclusivedealsPushButton2.setIconSize(QSize(20, 20))
 
@@ -477,8 +750,18 @@ class Ui_Form(object):
         self.exclusivedealsPushButton1 = QPushButton(self.scrollAreaWidgetContents_3)
         self.exclusivedealsPushButton1.setObjectName(u"exclusivedealsPushButton1")
         self.exclusivedealsPushButton1.setMinimumSize(QSize(0, 55))
-        self.exclusivedealsPushButton1.setFont(font)
+        self.exclusivedealsPushButton1.setFont(font1)
         self.exclusivedealsPushButton1.setCursor(QCursor(Qt.PointingHandCursor))
+        self.exclusivedealsPushButton1.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	background-color: #da2c43;\n"
+"	border:none;\n"
+"	border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#c32238;\n"
+"}")
         self.exclusivedealsPushButton1.setIcon(icon5)
         self.exclusivedealsPushButton1.setIconSize(QSize(20, 20))
 
@@ -496,8 +779,6 @@ class Ui_Form(object):
 
         self.hiLabel = QLabel(self.scrollAreaWidgetContents)
         self.hiLabel.setObjectName(u"hiLabel")
-        font1 = QFont()
-        font1.setPointSize(10)
         self.hiLabel.setFont(font1)
 
         self.formLayout.setWidget(1, QFormLayout.SpanningRole, self.hiLabel)
@@ -505,7 +786,7 @@ class Ui_Form(object):
         self.welcomeLabel = QLabel(self.scrollAreaWidgetContents)
         self.welcomeLabel.setObjectName(u"welcomeLabel")
         font2 = QFont()
-        font2.setPointSize(10)
+        font2.setPointSize(11)
         font2.setBold(True)
         self.welcomeLabel.setFont(font2)
         self.welcomeLabel.setStyleSheet(u"QLabel{\n"
@@ -516,19 +797,19 @@ class Ui_Form(object):
 
         self.otherservicesLabel = QLabel(self.scrollAreaWidgetContents)
         self.otherservicesLabel.setObjectName(u"otherservicesLabel")
-        self.otherservicesLabel.setFont(font1)
+        self.otherservicesLabel.setFont(font)
 
         self.formLayout.setWidget(5, QFormLayout.SpanningRole, self.otherservicesLabel)
 
         self.promotionLabel = QLabel(self.scrollAreaWidgetContents)
         self.promotionLabel.setObjectName(u"promotionLabel")
-        self.promotionLabel.setFont(font1)
+        self.promotionLabel.setFont(font)
 
         self.formLayout.setWidget(7, QFormLayout.SpanningRole, self.promotionLabel)
 
         self.exclusivedealsLabel = QLabel(self.scrollAreaWidgetContents)
         self.exclusivedealsLabel.setObjectName(u"exclusivedealsLabel")
-        self.exclusivedealsLabel.setFont(font1)
+        self.exclusivedealsLabel.setFont(font)
 
         self.formLayout.setWidget(9, QFormLayout.SpanningRole, self.exclusivedealsLabel)
 
@@ -563,7 +844,7 @@ class Ui_Form(object):
         self.historyLabel = QLabel(self.historyPage)
         self.historyLabel.setObjectName(u"historyLabel")
         self.historyLabel.setGeometry(QRect(20, 10, 121, 21))
-        self.historyLabel.setFont(font)
+        self.historyLabel.setFont(font1)
         self.stackedWidget.addWidget(self.historyPage)
         self.locationPage = QWidget()
         self.locationPage.setObjectName(u"locationPage")
@@ -583,7 +864,7 @@ class Ui_Form(object):
         self.accountLabel = QLabel(self.accountPage)
         self.accountLabel.setObjectName(u"accountLabel")
         self.accountLabel.setGeometry(QRect(20, 10, 121, 21))
-        self.accountLabel.setFont(font)
+        self.accountLabel.setFont(font1)
         self.accountScrollArea = QScrollArea(self.accountPage)
         self.accountScrollArea.setObjectName(u"accountScrollArea")
         self.accountScrollArea.setGeometry(QRect(0, 40, 361, 541))
@@ -611,7 +892,7 @@ class Ui_Form(object):
         self.accountVerticalLayout.setContentsMargins(0, 10, 0, 10)
         self.ewalletLabel = QLabel(self.scrollAreaWidgetContents_5)
         self.ewalletLabel.setObjectName(u"ewalletLabel")
-        self.ewalletLabel.setFont(font1)
+        self.ewalletLabel.setFont(font)
         self.ewalletLabel.setAlignment(Qt.AlignCenter)
 
         self.accountVerticalLayout.addWidget(self.ewalletLabel)
@@ -629,14 +910,21 @@ class Ui_Form(object):
         self.notificationPushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.notificationPushButton.setObjectName(u"notificationPushButton")
         self.notificationPushButton.setMinimumSize(QSize(0, 35))
-        self.notificationPushButton.setFont(font1)
+        self.notificationPushButton.setFont(font)
         self.notificationPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.notificationPushButton.setTabletTracking(False)
         self.notificationPushButton.setLayoutDirection(Qt.RightToLeft)
+        self.notificationPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #FFFFFF;\n"
+"	background-color:#71cd00;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #468000;\n"
+"}")
         icon6 = QIcon()
-        icon6.addFile(u"images/right-arrow.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u"images/right-arrow_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.notificationPushButton.setIcon(icon6)
-        self.notificationPushButton.setIconSize(QSize(21, 21))
+        self.notificationPushButton.setIconSize(QSize(15, 15))
         self.notificationPushButton.setAutoExclusive(False)
         self.notificationPushButton.setAutoDefault(False)
         self.notificationPushButton.setFlat(False)
@@ -676,12 +964,19 @@ class Ui_Form(object):
         self.addcarPushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.addcarPushButton.setObjectName(u"addcarPushButton")
         self.addcarPushButton.setMinimumSize(QSize(0, 35))
-        self.addcarPushButton.setFont(font1)
+        self.addcarPushButton.setFont(font)
         self.addcarPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.addcarPushButton.setTabletTracking(False)
         self.addcarPushButton.setLayoutDirection(Qt.RightToLeft)
+        self.addcarPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #FFFFFF;\n"
+"	background-color:#71cd00;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #468000;\n"
+"}")
         self.addcarPushButton.setIcon(icon6)
-        self.addcarPushButton.setIconSize(QSize(21, 21))
+        self.addcarPushButton.setIconSize(QSize(21, 15))
         self.addcarPushButton.setAutoExclusive(False)
         self.addcarPushButton.setAutoDefault(False)
 
@@ -802,9 +1097,9 @@ class Ui_Form(object):
 "}\n"
 "	")
         icon7 = QIcon()
-        icon7.addFile(u"images/add.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u"images/add_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.addcarPushButton_2.setIcon(icon7)
-        self.addcarPushButton_2.setIconSize(QSize(20, 20))
+        self.addcarPushButton_2.setIconSize(QSize(20, 16))
 
         self.addcarHorizontalLayout.addWidget(self.addcarPushButton_2)
 
@@ -817,12 +1112,19 @@ class Ui_Form(object):
         self.addcardPushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.addcardPushButton.setObjectName(u"addcardPushButton")
         self.addcardPushButton.setMinimumSize(QSize(0, 35))
-        self.addcardPushButton.setFont(font1)
+        self.addcardPushButton.setFont(font)
         self.addcardPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.addcardPushButton.setTabletTracking(False)
         self.addcardPushButton.setLayoutDirection(Qt.RightToLeft)
+        self.addcardPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #FFFFFF;\n"
+"	background-color:#71cd00;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #468000;\n"
+"}")
         self.addcardPushButton.setIcon(icon6)
-        self.addcardPushButton.setIconSize(QSize(21, 21))
+        self.addcardPushButton.setIconSize(QSize(21, 15))
         self.addcardPushButton.setAutoExclusive(False)
         self.addcardPushButton.setAutoDefault(False)
 
@@ -941,7 +1243,7 @@ class Ui_Form(object):
 "}\n"
 "	")
         self.addcardPushButton_2.setIcon(icon7)
-        self.addcardPushButton_2.setIconSize(QSize(20, 20))
+        self.addcardPushButton_2.setIconSize(QSize(20, 16))
 
         self.addcardHorizontalLayout.addWidget(self.addcardPushButton_2)
 
@@ -954,11 +1256,18 @@ class Ui_Form(object):
         self.changeusernamePushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.changeusernamePushButton.setObjectName(u"changeusernamePushButton")
         self.changeusernamePushButton.setMinimumSize(QSize(0, 35))
-        self.changeusernamePushButton.setFont(font1)
+        self.changeusernamePushButton.setFont(font)
         self.changeusernamePushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.changeusernamePushButton.setLayoutDirection(Qt.RightToLeft)
+        self.changeusernamePushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #FFFFFF;\n"
+"	background-color:#71cd00;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #468000;\n"
+"}")
         self.changeusernamePushButton.setIcon(icon6)
-        self.changeusernamePushButton.setIconSize(QSize(21, 21))
+        self.changeusernamePushButton.setIconSize(QSize(21, 15))
 
         self.accountVerticalLayout.addWidget(self.changeusernamePushButton)
 
@@ -1015,9 +1324,9 @@ class Ui_Form(object):
 "}\n"
 "	")
         icon8 = QIcon()
-        icon8.addFile(u"images/change.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u"images/change_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.changeusernamePushButton_2.setIcon(icon8)
-        self.changeusernamePushButton_2.setIconSize(QSize(16, 16))
+        self.changeusernamePushButton_2.setIconSize(QSize(16, 15))
 
         self.changeusernameHorizontalLayout.addWidget(self.changeusernamePushButton_2)
 
@@ -1034,27 +1343,51 @@ class Ui_Form(object):
         self.changepinPushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.changepinPushButton.setObjectName(u"changepinPushButton")
         self.changepinPushButton.setMinimumSize(QSize(0, 35))
-        self.changepinPushButton.setFont(font)
+        self.changepinPushButton.setFont(font1)
         self.changepinPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.changepinPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 10px;\n"
+"	background-color: #28a428;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color:#228c22;\n"
+"}")
         self.changepinPushButton.setIcon(icon8)
+        self.changepinPushButton.setIconSize(QSize(16, 15))
 
         self.verticalLayout_3.addWidget(self.changepinPushButton)
 
         self.changepasswordPushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.changepasswordPushButton.setObjectName(u"changepasswordPushButton")
         self.changepasswordPushButton.setMinimumSize(QSize(0, 35))
-        self.changepasswordPushButton.setFont(font)
+        self.changepasswordPushButton.setFont(font1)
         self.changepasswordPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.changepasswordPushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #fafafa;\n"
+"	border-radius: 10px;\n"
+"	background-color: #2871cc;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	background-color: #225faa;\n"
+"}")
 
         self.verticalLayout_3.addWidget(self.changepasswordPushButton)
 
         self.logoutPushButton = QPushButton(self.scrollAreaWidgetContents_5)
         self.logoutPushButton.setObjectName(u"logoutPushButton")
         self.logoutPushButton.setMinimumSize(QSize(0, 35))
-        self.logoutPushButton.setFont(font)
+        self.logoutPushButton.setFont(font1)
         self.logoutPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.logoutPushButton.setStyleSheet(u"QPushButton{\n"
-"	color: #aa1111;\n"
+"	color: #fafafa;\n"
+"	border-radius: 10px;\n"
+"	background-color: #aa1111;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"	background-color: #8b0e0e;\n"
 "}")
 
         self.verticalLayout_3.addWidget(self.logoutPushButton)
@@ -1097,7 +1430,7 @@ class Ui_Form(object):
         self.topupVerticalLayout_2.setContentsMargins(0, 10, 0, 0)
         self.ewalletLabel_2 = QLabel(self.scrollAreaWidgetContents_6)
         self.ewalletLabel_2.setObjectName(u"ewalletLabel_2")
-        self.ewalletLabel_2.setFont(font1)
+        self.ewalletLabel_2.setFont(font)
         self.ewalletLabel_2.setAlignment(Qt.AlignCenter)
 
         self.topupVerticalLayout_2.addWidget(self.ewalletLabel_2)
@@ -1116,7 +1449,7 @@ class Ui_Form(object):
         self.topupvalueVerticalLayout.setContentsMargins(20, 10, 20, 0)
         self.topupvalueLabel = QLabel(self.scrollAreaWidgetContents_6)
         self.topupvalueLabel.setObjectName(u"topupvalueLabel")
-        self.topupvalueLabel.setFont(font)
+        self.topupvalueLabel.setFont(font1)
         self.topupvalueLabel.setAlignment(Qt.AlignCenter)
 
         self.topupvalueVerticalLayout.addWidget(self.topupvalueLabel)
@@ -1435,14 +1768,14 @@ class Ui_Form(object):
         self.topupLabel_2 = QLabel(self.topupPage)
         self.topupLabel_2.setObjectName(u"topupLabel_2")
         self.topupLabel_2.setGeometry(QRect(20, 10, 111, 21))
-        self.topupLabel_2.setFont(font)
+        self.topupLabel_2.setFont(font1)
         self.stackedWidget.addWidget(self.topupPage)
         self.selectstationPage = QWidget()
         self.selectstationPage.setObjectName(u"selectstationPage")
         self.stationLabel = QLabel(self.selectstationPage)
         self.stationLabel.setObjectName(u"stationLabel")
         self.stationLabel.setGeometry(QRect(20, 10, 111, 21))
-        self.stationLabel.setFont(font)
+        self.stationLabel.setFont(font1)
         self.selectstationScrollArea = QScrollArea(self.selectstationPage)
         self.selectstationScrollArea.setObjectName(u"selectstationScrollArea")
         self.selectstationScrollArea.setGeometry(QRect(0, 40, 361, 541))
@@ -1914,7 +2247,7 @@ class Ui_Form(object):
         self.chargingstationLabel = QLabel(self.chargingstationPage)
         self.chargingstationLabel.setObjectName(u"chargingstationLabel")
         self.chargingstationLabel.setGeometry(QRect(20, 10, 121, 21))
-        self.chargingstationLabel.setFont(font)
+        self.chargingstationLabel.setFont(font1)
         self.chargingstationScrollArea = QScrollArea(self.chargingstationPage)
         self.chargingstationScrollArea.setObjectName(u"chargingstationScrollArea")
         self.chargingstationScrollArea.setGeometry(QRect(0, 40, 361, 541))
@@ -1993,14 +2326,14 @@ class Ui_Form(object):
         self.companyLabel_2 = QLabel(self.scrollAreaWidgetContents_8)
         self.companyLabel_2.setObjectName(u"companyLabel_2")
         self.companyLabel_2.setMaximumSize(QSize(100, 16777215))
-        self.companyLabel_2.setFont(font)
+        self.companyLabel_2.setFont(font1)
 
         self.companyHorizontalLayout.addWidget(self.companyLabel_2)
 
         self.companyvalueLabel_2 = QLabel(self.scrollAreaWidgetContents_8)
         self.companyvalueLabel_2.setObjectName(u"companyvalueLabel_2")
         self.companyvalueLabel_2.setMaximumSize(QSize(196, 16777215))
-        self.companyvalueLabel_2.setFont(font)
+        self.companyvalueLabel_2.setFont(font1)
 
         self.companyHorizontalLayout.addWidget(self.companyvalueLabel_2)
 
@@ -2018,14 +2351,14 @@ class Ui_Form(object):
         self.typeLabel = QLabel(self.scrollAreaWidgetContents_8)
         self.typeLabel.setObjectName(u"typeLabel")
         self.typeLabel.setMaximumSize(QSize(100, 16777215))
-        self.typeLabel.setFont(font)
+        self.typeLabel.setFont(font1)
 
         self.typeHorizontalLayout.addWidget(self.typeLabel)
 
         self.typevalueLabel = QLabel(self.scrollAreaWidgetContents_8)
         self.typevalueLabel.setObjectName(u"typevalueLabel")
         self.typevalueLabel.setMaximumSize(QSize(196, 16777215))
-        self.typevalueLabel.setFont(font)
+        self.typevalueLabel.setFont(font1)
 
         self.typeHorizontalLayout.addWidget(self.typevalueLabel)
 
@@ -2044,7 +2377,7 @@ class Ui_Form(object):
         self.locationLabel_2.setObjectName(u"locationLabel_2")
         self.locationLabel_2.setMinimumSize(QSize(100, 0))
         self.locationLabel_2.setMaximumSize(QSize(100, 16777215))
-        self.locationLabel_2.setFont(font)
+        self.locationLabel_2.setFont(font1)
         self.locationLabel_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
         self.locationHorizontalLayout.addWidget(self.locationLabel_2)
@@ -2054,7 +2387,7 @@ class Ui_Form(object):
         self.locationvalueTextEdit.setMinimumSize(QSize(0, 0))
         self.locationvalueTextEdit.setMaximumSize(QSize(16777215, 90))
         self.locationvalueTextEdit.setBaseSize(QSize(0, 0))
-        self.locationvalueTextEdit.setFont(font)
+        self.locationvalueTextEdit.setFont(font1)
         self.locationvalueTextEdit.setStyleSheet(u"QTextEdit{\n"
 "	background-color: rgba( 0, 0, 0, 0 );\n"
 "	border: none;\n"
@@ -2082,12 +2415,12 @@ class Ui_Form(object):
         self.cancelPushButton.setFont(font6)
         self.cancelPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.cancelPushButton.setStyleSheet(u"QPushButton{\n"
-"	background-color: #71cd00;\n"
+"	background-color: #aa1111;\n"
 "	border-radius: 10px;\n"
 "	color: #ffffff;\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: #468000;\n"
+"	background-color: #a21010;\n"
 "}")
         self.cancelPushButton.setIconSize(QSize(20, 20))
 
@@ -2126,6 +2459,68 @@ class Ui_Form(object):
 
         self.chargingstationScrollArea.setWidget(self.scrollAreaWidgetContents_8)
         self.stackedWidget.addWidget(self.chargingstationPage)
+        self.carsPage = QWidget()
+        self.carsPage.setObjectName(u"carsPage")
+        self.carsLabel_2 = QLabel(self.carsPage)
+        self.carsLabel_2.setObjectName(u"carsLabel_2")
+        self.carsLabel_2.setGeometry(QRect(10, 10, 121, 21))
+        self.carsLabel_2.setFont(font1)
+        self.carsScrollArea = QScrollArea(self.carsPage)
+        self.carsScrollArea.setObjectName(u"carsScrollArea")
+        self.carsScrollArea.setGeometry(QRect(0, 40, 361, 541))
+        sizePolicy.setHeightForWidth(self.carsScrollArea.sizePolicy().hasHeightForWidth())
+        self.carsScrollArea.setSizePolicy(sizePolicy)
+        self.carsScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.carsScrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_9 = QWidget()
+        self.scrollAreaWidgetContents_9.setObjectName(u"scrollAreaWidgetContents_9")
+        self.scrollAreaWidgetContents_9.setGeometry(QRect(0, 0, 359, 539))
+        self.scrollAreaWidgetContents_9.setMinimumSize(QSize(0, 0))
+        self.formLayout_10 = QFormLayout(self.scrollAreaWidgetContents_9)
+        self.formLayout_10.setObjectName(u"formLayout_10")
+        self.formLayout_10.setHorizontalSpacing(0)
+        self.formLayout_10.setVerticalSpacing(0)
+        self.formLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.carsVerticalLayout_2 = QVBoxLayout()
+        self.carsVerticalLayout_2.setSpacing(6)
+        self.carsVerticalLayout_2.setObjectName(u"carsVerticalLayout_2")
+        self.carsVerticalLayout_2.setContentsMargins(0, 0, 0, -1)
+
+        self.formLayout_10.setLayout(0, QFormLayout.FieldRole, self.carsVerticalLayout_2)
+
+        self.carsScrollArea.setWidget(self.scrollAreaWidgetContents_9)
+        self.stackedWidget.addWidget(self.carsPage)
+        self.cardsPage = QWidget()
+        self.cardsPage.setObjectName(u"cardsPage")
+        self.cardsLabel_2 = QLabel(self.cardsPage)
+        self.cardsLabel_2.setObjectName(u"cardsLabel_2")
+        self.cardsLabel_2.setGeometry(QRect(10, 10, 121, 21))
+        self.cardsLabel_2.setFont(font1)
+        self.cardsScrollArea = QScrollArea(self.cardsPage)
+        self.cardsScrollArea.setObjectName(u"cardsScrollArea")
+        self.cardsScrollArea.setGeometry(QRect(0, 40, 361, 541))
+        sizePolicy.setHeightForWidth(self.cardsScrollArea.sizePolicy().hasHeightForWidth())
+        self.cardsScrollArea.setSizePolicy(sizePolicy)
+        self.cardsScrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.cardsScrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_10 = QWidget()
+        self.scrollAreaWidgetContents_10.setObjectName(u"scrollAreaWidgetContents_10")
+        self.scrollAreaWidgetContents_10.setGeometry(QRect(0, 0, 359, 539))
+        self.scrollAreaWidgetContents_10.setMinimumSize(QSize(0, 0))
+        self.formLayout_11 = QFormLayout(self.scrollAreaWidgetContents_10)
+        self.formLayout_11.setObjectName(u"formLayout_11")
+        self.formLayout_11.setHorizontalSpacing(0)
+        self.formLayout_11.setVerticalSpacing(0)
+        self.formLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.cardsVerticalLayout_2 = QVBoxLayout()
+        self.cardsVerticalLayout_2.setSpacing(6)
+        self.cardsVerticalLayout_2.setObjectName(u"cardsVerticalLayout_2")
+        self.cardsVerticalLayout_2.setContentsMargins(0, 0, 0, -1)
+
+        self.formLayout_11.setLayout(0, QFormLayout.FieldRole, self.cardsVerticalLayout_2)
+
+        self.cardsScrollArea.setWidget(self.scrollAreaWidgetContents_10)
+        self.stackedWidget.addWidget(self.cardsPage)
 
         self.verticalLayout.addWidget(self.stackedWidget)
 
@@ -2215,10 +2610,14 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.promotionPushButton6_3.setText(QCoreApplication.translate("Form", u"Elex", None))
-        self.promotionPushButton6_4.setText(QCoreApplication.translate("Form", u"PPA", None))
-        self.promotionPushButton6_5.setText(QCoreApplication.translate("Form", u"Elex", None))
-        self.promotionPushButton6_6.setText(QCoreApplication.translate("Form", u"PPA", None))
+        self.promotionPushButton6_3.setText(QCoreApplication.translate("Form", u"BANGCHAK", None))
+        self.promotionPushButton6_4.setText(QCoreApplication.translate("Form", u"CALTEX", None))
+        self.promotionPushButton6_5.setText(QCoreApplication.translate("Form", u"MG", None))
+        self.promotionPushButton6_6.setText(QCoreApplication.translate("Form", u"PEA", None))
+        self.promotionPushButton6_7.setText(QCoreApplication.translate("Form", u"PT", None))
+        self.promotionPushButton6_8.setText(QCoreApplication.translate("Form", u"PTT", None))
+        self.promotionPushButton6_9.setText(QCoreApplication.translate("Form", u"SHELL", None))
+        self.promotionPushButton6_10.setText(QCoreApplication.translate("Form", u"SUSCO", None))
         self.chargePushButton.setText("")
 #if QT_CONFIG(tooltip)
         self.chargeLabel.setToolTip(QCoreApplication.translate("Form", u"<html><head/><body><p><br/></p></body></html>", None))
@@ -2350,6 +2749,8 @@ class Ui_Form(object):
         self.locationLabel_2.setText(QCoreApplication.translate("Form", u"Location:", None))
         self.cancelPushButton.setText(QCoreApplication.translate("Form", u"Cancel", None))
         self.confirmPushButton.setText(QCoreApplication.translate("Form", u"Confirm", None))
+        self.carsLabel_2.setText(QCoreApplication.translate("Form", u"Cars List", None))
+        self.cardsLabel_2.setText(QCoreApplication.translate("Form", u"Cards List", None))
 #if QT_CONFIG(whatsthis)
         self.homePushButton.setWhatsThis(QCoreApplication.translate("Form", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)

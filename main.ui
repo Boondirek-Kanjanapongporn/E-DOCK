@@ -25,6 +25,9 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
@@ -44,6 +47,9 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="verticalScrollBarPolicy">
          <enum>Qt::ScrollBarAsNeeded</enum>
         </property>
@@ -54,9 +60,9 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
+           <y>-112</y>
            <width>342</width>
-           <height>687</height>
+           <height>691</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout">
@@ -91,7 +97,7 @@
 }
 QLineEdit:focus
 {
-	border: 2px solid #D2D2D2;
+	border: 2px solid #2871cc;
 }</string>
             </property>
            </widget>
@@ -118,7 +124,7 @@ QLineEdit:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>300</width>
+               <width>400</width>
                <height>175</height>
               </rect>
              </property>
@@ -188,14 +194,25 @@ QLineEdit:focus
                     </property>
                     <property name="font">
                      <font>
-                      <pointsize>11</pointsize>
+                      <pointsize>10</pointsize>
                      </font>
                     </property>
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
                     <property name="text">
-                     <string>Elex</string>
+                     <string>BANGCHAK</string>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -221,14 +238,25 @@ QLineEdit:focus
                     </property>
                     <property name="font">
                      <font>
-                      <pointsize>11</pointsize>
+                      <pointsize>10</pointsize>
                      </font>
                     </property>
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
                     <property name="text">
-                     <string>PPA</string>
+                     <string>CALTEX</string>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -270,14 +298,25 @@ QLineEdit:focus
                     </property>
                     <property name="font">
                      <font>
-                      <pointsize>11</pointsize>
+                      <pointsize>10</pointsize>
                      </font>
                     </property>
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
                     <property name="text">
-                     <string>Elex</string>
+                     <string>MG</string>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -303,14 +342,233 @@ QLineEdit:focus
                     </property>
                     <property name="font">
                      <font>
-                      <pointsize>11</pointsize>
+                      <pointsize>10</pointsize>
                      </font>
                     </property>
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
                     <property name="text">
-                     <string>PPA</string>
+                     <string>PEA</string>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="stationVerticalLayout_4">
+                  <property name="leftMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="promotionPushButton6_7">
+                    <property name="minimumSize">
+                     <size>
+                      <width>83</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>PT</string>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="promotionPushButton6_8">
+                    <property name="minimumSize">
+                     <size>
+                      <width>83</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>PTT</string>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="stationVerticalLayout_5">
+                  <property name="leftMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>6</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QPushButton" name="promotionPushButton6_9">
+                    <property name="minimumSize">
+                     <size>
+                      <width>83</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>SHELL</string>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="promotionPushButton6_10">
+                    <property name="minimumSize">
+                     <size>
+                      <width>83</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>80</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 20px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>SUSCO</string>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -348,6 +606,17 @@ QLineEdit:focus
                 </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #fafafa;
+	border: 2px solid #444444;
+}
+QPushButton:hover
+{
+	background-color:#f2f2f2;
+}</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -402,7 +671,15 @@ QLineEdit:focus
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true"/>
+                 <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #fafafa;
+	border: 2px solid #444444;
+}
+QPushButton:hover
+{
+	background-color:#f2f2f2;
+}</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -456,6 +733,17 @@ QLineEdit:focus
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #fafafa;
+	border: 2px solid #444444;
+}
+QPushButton:hover
+{
+	background-color:#f2f2f2;
+}</string>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -507,6 +795,17 @@ QLineEdit:focus
                 </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #fafafa;
+	border: 2px solid #444444;
+}
+QPushButton:hover
+{
+	background-color:#f2f2f2;
+}</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -615,12 +914,24 @@ QLineEdit:focus
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #ff751a;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#ff6600;
+}</string>
+                  </property>
                   <property name="text">
                    <string> 55%</string>
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>images/promotion.png</normaloff>images/promotion.png</iconset>
+                    <normaloff>images/promotion_white.png</normaloff>images/promotion_white.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -646,12 +957,24 @@ QLineEdit:focus
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #ff751a;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#ff6600;
+}</string>
+                  </property>
                   <property name="text">
                    <string> 50%</string>
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>images/promotion.png</normaloff>images/promotion.png</iconset>
+                    <normaloff>images/promotion_white.png</normaloff>images/promotion_white.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -677,12 +1000,24 @@ QLineEdit:focus
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #ff751a;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#ff6600;
+}</string>
+                  </property>
                   <property name="text">
                    <string> 45%</string>
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>images/promotion.png</normaloff>images/promotion.png</iconset>
+                    <normaloff>images/promotion_white.png</normaloff>images/promotion_white.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -708,12 +1043,24 @@ QLineEdit:focus
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #ff751a;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#ff6600;
+}</string>
+                  </property>
                   <property name="text">
                    <string> 40%</string>
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>images/promotion.png</normaloff>images/promotion.png</iconset>
+                    <normaloff>images/promotion_white.png</normaloff>images/promotion_white.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -739,12 +1086,24 @@ QLineEdit:focus
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #ff751a;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#ff6600;
+}</string>
+                  </property>
                   <property name="text">
                    <string> 35%</string>
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>images/promotion.png</normaloff>images/promotion.png</iconset>
+                    <normaloff>images/promotion_white.png</normaloff>images/promotion_white.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -770,12 +1129,24 @@ QLineEdit:focus
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
                   </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #ff751a;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#ff6600;
+}</string>
+                  </property>
                   <property name="text">
                    <string> 30%</string>
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>images/promotion.png</normaloff>images/promotion.png</iconset>
+                    <normaloff>images/promotion_white.png</normaloff>images/promotion_white.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -875,12 +1246,24 @@ QLineEdit:focus
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #da2c43;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#c32238;
+}</string>
+                    </property>
                     <property name="text">
                      <string> 150.-</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/exlusivedeals.png</normaloff>images/exlusivedeals.png</iconset>
+                      <normaloff>images/exclusivedeals_white.png</normaloff>images/exclusivedeals_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -923,12 +1306,24 @@ QLineEdit:focus
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #da2c43;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#c32238;
+}</string>
+                    </property>
                     <property name="text">
                      <string> 100.-</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/exlusivedeals.png</normaloff>images/exlusivedeals.png</iconset>
+                      <normaloff>images/exclusivedeals_white.png</normaloff>images/exclusivedeals_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -971,12 +1366,24 @@ QLineEdit:focus
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #da2c43;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#c32238;
+}</string>
+                    </property>
                     <property name="text">
                      <string> 80.-</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/exlusivedeals.png</normaloff>images/exlusivedeals.png</iconset>
+                      <normaloff>images/exclusivedeals_white.png</normaloff>images/exclusivedeals_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1019,12 +1426,24 @@ QLineEdit:focus
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #da2c43;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#c32238;
+}</string>
+                    </property>
                     <property name="text">
                      <string> 80.-</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/exlusivedeals.png</normaloff>images/exlusivedeals.png</iconset>
+                      <normaloff>images/exclusivedeals_white.png</normaloff>images/exclusivedeals_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1067,12 +1486,24 @@ QLineEdit:focus
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #da2c43;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#c32238;
+}</string>
+                    </property>
                     <property name="text">
                      <string> 60.-</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/exlusivedeals.png</normaloff>images/exlusivedeals.png</iconset>
+                      <normaloff>images/exclusivedeals_white.png</normaloff>images/exclusivedeals_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1115,12 +1546,24 @@ QLineEdit:focus
                     <property name="cursor">
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+	color: #fafafa;
+	background-color: #da2c43;
+	border:none;
+	border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color:#c32238;
+}</string>
+                    </property>
                     <property name="text">
                      <string> 50.-</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/exlusivedeals.png</normaloff>images/exlusivedeals.png</iconset>
+                      <normaloff>images/exclusivedeals_white.png</normaloff>images/exclusivedeals_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -1142,7 +1585,7 @@ QLineEdit:focus
            <widget class="QLabel" name="hiLabel">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
              </font>
             </property>
             <property name="text">
@@ -1154,7 +1597,7 @@ QLineEdit:focus
            <widget class="QLabel" name="welcomeLabel">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>11</pointsize>
               <bold>true</bold>
              </font>
             </property>
@@ -1377,8 +1820,8 @@ QLineEdit:focus
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
-           <width>327</width>
+           <y>-597</y>
+           <width>342</width>
            <height>1136</height>
           </rect>
          </property>
@@ -1488,17 +1931,26 @@ QLineEdit:focus
               <property name="layoutDirection">
                <enum>Qt::RightToLeft</enum>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color: #FFFFFF;
+	background-color:#71cd00;
+}
+QPushButton:pressed{
+	background-color: #468000;
+}</string>
+              </property>
               <property name="text">
                <string>Notification                                                              </string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>images/right-arrow.png</normaloff>images/right-arrow.png</iconset>
+                <normaloff>images/right-arrow_white.png</normaloff>images/right-arrow_white.png</iconset>
               </property>
               <property name="iconSize">
                <size>
-                <width>21</width>
-                <height>21</height>
+                <width>15</width>
+                <height>15</height>
                </size>
               </property>
               <property name="autoExclusive">
@@ -1610,17 +2062,26 @@ QLineEdit:focus
               <property name="layoutDirection">
                <enum>Qt::RightToLeft</enum>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color: #FFFFFF;
+	background-color:#71cd00;
+}
+QPushButton:pressed{
+	background-color: #468000;
+}</string>
+              </property>
               <property name="text">
                <string>Add Car                                                                    </string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>images/right-arrow.png</normaloff>images/right-arrow.png</iconset>
+                <normaloff>images/right-arrow_white.png</normaloff>images/right-arrow_white.png</iconset>
               </property>
               <property name="iconSize">
                <size>
                 <width>21</width>
-                <height>21</height>
+                <height>15</height>
                </size>
               </property>
               <property name="autoExclusive">
@@ -1837,12 +2298,12 @@ QPushButton:hover
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/add.png</normaloff>images/add.png</iconset>
+                      <normaloff>images/add_white.png</normaloff>images/add_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
                       <width>20</width>
-                      <height>20</height>
+                      <height>16</height>
                      </size>
                     </property>
                    </widget>
@@ -1875,17 +2336,26 @@ QPushButton:hover
               <property name="layoutDirection">
                <enum>Qt::RightToLeft</enum>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color: #FFFFFF;
+	background-color:#71cd00;
+}
+QPushButton:pressed{
+	background-color: #468000;
+}</string>
+              </property>
               <property name="text">
                <string>Add Debit/Credit Card                                             </string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>images/right-arrow.png</normaloff>images/right-arrow.png</iconset>
+                <normaloff>images/right-arrow_white.png</normaloff>images/right-arrow_white.png</iconset>
               </property>
               <property name="iconSize">
                <size>
                 <width>21</width>
-                <height>21</height>
+                <height>15</height>
                </size>
               </property>
               <property name="autoExclusive">
@@ -2096,12 +2566,12 @@ QPushButton:hover
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/add.png</normaloff>images/add.png</iconset>
+                      <normaloff>images/add_white.png</normaloff>images/add_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
                       <width>20</width>
-                      <height>20</height>
+                      <height>16</height>
                      </size>
                     </property>
                    </widget>
@@ -2131,17 +2601,26 @@ QPushButton:hover
               <property name="layoutDirection">
                <enum>Qt::RightToLeft</enum>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color: #FFFFFF;
+	background-color:#71cd00;
+}
+QPushButton:pressed{
+	background-color: #468000;
+}</string>
+              </property>
               <property name="text">
                <string>Change Username                                                    </string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>images/right-arrow.png</normaloff>images/right-arrow.png</iconset>
+                <normaloff>images/right-arrow_white.png</normaloff>images/right-arrow_white.png</iconset>
               </property>
               <property name="iconSize">
                <size>
                 <width>21</width>
-                <height>21</height>
+                <height>15</height>
                </size>
               </property>
              </widget>
@@ -2262,12 +2741,12 @@ QPushButton:hover
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>images/change.png</normaloff>images/change.png</iconset>
+                      <normaloff>images/change_white.png</normaloff>images/change_white.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
                       <width>16</width>
-                      <height>16</height>
+                      <height>15</height>
                      </size>
                     </property>
                    </widget>
@@ -2311,12 +2790,29 @@ QPushButton:hover
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 10px;
+	background-color: #28a428;
+}
+QPushButton:hover
+{
+	background-color:#228c22;
+}</string>
+                </property>
                 <property name="text">
                  <string>Change Pin</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>images/change.png</normaloff>images/change.png</iconset>
+                  <normaloff>images/change_white.png</normaloff>images/change_white.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>16</width>
+                  <height>15</height>
+                 </size>
                 </property>
                </widget>
               </item>
@@ -2335,6 +2831,16 @@ QPushButton:hover
                 </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	color: #fafafa;
+	border-radius: 10px;
+	background-color: #2871cc;
+}
+QPushButton:hover{
+	background-color: #225faa;
+}</string>
                 </property>
                 <property name="text">
                  <string>Change Password</string>
@@ -2359,7 +2865,13 @@ QPushButton:hover
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton{
-	color: #aa1111;
+	color: #fafafa;
+	border-radius: 10px;
+	background-color: #aa1111;
+}
+QPushButton:hover
+{
+	background-color: #8b0e0e;
 }</string>
                 </property>
                 <property name="text">
@@ -2415,7 +2927,7 @@ QPushButton:hover
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>239</width>
+           <width>342</width>
            <height>540</height>
           </rect>
          </property>
@@ -4636,12 +5148,12 @@ QPushButton:hover{
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QPushButton{
-	background-color: #71cd00;
+	background-color: #aa1111;
 	border-radius: 10px;
 	color: #ffffff;
 }
 QPushButton:hover{
-	background-color: #468000;
+	background-color: #a21010;
 }</string>
                   </property>
                   <property name="text">
@@ -4715,6 +5227,194 @@ QPushButton:hover{
               </item>
              </layout>
             </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="carsPage">
+       <widget class="QLabel" name="carsLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cars List</string>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="carsScrollArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>361</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_9">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>359</width>
+           <height>539</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QFormLayout" name="formLayout_10">
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="carsVerticalLayout_2">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="cardsPage">
+       <widget class="QLabel" name="cardsLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cards List</string>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="cardsScrollArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>361</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_10">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>359</width>
+           <height>539</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QFormLayout" name="formLayout_11">
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="cardsVerticalLayout_2">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
            </layout>
           </item>
          </layout>

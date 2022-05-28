@@ -22,6 +22,11 @@
      <height>641</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+	background-color: #FAFAFA;
+}</string>
+   </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
