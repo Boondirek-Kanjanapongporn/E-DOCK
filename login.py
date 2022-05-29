@@ -139,6 +139,16 @@ class Ui_Form(object):
         self.loginLabel.setStyleSheet(u"font: 20pt, Arial;\n"
 "color: #444444;\n"
 "background-color: rgba(0,0,0,0);")
+        self.edockiconPushButton = QPushButton(Form)
+        self.edockiconPushButton.setObjectName(u"edockiconPushButton")
+        self.edockiconPushButton.setGeometry(QRect(40, 23, 281, 51))
+        self.edockiconPushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgba(0,0,0,0);\n"
+"}")
+        icon = QIcon()
+        icon.addFile(u"images/edock.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.edockiconPushButton.setIcon(icon)
+        self.edockiconPushButton.setIconSize(QSize(150, 150))
         self.invalidemailLabel.raise_()
         self.invalidpasswordLabel.raise_()
         self.emailLabel.raise_()
@@ -152,6 +162,7 @@ class Ui_Form(object):
         self.emailLineEdit.raise_()
         self.passwordLineEdit.raise_()
         self.loginLabel.raise_()
+        self.edockiconPushButton.raise_()
 
         self.retranslateUi(Form)
 
@@ -171,5 +182,6 @@ class Ui_Form(object):
         self.invalidemailLabel.setText(QCoreApplication.translate("Form", u"*Invalid Email", None))
         self.invalidpasswordLabel.setText(QCoreApplication.translate("Form", u"*Invalid Password", None))
         self.loginLabel.setText(QCoreApplication.translate("Form", u"LOGIN", None))
+        self.edockiconPushButton.setText("")
     # retranslateUi
 
