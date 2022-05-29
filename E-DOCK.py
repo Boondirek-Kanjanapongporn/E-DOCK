@@ -1,9 +1,11 @@
 import sys
+import time
 import pyrebase
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from LoginPage import Login_Page
 from SignupPage import Signup_Page
+from SplashPage import Splash_Page
 
 firebaseConfig={
     'apiKey': "AIzaSyBNtpVvn25ATKbJ0lg0ZdV-rhjJ1vkd5dA",
@@ -21,6 +23,12 @@ auth = firebase.auth()
 db = firebase.database()
 storage = firebase.storage()
 
+def wait_object_destruction(my_object):
+        loop = QEventLoop()
+        my_object.destroyed.connect(loop.quit)
+        loop.exec_()
+        return None
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     widget = QStackedWidget()
@@ -36,3 +44,27 @@ if __name__ == '__main__':
     widget.show()
 
     sys.exit(app.exec())
+
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     widget = QStackedWidget()
+
+#     # Create Splash Screen
+#     splash_page = Splash_Page()
+#     widget.addWidget(splash_page)
+
+#     widget.setFixedHeight(640)
+#     widget.setFixedWidth(360)
+#     widget.show()
+
+#     splash_page.startSplash()
+#     time.sleep(1)
+#     login_page = Login_Page(db, auth, widget)
+#     wait_object_destruction(splash_page)
+    
+#     signup_page = Signup_Page(db, auth, widget)
+
+#     widget.addWidget(login_page)
+#     widget.addWidget(signup_page)
+
+#     sys.exit(app.exec())
