@@ -102,17 +102,17 @@ class Pin_Page(QWidget):
     def updatePinColor(self, val, index):
         if index == 1:
             if val >= 1:
-                self.ui.pin1.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                self.ui.pin1.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                 if val >= 2:
-                    self.ui.pin2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                    self.ui.pin2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                     if val >= 3:
-                        self.ui.pin3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                        self.ui.pin3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                         if val >= 4:
-                            self.ui.pin4.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                            self.ui.pin4.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                             if val >= 5:
-                                self.ui.pin5.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                self.ui.pin5.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                                 if val >= 6:
-                                    self.ui.pin6.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                    self.ui.pin6.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                                 else:
                                     self.ui.pin6.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
                             else:
@@ -127,17 +127,17 @@ class Pin_Page(QWidget):
                 self.ui.pin1.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
         elif index == 2:
             if val >= 1:
-                self.ui.pin1_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                self.ui.pin1_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                 if val >= 2:
-                    self.ui.pin2_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                    self.ui.pin2_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                     if val >= 3:
-                        self.ui.pin3_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                        self.ui.pin3_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                         if val >= 4:
-                            self.ui.pin4_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                            self.ui.pin4_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                             if val >= 5:
-                                self.ui.pin5_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                self.ui.pin5_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                                 if val >= 6:
-                                    self.ui.pin6_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                    self.ui.pin6_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                                 else:
                                     self.ui.pin6_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
                             else:
@@ -152,17 +152,17 @@ class Pin_Page(QWidget):
                 self.ui.pin1_2.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
         elif index == 3:
             if val >= 1:
-                self.ui.pin1_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                self.ui.pin1_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                 if val >= 2:
-                    self.ui.pin2_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                    self.ui.pin2_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                     if val >= 3:
-                        self.ui.pin3_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                        self.ui.pin3_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                         if val >= 4:
-                            self.ui.pin4_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                            self.ui.pin4_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                             if val >= 5:
-                                self.ui.pin5_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                self.ui.pin5_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                                 if val >= 6:
-                                    self.ui.pin6_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: black; } ")
+                                    self.ui.pin6_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; background-color: #71cd00; } ")
                                 else:
                                     self.ui.pin6_3.setStyleSheet("QPushButton { border-radius: 10px; border: 3px solid #cecece; } ")
                             else:

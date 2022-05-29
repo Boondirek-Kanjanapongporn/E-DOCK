@@ -60,7 +60,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-112</y>
+           <y>0</y>
            <width>342</width>
            <height>691</height>
           </rect>
@@ -122,7 +122,7 @@ QLineEdit:focus
             <widget class="QWidget" name="stationAreaWidgetContents">
              <property name="geometry">
               <rect>
-               <x>0</x>
+               <x>-100</x>
                <y>0</y>
                <width>400</width>
                <height>175</height>
@@ -179,7 +179,7 @@ QLineEdit:focus
                    <number>0</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_3">
+                   <widget class="QPushButton" name="bangchakPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -223,7 +223,7 @@ QPushButton:hover
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_4">
+                   <widget class="QPushButton" name="caltexPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -283,7 +283,7 @@ QPushButton:hover
                    <number>0</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_5">
+                   <widget class="QPushButton" name="mgPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -327,7 +327,7 @@ QPushButton:hover
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_6">
+                   <widget class="QPushButton" name="peaPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -387,7 +387,7 @@ QPushButton:hover
                    <number>0</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_7">
+                   <widget class="QPushButton" name="ptPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -431,7 +431,7 @@ QPushButton:hover
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_8">
+                   <widget class="QPushButton" name="pttPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -491,7 +491,7 @@ QPushButton:hover
                    <number>0</number>
                   </property>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_9">
+                   <widget class="QPushButton" name="shellPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -535,7 +535,7 @@ QPushButton:hover
                    </widget>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="promotionPushButton6_10">
+                   <widget class="QPushButton" name="suscoPushButton">
                     <property name="minimumSize">
                      <size>
                       <width>83</width>
@@ -1752,7 +1752,7 @@ QPushButton:hover
           <x>0</x>
           <y>40</y>
           <width>361</width>
-          <height>541</height>
+          <height>551</height>
          </rect>
         </property>
        </widget>
@@ -1820,7 +1820,7 @@ QPushButton:hover
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-597</y>
+           <y>0</y>
            <width>342</width>
            <height>1136</height>
           </rect>
@@ -4889,7 +4889,7 @@ QPushButton:hover{
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>15</height>
+                  <height>10</height>
                  </size>
                 </property>
                </spacer>
@@ -4954,7 +4954,7 @@ QPushButton:hover{
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>15</height>
+                  <height>5</height>
                  </size>
                 </property>
                </spacer>
@@ -5019,7 +5019,72 @@ QPushButton:hover{
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>15</height>
+                  <height>5</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="rateHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="rateLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>11</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Rate:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="ratevalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>11</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_24">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>5</height>
                  </size>
                 </property>
                </spacer>
@@ -5114,7 +5179,7 @@ QPushButton:hover{
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>20</height>
+                  <height>15</height>
                  </size>
                 </property>
                </spacer>
@@ -5421,6 +5486,683 @@ QPushButton:hover{
         </widget>
        </widget>
       </widget>
+      <widget class="QWidget" name="companyPage">
+       <widget class="QLabel" name="companystationLabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Company Station</string>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="companyScrollArea">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>40</y>
+          <width>361</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_11">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>359</width>
+           <height>539</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QFormLayout" name="formLayout_12">
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="companyVerticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="verticalSpacer_25">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>15</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="companyLabel_3">
+              <property name="minimumSize">
+               <size>
+                <width>357</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Company:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="companyVerticalLayout_2">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="companyvalueLabel">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_27">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>10</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QChartView" name="ratesGraphicsView">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>166</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_28">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>10</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="weeklyratesLabel">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Weekly Rates:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="mondayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="mondayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Monday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="mondayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="tuesdayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="tuesdayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Tuesday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="tuesdayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="wednesdayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="wednesdayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Wednesday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="wednesdayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="thursdayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="thursdayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Thursday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="thursdayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="fridayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="fridayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Friday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="fridayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="saturdayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="saturdayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Saturday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="saturdayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="sundayHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>40</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="sundayLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>Sunday:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="sundayvalueLabel">
+                  <property name="maximumSize">
+                   <size>
+                    <width>196</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_29">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="homeHorizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="homePushButton_2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>35</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background-color: #71cd00;
+	border-radius: 10px;
+	color: #ffffff;
+}
+QPushButton:hover{
+	background-color: #468000;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Home</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -5443,7 +6185,7 @@ QPushButton:hover{
       <property name="minimumSize">
        <size>
         <width>90</width>
-        <height>51</height>
+        <height>59</height>
        </size>
       </property>
       <property name="cursor">
@@ -5460,7 +6202,8 @@ QPushButton:hover{
 	border: None;
 }
 QPushButton:hover{
-	color: #71cd00;
+	background-color: #71cd00;
+	color: #fafafa
 }</string>
       </property>
       <property name="text">
@@ -5477,7 +6220,7 @@ QPushButton:hover{
       <property name="minimumSize">
        <size>
         <width>90</width>
-        <height>51</height>
+        <height>59</height>
        </size>
       </property>
       <property name="cursor">
@@ -5488,7 +6231,8 @@ QPushButton:hover{
 	border: None;
 }
 QPushButton:hover{
-	color: #71cd00;
+	background-color: #71cd00;
+	color: #fafafa
 }</string>
       </property>
       <property name="text">
@@ -5505,7 +6249,7 @@ QPushButton:hover{
       <property name="minimumSize">
        <size>
         <width>90</width>
-        <height>51</height>
+        <height>59</height>
        </size>
       </property>
       <property name="cursor">
@@ -5516,7 +6260,8 @@ QPushButton:hover{
 	border: None;
 }
 QPushButton:hover{
-	color: #71cd00;
+	background-color: #71cd00;
+	color: #fafafa
 }</string>
       </property>
       <property name="text">
@@ -5539,7 +6284,7 @@ QPushButton:hover{
       <property name="minimumSize">
        <size>
         <width>90</width>
-        <height>51</height>
+        <height>59</height>
        </size>
       </property>
       <property name="cursor">
@@ -5550,7 +6295,8 @@ QPushButton:hover{
 	border: None;
 }
 QPushButton:hover{
-	color: #71cd00;
+	background-color: #71cd00;
+	color: #fafafa
 }</string>
       </property>
       <property name="text">
@@ -5571,6 +6317,13 @@ QPushButton:hover{
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header>QtCharts</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

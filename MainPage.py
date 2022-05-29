@@ -3,6 +3,7 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWebEngineWidgets import *
+from PySide6.QtCharts import *
 from scb_payment import QRCodePayment
 import qrcode
 import datetime
@@ -44,6 +45,7 @@ class Main_Page(QWidget):
         self.refreshHistoryPage()
         self.refreshLocationPage()
         self.refreshAccountPage()
+        self.onHomePage()
         
         # Home Page -------------------------------------------------------------------------------------------------------
         self.ui.searchLineEdit.textChanged.connect(self.handleSearch)
@@ -52,13 +54,26 @@ class Main_Page(QWidget):
         self.ui.carsPushButton.clicked.connect(self.gotoCarsPage)
         self.ui.cardsPushButton.clicked.connect(self.gotoCardsPage)
 
+        self.ui.bangchakPushButton.clicked.connect(lambda: self.gotoCompanyPage("BANGCHAK"))
+        self.ui.caltexPushButton.clicked.connect(lambda: self.gotoCompanyPage("CALTEX"))
+        self.ui.mgPushButton.clicked.connect(lambda: self.gotoCompanyPage("MG"))
+        self.ui.peaPushButton.clicked.connect(lambda: self.gotoCompanyPage("PEA"))
+        self.ui.ptPushButton.clicked.connect(lambda: self.gotoCompanyPage("PT"))
+        self.ui.pttPushButton.clicked.connect(lambda: self.gotoCompanyPage("PTT"))
+        self.ui.shellPushButton.clicked.connect(lambda: self.gotoCompanyPage("SHELL"))
+        self.ui.suscoPushButton.clicked.connect(lambda: self.gotoCompanyPage("SUSCO"))
+
         # History Page ----------------------------------------------------------------------------------------------------
         
         # Location Page -------------------------------------------------------------------------------------------------
         # Open EV station locations
         self.openStationLocations()
 
-        # Account Page -----------------------------------------------------------------------------------------
+        # Account Page ---------------------------------------------------------------------------------------------------
+
+        # Company Page ---------------------------------------------------------------------------------------------------
+        self.ui.homePushButton_2.clicked.connect(self.gotoHomePage)
+
         # Toggle Open/Close Settings
         self.ui.notificationPushButton.clicked.connect(self.toggleNotificationWidget)
         self.ui.addcarPushButton.clicked.connect(self.toggleAddCarWidget)
@@ -163,20 +178,28 @@ class Main_Page(QWidget):
         return False
         
     def gotoHomePage(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
         self.refreshHomePage()
+        self.refreshNavBar()
+        self.onHomePage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.homePage)
     
     def gotoHistoryPage(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.historyPage)
         self.refreshHistoryPage()
+        self.refreshNavBar()
+        self.onHistoryPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.historyPage)
 
     def gotoLocationPage(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.locationPage)
         self.refreshLocationPage()
+        self.refreshNavBar()
+        self.onLocationPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.locationPage)
 
     def gotoAccountPage(self):
-        self.ui.stackedWidget.setCurrentWidget(self.ui.accountPage)
         self.refreshAccountPage()
+        self.refreshNavBar()
+        self.onAccountPage()
+        self.ui.stackedWidget.setCurrentWidget(self.ui.accountPage)
     
     def refreshHomePage(self):
         username = self.user.getUsername()
@@ -204,6 +227,33 @@ class Main_Page(QWidget):
         self.ui.addcardWidget.setVisible(False)
         self.ui.changeusernameWidget.setVisible(False)
     
+    def refreshNavBar(self):
+        self.ui.homePushButton.setIcon(QIcon("images\\home.png"))
+        self.ui.historyPushButton.setIcon(QIcon("images\\history.png"))
+        self.ui.locationPushButton.setIcon(QIcon("images\\location.png"))
+        self.ui.accountPushButton.setIcon(QIcon("images\\account.png"))
+
+        self.ui.homePushButton.setStyleSheet("QPushButton{border: None;} QPushButton:hover{background-color: #71cd00;color: #fafafa;}")
+        self.ui.historyPushButton.setStyleSheet("QPushButton{border: None;} QPushButton:hover{background-color: #71cd00;color: #fafafa;}")
+        self.ui.locationPushButton.setStyleSheet("QPushButton{border: None;} QPushButton:hover{background-color: #71cd00;color: #fafafa;}")
+        self.ui.accountPushButton.setStyleSheet("QPushButton{border: None;} QPushButton:hover{background-color: #71cd00;color: #fafafa;}")
+    
+    def onHomePage(self):
+        self.ui.homePushButton.setIcon(QIcon("images\\home_white.png"))
+        self.ui.homePushButton.setStyleSheet("QPushButton{border:None; background-color: #71cd00; color: #fafafa;} QPushButton:hover{background-color: #468000;")
+
+    def onHistoryPage(self):
+        self.ui.historyPushButton.setIcon(QIcon("images\\history_white.png"))
+        self.ui.historyPushButton.setStyleSheet("QPushButton{border:None; background-color: #71cd00; color: #fafafa;} QPushButton:hover{background-color: #468000;")
+
+    def onLocationPage(self):
+        self.ui.locationPushButton.setIcon(QIcon("images\\location_white.png"))
+        self.ui.locationPushButton.setStyleSheet("QPushButton{border:None; background-color: #71cd00; color: #fafafa;} QPushButton:hover{background-color: #468000;")
+
+    def onAccountPage(self):
+        self.ui.accountPushButton.setIcon(QIcon("images\\account_white.png"))
+        self.ui.accountPushButton.setStyleSheet("QPushButton{border:None; background-color: #71cd00; color: #fafafa;} QPushButton:hover{background-color: #468000;")
+
     def showAlert(self, text):
         messageBox = QMessageBox(self)
         messageBox.setText(text)
@@ -253,6 +303,10 @@ class Main_Page(QWidget):
         self.refreshCardsPage()
         self.ui.stackedWidget.setCurrentWidget(self.ui.cardsPage)
     
+    def gotoCompanyPage(self, company):
+        self.refreshCompanyPage(company)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.companyPage)
+    
     def refreshTopupPage(self):
         self.ui.topupvalueLineEdit.setText("")
         self.ui.moneyLabel_2.setText(f"{self.user.getMoney():.5f}")
@@ -271,6 +325,44 @@ class Main_Page(QWidget):
 
     def refreshCardsPage(self):
         self.addCardsList()
+    
+    def refreshCompanyPage(self, company):
+        weekRates = self.db.child('companies').child(company).get().val()
+        mondayRate = weekRates.get('monday')
+        tuesdayRate = weekRates.get('tuesday')
+        wednesdayRate = weekRates.get('wednesday')
+        thursdayRate = weekRates.get('thursday')
+        fridayRate = weekRates.get('friday')
+        saturdayRate = weekRates.get('saturday')
+        sundayRate = weekRates.get('sunday')
+
+        lineseries = QLineSeries()
+        lineseries.append(0, mondayRate)
+        lineseries.append(5, tuesdayRate)
+        lineseries.append(10, wednesdayRate)
+        lineseries.append(15, thursdayRate)
+        lineseries.append(20, fridayRate)
+        lineseries.append(25, saturdayRate)
+        lineseries.append(30, sundayRate)
+
+        chart = QChart()
+        chart.legend().setVisible(False)
+        chart.addSeries(lineseries)
+        chart.createDefaultAxes()
+        chart.setTitle("Weekly Charge Rates")
+
+        self.ui.ratesGraphicsView.setChart(chart)
+        self.ui.ratesGraphicsView.setRenderHint(QPainter.Antialiasing)
+
+
+        self.ui.companyvalueLabel.setText(company)
+        self.ui.mondayvalueLabel.setText(str(mondayRate))
+        self.ui.tuesdayvalueLabel.setText(str(tuesdayRate))
+        self.ui.wednesdayvalueLabel.setText(str(wednesdayRate))
+        self.ui.thursdayvalueLabel.setText(str(thursdayRate))
+        self.ui.fridayvalueLabel.setText(str(fridayRate))
+        self.ui.saturdayvalueLabel.setText(str(saturdayRate))
+        self.ui.sundayvalueLabel.setText(str(sundayRate))
 
     
     # History Page functions ---------------------------------------------------------------------------------------------
@@ -301,10 +393,10 @@ class Main_Page(QWidget):
     def toggleNotificationWidget(self):
         if self.ui.notificationWidget.isVisible():
             self.ui.notificationWidget.setVisible(False)
-            self.ui.notificationPushButton.setIcon(QIcon("images\\right-arrow.png"))
+            self.ui.notificationPushButton.setIcon(QIcon("images\\right-arrow_white.png"))
         else:
             self.ui.notificationWidget.setVisible(True)
-            self.ui.notificationPushButton.setIcon(QIcon("images\\down-arrow.png"))
+            self.ui.notificationPushButton.setIcon(QIcon("images\\down-arrow_white.png"))
             if self.user.getNotification:
                 self.ui.opennotificationRadioButton.setChecked(True)
             else:
@@ -313,26 +405,26 @@ class Main_Page(QWidget):
     def toggleAddCarWidget(self):
         if self.ui.addcarWidget.isVisible():
             self.ui.addcarWidget.setVisible(False)
-            self.ui.addcarPushButton.setIcon(QIcon("images\\right-arrow.png"))
+            self.ui.addcarPushButton.setIcon(QIcon("images\\right-arrow_white.png"))
         else:
             self.ui.addcarWidget.setVisible(True)
-            self.ui.addcarPushButton.setIcon(QIcon("images\\down-arrow.png"))
+            self.ui.addcarPushButton.setIcon(QIcon("images\\down-arrow_white.png"))
     
     def toggleAddCardWidget(self):
         if self.ui.addcardWidget.isVisible():
             self.ui.addcardWidget.setVisible(False)
-            self.ui.addcardPushButton.setIcon(QIcon("images\\right-arrow.png"))
+            self.ui.addcardPushButton.setIcon(QIcon("images\\right-arrow_white.png"))
         else:
             self.ui.addcardWidget.setVisible(True)
-            self.ui.addcardPushButton.setIcon(QIcon("images\\down-arrow.png"))
+            self.ui.addcardPushButton.setIcon(QIcon("images\\down-arrow_white.png"))
     
     def toggleChangeUsernameWidget(self):
         if self.ui.changeusernameWidget.isVisible():
             self.ui.changeusernameWidget.setVisible(False)
-            self.ui.changeusernamePushButton.setIcon(QIcon("images\\right-arrow.png"))
+            self.ui.changeusernamePushButton.setIcon(QIcon("images\\right-arrow_white.png"))
         else:
             self.ui.changeusernameWidget.setVisible(True)
-            self.ui.changeusernamePushButton.setIcon(QIcon("images\\down-arrow.png"))
+            self.ui.changeusernamePushButton.setIcon(QIcon("images\\down-arrow_white.png"))
     
     def wait_object_destruction(self, my_object):
         loop = QEventLoop()
@@ -533,10 +625,30 @@ class Main_Page(QWidget):
     
     # Charging Station functions ------------------------------------------------------------------------------------------
     def refreshChargingStationPage(self, stationidStr, stationInfo):
+        company = stationInfo.get('company')
+        stationRate = self.findChargingRate(company)
         self.ui.stationidvalueLabel.setText(stationidStr)
-        self.ui.companyvalueLabel_2.setText(stationInfo.get('company'))
+        self.ui.companyvalueLabel_2.setText(company)
         self.ui.typevalueLabel.setText(stationInfo.get('type'))
+        self.ui.ratevalueLabel.setText(str(stationRate) + " THB/kwH")
         self.ui.locationvalueTextEdit.setText(stationInfo.get('location'))
+    
+    def findChargingRate(self, company):
+        weekday = datetime.datetime.today().weekday()
+        if weekday == 0:
+            return self.db.child('companies').child(company).child('monday').get().val()
+        elif weekday == 1:
+            return self.db.child('companies').child(company).child('tuesday').get().val()
+        elif weekday == 2:
+            return self.db.child('companies').child(company).child('wednesday').get().val()
+        elif weekday == 3:
+            return self.db.child('companies').child(company).child('thursday').get().val()
+        elif weekday == 4:
+            return self.db.child('companies').child(company).child('friday').get().val()
+        elif weekday == 5:
+            return self.db.child('companies').child(company).child('saturday').get().val()
+        elif weekday == 6:
+            return self.db.child('companies').child(company).child('sunday').get().val()
     
     def gotoStationPage(self):
         if self.gotoPinPage(3):

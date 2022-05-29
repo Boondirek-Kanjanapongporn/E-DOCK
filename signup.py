@@ -28,15 +28,17 @@ class Ui_Form(object):
 "}")
         self.signupLabel = QLabel(Form)
         self.signupLabel.setObjectName(u"signupLabel")
-        self.signupLabel.setGeometry(QRect(40, 70, 91, 21))
+        self.signupLabel.setGeometry(QRect(40, 100, 91, 21))
         self.signupLabel.setStyleSheet(u"font: 20pt, Arial;\n"
-"color: #444444;")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.needanaccountLabel = QLabel(Form)
         self.needanaccountLabel.setObjectName(u"needanaccountLabel")
-        self.needanaccountLabel.setGeometry(QRect(110, 520, 101, 16))
+        self.needanaccountLabel.setGeometry(QRect(110, 540, 101, 16))
+        self.needanaccountLabel.setStyleSheet(u"background-color: rgba(0,0,0,0);")
         self.emailLineEdit = QLineEdit(Form)
         self.emailLineEdit.setObjectName(u"emailLineEdit")
-        self.emailLineEdit.setGeometry(QRect(40, 140, 281, 35))
+        self.emailLineEdit.setGeometry(QRect(40, 160, 281, 35))
         self.emailLineEdit.setMinimumSize(QSize(0, 35))
         font = QFont()
         font.setPointSize(9)
@@ -52,7 +54,7 @@ class Ui_Form(object):
 "}")
         self.passwordLineEdit = QLineEdit(Form)
         self.passwordLineEdit.setObjectName(u"passwordLineEdit")
-        self.passwordLineEdit.setGeometry(QRect(40, 230, 281, 35))
+        self.passwordLineEdit.setGeometry(QRect(40, 250, 281, 35))
         self.passwordLineEdit.setMinimumSize(QSize(0, 35))
         self.passwordLineEdit.setStyleSheet(u"QLineEdit\n"
 "{\n"
@@ -65,21 +67,24 @@ class Ui_Form(object):
 "}")
         self.emailLabel = QLabel(Form)
         self.emailLabel.setObjectName(u"emailLabel")
-        self.emailLabel.setGeometry(QRect(40, 120, 271, 16))
+        self.emailLabel.setGeometry(QRect(40, 140, 271, 16))
         self.emailLabel.setStyleSheet(u"font: 16pt, Arial;\n"
-"color: #444444;")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.orLabel = QLabel(Form)
         self.orLabel.setObjectName(u"orLabel")
-        self.orLabel.setGeometry(QRect(0, 470, 361, 20))
+        self.orLabel.setGeometry(QRect(0, 490, 361, 20))
+        self.orLabel.setStyleSheet(u"background-color: rgba(0,0,0,0);")
         self.orLabel.setAlignment(Qt.AlignCenter)
         self.passwordLabel = QLabel(Form)
         self.passwordLabel.setObjectName(u"passwordLabel")
-        self.passwordLabel.setGeometry(QRect(40, 210, 271, 16))
+        self.passwordLabel.setGeometry(QRect(40, 230, 271, 16))
         self.passwordLabel.setStyleSheet(u"font: 16pt, Arial;\n"
-"color: #444444;")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.singupPushButton = QPushButton(Form)
         self.singupPushButton.setObjectName(u"singupPushButton")
-        self.singupPushButton.setGeometry(QRect(40, 410, 281, 41))
+        self.singupPushButton.setGeometry(QRect(40, 430, 281, 41))
         self.singupPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.singupPushButton.setStyleSheet(u"QPushButton{\n"
 "	background-color:#71cd00;\n"
@@ -94,21 +99,23 @@ class Ui_Form(object):
 "	")
         self.loginPushButton = QPushButton(Form)
         self.loginPushButton.setObjectName(u"loginPushButton")
-        self.loginPushButton.setGeometry(QRect(200, 520, 51, 16))
+        self.loginPushButton.setGeometry(QRect(200, 540, 51, 16))
         self.loginPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.loginPushButton.setStyleSheet(u"QPushButton {\n"
 "	border: None;\n"
 "	text-decoration: underline;\n"
 "	color: #1c33de;\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
         self.confirmpasswordLabel = QLabel(Form)
         self.confirmpasswordLabel.setObjectName(u"confirmpasswordLabel")
-        self.confirmpasswordLabel.setGeometry(QRect(40, 310, 271, 16))
+        self.confirmpasswordLabel.setGeometry(QRect(40, 330, 271, 16))
         self.confirmpasswordLabel.setStyleSheet(u"font: 16pt, Arial;\n"
-"color: #444444;")
+"color: #444444;\n"
+"background-color: rgba(0,0,0,0);")
         self.confirmpasswordLineEdit = QLineEdit(Form)
         self.confirmpasswordLineEdit.setObjectName(u"confirmpasswordLineEdit")
-        self.confirmpasswordLineEdit.setGeometry(QRect(40, 330, 281, 35))
+        self.confirmpasswordLineEdit.setGeometry(QRect(40, 350, 281, 35))
         self.confirmpasswordLineEdit.setMinimumSize(QSize(0, 35))
         self.confirmpasswordLineEdit.setStyleSheet(u"QLineEdit\n"
 "{\n"
@@ -121,23 +128,36 @@ class Ui_Form(object):
 "}")
         self.invalidemailLabel = QLabel(Form)
         self.invalidemailLabel.setObjectName(u"invalidemailLabel")
-        self.invalidemailLabel.setGeometry(QRect(250, 180, 81, 16))
+        self.invalidemailLabel.setGeometry(QRect(250, 200, 81, 16))
         self.invalidemailLabel.setStyleSheet(u"QLabel{\n"
 "	color: #AA1111;\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
         self.invalidpasswordLabel = QLabel(Form)
         self.invalidpasswordLabel.setObjectName(u"invalidpasswordLabel")
-        self.invalidpasswordLabel.setGeometry(QRect(160, 270, 161, 31))
+        self.invalidpasswordLabel.setGeometry(QRect(160, 290, 161, 31))
         self.invalidpasswordLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
         self.invalidpasswordLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.passwordsdonotmatchLabel = QLabel(Form)
         self.passwordsdonotmatchLabel.setObjectName(u"passwordsdonotmatchLabel")
-        self.passwordsdonotmatchLabel.setGeometry(QRect(190, 370, 141, 20))
+        self.passwordsdonotmatchLabel.setGeometry(QRect(190, 390, 141, 20))
         self.passwordsdonotmatchLabel.setStyleSheet(u"QLabel{\n"
 "	color: #aa1111;\n"
+"	background-color: rgba(0,0,0,0);\n"
 "}")
+        self.edockiconPushButton = QPushButton(Form)
+        self.edockiconPushButton.setObjectName(u"edockiconPushButton")
+        self.edockiconPushButton.setGeometry(QRect(40, 20, 281, 51))
+        self.edockiconPushButton.setStyleSheet(u"QPushButton{\n"
+"	background-color:rgba(0,0,0,0);\n"
+"}")
+        icon = QIcon()
+        icon.addFile(u"images/edock.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.edockiconPushButton.setIcon(icon)
+        self.edockiconPushButton.setIconSize(QSize(150, 150))
         self.passwordsdonotmatchLabel.raise_()
         self.invalidpasswordLabel.raise_()
         self.invalidemailLabel.raise_()
@@ -152,6 +172,7 @@ class Ui_Form(object):
         self.emailLineEdit.raise_()
         self.passwordLineEdit.raise_()
         self.confirmpasswordLineEdit.raise_()
+        self.edockiconPushButton.raise_()
 
         self.retranslateUi(Form)
 
@@ -172,5 +193,6 @@ class Ui_Form(object):
         self.invalidpasswordLabel.setText(QCoreApplication.translate("Form", u"*Invalid Password\n"
 "*Must be more than 8 digits", None))
         self.passwordsdonotmatchLabel.setText(QCoreApplication.translate("Form", u"*Passwords do not match", None))
+        self.edockiconPushButton.setText("")
     # retranslateUi
 
